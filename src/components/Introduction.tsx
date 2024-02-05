@@ -18,9 +18,9 @@ const Introduction = () => {
     },
   ];
   return (
-    <section className="flex flex-col text-white">
-      <div className="text-gray-500">Introduction</div>
-      <div className="font-bold text-3xl my-2">Overview</div>
+    <section className="flex flex-col text-white sm:px-10">
+      <div className="text-gray-500 uppercase">Introduction</div>
+      <div className="font-bold text-3xl my-2 sm:text-5xl">Overview</div>
       <p className="text-gray-500 leading-7">
         I am an experienced software engineer with strong skills in JavaScript
         and TypeScript, focusing on front-end development using frameworks like
@@ -29,13 +29,13 @@ const Introduction = () => {
         my quick learning abilities and my commitment to closely collaborating
         with clients to deliver impactful applications.
       </p>
-      <div className="z-10">
+      <div className="z-10 sm:flex sm:flex-wrap  ">
         {KnowlageItems.map((item) => (
           <div
-            className="flex flex-col  w-full bg-dynamic-menu rounded-xl justify-center items-center h-40 text-xl mt-10 "
+            className="flex flex-col  w-full bg-dynamic-menu rounded-xl justify-center items-center h-40 text-xl mt-10  text-center  sm:h-64  sm:w-56 mr-6 "
             key={item.name}
           >
-            <div className="text-4xl text-blue-300 pb-1">{item.src}</div>
+            <div className="text-4xl text-blue-300 pb-1 ">{item.src}</div>
             <div className="text-blue-600 font-semibold pt-1">{item.name}</div>
           </div>
         ))}

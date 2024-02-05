@@ -2,12 +2,14 @@
 
 const ContactMe = () => {
   return (
-    <section className="text-white bg-Grey-Wave p-5 -mt-px">
+    <section className="text-white bg-Grey-Wave p-5 -mt-px sm:px-10">
       <div className="bg-main-dark  mt-18 p-7 rounded-xl">
-        <div className="uppercase text-sm text-gray-400 mt-2">Get in touch</div>
-        <div className="text-3xl font-bold my-2"> Contact</div>
+        <div className="uppercase text-sm text-gray-400 mt-2 ">
+          Get in touch
+        </div>
+        <div className="text-3xl font-bold my-2 sm:text-5xl"> Contact</div>
         <div className="mt-4 text-gray-400">
-          I appreciate any communication you can provide via{" "}
+          I appreciate any communication you can provide via
           <a href="">email</a>, <a href="">LinkedIn</a>, or the form provided
           below.
         </div>
@@ -36,7 +38,7 @@ const ContactMe = () => {
               placeholder="Whats your message"
             />
           </div>
-          <button className="bg-light-blue px-7 py-3 rounded-2xl mt-5 font-medium">
+          <button className="bg-light-blue px-7 py-3 rounded-2xl mt-7 font-medium">
             send
           </button>
         </form>

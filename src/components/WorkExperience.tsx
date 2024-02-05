@@ -47,7 +47,7 @@ const WorkExperience = () => {
     },
   ];
   return (
-    <section className="bg-light-blue -mt-px">
+    <section className="bg-light-blue -mt-px sm:px-10">
       <div className="mt-20 px-5 flex flex-col text-slate-50">
         <div className="text-base">What i have done so far</div>
         <div className="mt-2 text-3xl font-extrabold mb-18">

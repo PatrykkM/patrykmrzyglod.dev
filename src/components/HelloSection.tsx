@@ -3,19 +3,21 @@ import { LuMouse } from "react-icons/lu";
 const HelloSection = () => {
   return (
     <>
-      <section className="flex flex-col text-white mt-5">
-        <h1 className="text-5xl font-bold flex items-center">
+      <section className="flex flex-col text-white mt-5 ">
+        <h1 className="text-5xl font-bold flex items-center sm:text-7xl">
           <div>Hello</div>
           <div className="ml-1 mb-1 "> 👋</div>
         </h1>
-        <h2 className="text-4xl font-bold mt-2 gradient-text">I'm Patryk</h2>
-        <div className="text-4xl font-bold my-2 outline-text italic">
-          <div>Frontend</div>
-          <div className="mt-2">Developer</div>
+        <h2 className="text-4xl font-bold mt-2 gradient-text sm:text-6xl sm:my-5">
+          I'm Patryk
+        </h2>
+        <div className="text-4xl font-bold my-2 outline-text italic sm:text-6xl">
+          <div className="">Frontend</div>
+          <div className="mt-2 sm:mt-5">Developer</div>
         </div>
       </section>
       <section className="text-slate-200 mt-10  font-medium">
-        <div className="leading-8 ">
+        <div className="leading-8 md:w-3/5 sm:text-lg">
           I create user interfaces, develop web applications,
           <span className="gradient-text"> and much more!</span> As a college
           freshman, I have already accumulated almost half year year of

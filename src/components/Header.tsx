@@ -26,11 +26,11 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="flex w-full bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-50 ">
+      <nav className="flex w-full bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-50  sm:px-10">
         <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide ">
           <div className="gradient-text ">PatrykMrzygłód.dev</div>
           <div
-            className="text-2xl  font-bolder text-white transition-opacity cursor-pointer"
+            className="text-2xl  font-bolder text-white transition-opacity cursor-pointer "
             onClick={() => setActive(!active)}
           >
             {active ? <RxCross2 /> : <RxHamburgerMenu />}
@@ -38,12 +38,12 @@ const Header = () => {
         </div>
       </nav>
       {active ? (
-        <div className="fixed bg-dynamic-menu h-36 w-32 rounded-3xl right-5 top-20 text-white transition-opacity z-50">
-          <ul className=" flex flex-col px-6 items-end justify-around h-full font-semibold text-sm">
+        <div className="fixed bg-dynamic-menu  rounded-3xl right-5 top-20 text-white transition-opacity z-50">
+          <ul className=" flex flex-col p-6 items-end justify-around h-full font-semibold text-sm sm:text-base sm:p-8 ">
             {nav.map((e, id) => (
               <li
                 onClick={() => handleClick(id)}
-                className={activeIndex === id ? "gradient-text" : ""}
+                className={`${activeIndex === id ? "gradient-text" : ""} mb-3`}
                 key={e.name}
               >
                 {e.name}

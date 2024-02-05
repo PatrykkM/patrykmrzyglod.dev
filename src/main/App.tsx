@@ -16,12 +16,12 @@ function App() {
     <>
       <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px">
         <Header />
-        <div className="mt-18 px-5">
+        <div className="mt-18 px-5 sm:px-10">
           <HelloSection />
           <Tesla3Dmodel />
         </div>
         <WaveDelmiter />
-        <div className="mt-18 px-5">
+        <div className="mt-18 px-5 sm:px-10">
           <Introduction />
         </div>
         <SecondWaveDelmiter />
