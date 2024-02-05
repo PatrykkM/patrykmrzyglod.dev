@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
-// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Tesla3Dmodel: React.FC = () => {
@@ -40,19 +38,23 @@ const Tesla3Dmodel: React.FC = () => {
     scene.add(directionalLight);
 
     const loader = new GLTFLoader();
+    const modelPath =
+      process.env.NODE_ENV === "development"
+        ? new URL("../../assets/TeslaModel3D/scene.gltf", import.meta.url).href
+        : "https://twoj_username.github.io/twoje_repozytorium/assets/TeslaModel3D/scene.gltf";
+
     loader.load(
-      new URL("../../assets/TeslaModel3D/scene.gltf", import.meta.url).href,
-      (gltf: any) => {
+      modelPath,
+      (gltf) => {
         const model = gltf.scene;
         model.scale.set(0.2, 0.2, 0.2);
         model.position.set(0, 0, 0);
         scene.add(model);
-
         camera.lookAt(model.position);
       },
       undefined,
-      (error: Error) => {
-        console.error("Error:", error);
+      (error) => {
+        console.error("An error happened:", error);
       }
     );
 
