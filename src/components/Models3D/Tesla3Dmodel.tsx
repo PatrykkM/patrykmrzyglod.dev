@@ -41,7 +41,7 @@ const Tesla3Dmodel: React.FC = () => {
     const modelPath =
       process.env.NODE_ENV === "development"
         ? new URL("../../assets/TeslaModel3D/scene.gltf", import.meta.url).href
-        : "https://twoj_username.github.io/twoje_repozytorium/assets/TeslaModel3D/scene.gltf";
+        : "https://PatrykkM.github.io/patrykmrzyglod.dev/assets/TeslaModel3D/scene.gltf";
 
     loader.load(
       modelPath,
