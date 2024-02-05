@@ -18,17 +18,17 @@ const Introduction = () => {
     },
   ];
   return (
-    <div className="flex flex-col text-white">
+    <section className="flex flex-col text-white">
       <div className="text-gray-500">Introduction</div>
       <div className="font-bold text-3xl my-2">Overview</div>
-      <div className="text-gray-500 leading-7">
+      <p className="text-gray-500 leading-7">
         I am an experienced software engineer with strong skills in JavaScript
         and TypeScript, focusing on front-end development using frameworks like
         React. My expertise includes creating efficient, scalable, and
         user-friendly solutions that address real-world problems. I am known for
         my quick learning abilities and my commitment to closely collaborating
         with clients to deliver impactful applications.
-      </div>
+      </p>
       <div className="z-10">
         {KnowlageItems.map((item) => (
           <div
@@ -40,7 +40,7 @@ const Introduction = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

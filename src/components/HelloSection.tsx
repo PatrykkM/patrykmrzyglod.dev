@@ -14,7 +14,7 @@ const HelloSection = () => {
           <div className="mt-2">Developer</div>
         </div>
       </section>
-      <section className="text-white mt-10  font-medium">
+      <section className="text-slate-200 mt-10  font-medium">
         <div className="leading-8 ">
           I create user interfaces, develop web applications,
           <span className="gradient-text"> and much more!</span> As a college

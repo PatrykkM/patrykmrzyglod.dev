@@ -11,6 +11,10 @@ export default {
         "dynamic-menu": "#111725",
         "light-blue": "#2B5FDA",
         "Jobs-blue": "#203E83",
+        "Grey-Wave": "#151924",
+      },
+      minWidth: {
+        "314px": "314px",
       },
       height: {
         18: "4.5rem",
