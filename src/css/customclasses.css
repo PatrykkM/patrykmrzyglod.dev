@@ -1,5 +1,5 @@
 .gradient-text {
-  background-image: linear-gradient(to right, rgb(255, 197, 62), royalblue);
+  background-image: linear-gradient(to right, rgb(255, 179, 0), royalblue);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

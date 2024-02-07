@@ -2,7 +2,7 @@
 
 const ContactMe = () => {
   return (
-    <section className="text-white bg-Grey-Wave p-5 -mt-px sm:px-10">
+    <section className="text-white bg-Grey-Wave p-5 -mt-px sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16">
       <div className="bg-main-dark  mt-18 p-7 rounded-xl">
         <div className="uppercase text-sm text-gray-400 mt-2 ">
           Get in touch

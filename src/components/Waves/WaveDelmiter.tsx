@@ -1,6 +1,6 @@
 const WaveDelmiter = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 ">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#203E83"
@@ -11,7 +11,7 @@ const WaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="-mt-px"
+        className="-mt-px lg:-mt-5"
       >
         <path
           fill="#203E83"

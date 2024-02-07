@@ -19,7 +19,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section className="mt-18 px-5 flex flex-col text-white font-medium">
+    <section className="mt-18 px-5 flex flex-col text-white font-medium sm:px-10 lg:max-w-6xl lg:m-auto lg:px-16">
       <p className="uppercase text-sm text-gray-500 sm:text-base">My work</p>
       <div className="text-3xl font-extrabold mt-2 sm:text-5xl">Projects</div>
       <p className="mt-4 text-gray-500">

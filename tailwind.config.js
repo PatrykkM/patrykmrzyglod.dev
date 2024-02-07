@@ -15,6 +15,7 @@ export default {
       },
       minWidth: {
         "314px": "314px",
+        "1280px": "1280px",
       },
       height: {
         18: "4.5rem",

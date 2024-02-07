@@ -18,9 +18,11 @@ const Introduction = () => {
     },
   ];
   return (
-    <section className="flex flex-col text-white sm:px-10">
+    <section className="flex flex-col text-white lg:max-w-6xl lg:m-auto  lg:px-16">
       <div className="text-gray-500 uppercase">Introduction</div>
-      <div className="font-bold text-3xl my-2 sm:text-5xl">Overview</div>
+      <div className="font-bold text-3xl my-2 sm:text-5xl lg:text-6xl">
+        Overview
+      </div>
       <p className="text-gray-500 leading-7">
         I am an experienced software engineer with strong skills in JavaScript
         and TypeScript, focusing on front-end development using frameworks like
