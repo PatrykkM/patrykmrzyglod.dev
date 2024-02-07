@@ -19,7 +19,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section className="mt-18 px-5 flex flex-col text-white font-medium sm:px-10 lg:max-w-6xl lg:m-auto lg:px-16">
+    <section className="mt-18 px-5 flex flex-col text-white font-medium sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16 lg:mt-18">
       <p className="uppercase text-sm text-gray-500 sm:text-base">My work</p>
       <div className="text-3xl font-extrabold mt-2 sm:text-5xl">Projects</div>
       <p className="mt-4 text-gray-500">
@@ -30,9 +30,9 @@ const Projects = () => {
         currently working on more sophisticated and polished projects. Keep an
         eye out for updates!
       </p>
-      <div className="sm:flex ">
+      <div className="sm:flex">
         {MyProjects.map((project) => (
-          <div className="bg-dynamic-menu mt-18 rounded-lg p-5 mr-8 font-normal sm:w-96">
+          <div className="bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-8 font-normal sm:w-96 ">
             <div className="">
               <img
                 src={project.img}

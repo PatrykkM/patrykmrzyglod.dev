@@ -47,11 +47,11 @@ const WorkExperience = () => {
     },
   ];
   return (
-    <div className="bg-light-blue ">
-      <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-6xl m-auto lg:px-16">
+    <div className="bg-light-blue " id="Experience">
+      <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16">
         <div className="mt-20  flex flex-col text-slate-50">
           <div className="text-base">What i have done so far</div>
-          <div className="mt-2 text-3xl font-extrabold mb-18">
+          <div className="mt-2 text-3xl font-extrabold mb-18 lg:text-6xl">
             Work Experience
           </div>
           {JobPositions.map((position) => (
@@ -62,7 +62,7 @@ const WorkExperience = () => {
               <div className="w-1/5 flex justify-center">
                 <div className="bg-white w-1 relative">
                   <div
-                    className="w-12 h-12   absolute"
+                    className="w-12 h-12   absolute lg:w-16 lg:h-16"
                     style={{
                       left: "50%",
                       top: "25px",
@@ -72,7 +72,7 @@ const WorkExperience = () => {
                     <img
                       src={position.img}
                       alt=""
-                      className="w-full h-full rounded-3xl"
+                      className="w-full h-full rounded-full"
                     />
                   </div>
                 </div>

@@ -9,3 +9,6 @@
   -webkit-text-stroke: 1px white;
   color: transparent;
 }
+html {
+  scroll-behavior: smooth;
+}

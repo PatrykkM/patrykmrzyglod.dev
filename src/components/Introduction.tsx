@@ -18,7 +18,7 @@ const Introduction = () => {
     },
   ];
   return (
-    <section className="flex flex-col text-white lg:max-w-6xl lg:m-auto  lg:px-16">
+    <section className="flex flex-col text-white lg:max-w-7xl lg:m-auto  lg:px-16">
       <div className="text-gray-500 uppercase">Introduction</div>
       <div className="font-bold text-3xl my-2 sm:text-5xl lg:text-6xl">
         Overview

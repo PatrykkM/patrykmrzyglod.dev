@@ -15,7 +15,7 @@ const Header = () => {
       name: "Experience",
     },
     {
-      name: "About",
+      name: "Technologies",
     },
     {
       name: "Contact",
@@ -24,10 +24,14 @@ const Header = () => {
   const handleClick = (id: number) => {
     setActiveIndex(id);
   };
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <nav className="flex w-full  bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-50  sm:px-10  lg:items-center lg:px-0">
-        <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide lg:h-14 lg:max-w-6xl lg:m-auto lg:px-16  ">
+        <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide lg:h-14 lg:max-w-7xl lg:m-auto lg:px-16  ">
           <div className="gradient-text ">PatrykMrzygłód.dev</div>
           <div
             className="text-2xl  font-bolder text-white transition-opacity cursor-pointer sm:hidden "
@@ -44,7 +48,9 @@ const Header = () => {
                 }  list-none ml-10 text-base font-medium`}
                 key={e.name}
               >
-                {e.name}
+                <a href={`#${e.name}`} onClick={() => scrollToSection(e.name)}>
+                  {e.name}
+                </a>
               </li>
             ))}
           </div>
@@ -59,7 +65,9 @@ const Header = () => {
                 className={`${activeIndex === id ? "gradient-text" : ""} mb-3`}
                 key={e.name}
               >
-                {e.name}
+                <a href={`#${e.name}`} onClick={() => scrollToSection(e.name)}>
+                  {e.name}
+                </a>
               </li>
             ))}
             <div className="flex">

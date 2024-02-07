@@ -60,9 +60,14 @@ const Technologies = () => {
     },
   ];
   return (
-    <section className="flex flex-col text-white px-5 mt-17  sm:px-10 lg:max-w-6xl lg:m-auto lg:px-16">
+    <section
+      className="flex flex-col text-white px-5 mt-17  sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16"
+      id="Technologies"
+    >
       <div className="uppercase text-sm text-gray-400">My knowlage of</div>
-      <div className="text-3xl font-extrabold mt-2">Technologies</div>
+      <div className="text-3xl font-extrabold mt-2 lg:text-6xl">
+        Technologies
+      </div>
       <div className="">
         <div className="sm:flex sm:flex-wrap ">
           {MyTechnologies.map((tech) => (

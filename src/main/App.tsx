@@ -16,7 +16,7 @@ function App() {
     <>
       <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px">
         <Header />
-        <div className="mt-18 px-5 sm:px-10 lg:flex lg:max-w-6xl lg:m-auto lg:px-16">
+        <div className="mt-18 px-5 sm:px-10 lg:flex lg:max-w-7xl lg:m-auto lg:px-16">
           <HelloSection />
           <Tesla3Dmodel />
         </div>
