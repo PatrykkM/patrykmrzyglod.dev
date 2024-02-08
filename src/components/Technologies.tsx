@@ -1,13 +1,7 @@
-import { FaSass } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-
+import { motion } from "framer-motion";
+import { FaSass, FaHtml5, FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiRedux, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
 
 const Technologies = () => {
   const MyTechnologies = [
@@ -23,7 +17,7 @@ const Technologies = () => {
     },
     {
       icon: <FaReact />,
-      name: "React ",
+      name: "React",
       color: "text-cyan-400",
     },
     {
@@ -31,7 +25,6 @@ const Technologies = () => {
       name: "Typescript",
       color: "text-blue-900",
     },
-
     {
       icon: <SiRedux />,
       name: "Redux",
@@ -52,34 +45,62 @@ const Technologies = () => {
       name: "Tailwindcss",
       color: "text-cyan-600",
     },
-
     {
       icon: <FaGitAlt />,
       name: "Git",
       color: "text-orange-700",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
     <section
-      className="flex flex-col text-white px-5 mt-17  sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16"
+      className="flex flex-col text-white px-5 mt-17 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16"
       id="Technologies"
     >
-      <div className="uppercase text-sm text-gray-400">My knowlage of</div>
+      <div className="uppercase text-sm text-gray-400">My knowledge of</div>
       <div className="text-3xl font-extrabold mt-2 lg:text-6xl">
         Technologies
       </div>
-      <div className="">
-        <div className="sm:flex sm:flex-wrap ">
-          {MyTechnologies.map((tech) => (
-            <div className="bg-dynamic-menu flex flex-col justify-center items-center h-36  rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5">
-              <div className={`text-4xl mb-1 ${tech.color} sm:text-5xl`}>
-                {tech.icon}
-              </div>
-              <div className={`mt-2 `}>{tech.name}</div>
+      <motion.div
+        className="sm:flex sm:flex-wrap"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {MyTechnologies.map((tech, index) => (
+          <motion.div
+            key={index}
+            className="bg-dynamic-menu flex flex-col justify-center items-center h-36 rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5"
+            variants={itemVariants}
+          >
+            <div className={`text-4xl mb-1 ${tech.color} sm:text-5xl`}>
+              {tech.icon}
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="mt-2">{tech.name}</div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };

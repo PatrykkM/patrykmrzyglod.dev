@@ -1,10 +1,32 @@
-// import Planet3Dmodel from "./Models3D/Planet3Dmodel";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
+  const formVariants = {
+    offscreen: {
+      x: -100,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      },
+    },
+  };
+
   return (
     <div className="bg-Grey-Wave" id="Contact">
-      <section className="flex text-white bg-Grey-Wave p-5 -mt-px sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16  lg:justify-start">
-        <div className="bg-main-dark  mt-18 p-7 rounded-xl">
+      <section className="text-white bg-Grey-Wave p-5 -mt-px sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16 lg:justify-start">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          variants={formVariants}
+          className="bg-main-dark mt-18 p-7 rounded-xl"
+        >
           <div className="uppercase text-sm text-gray-400 mt-2 ">
             Get in touch
           </div>
@@ -20,30 +42,32 @@ const ContactMe = () => {
               <input
                 type="text"
                 className="bg-dynamic-menu py-4  px-3 rounded-lg mt-3 w-full"
-                placeholder="Whats your name"
+                placeholder="What's your name"
               />
             </div>
             <div className="mt-8">
               <p>Your Email</p>
               <input
-                type="text"
+                type="email"
                 className="bg-dynamic-menu py-4  px-3 rounded-lg mt-3 w-full"
-                placeholder="Whats your email"
+                placeholder="What's your email"
               />
             </div>
-            <div className="mt-8 ">
+            <div className="mt-8">
               <p>Your Message</p>
-              <input
-                type="text"
-                className="bg-dynamic-menu py-4  px-3 rounded-lg mt-3 w-full  flex justify-start items-start "
-                placeholder="Whats your message"
+              <textarea
+                className="bg-dynamic-menu py-4 px-3 rounded-lg mt-3 w-full flex justify-start items-start"
+                placeholder="What's your message"
               />
             </div>
-            <button className="bg-light-blue px-7 py-3 rounded-2xl mt-7 font-medium">
-              send
+            <button
+              type="submit"
+              className="bg-light-blue px-7 py-3 rounded-2xl mt-7 font-medium"
+            >
+              Send
             </button>
           </form>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Collective from "../assets/img/Collective.jpg";
@@ -11,7 +11,7 @@ const Projects = () => {
     threshold: 0.5,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (headerInView) {
       headerControls.start("visible");
     }
@@ -86,7 +86,7 @@ const Projects = () => {
           });
           const controls = useAnimation();
 
-          React.useEffect(() => {
+          useEffect(() => {
             if (inView) {
               controls.start("onscreen");
             }

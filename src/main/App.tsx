@@ -5,12 +5,13 @@ import Tesla3Dmodel from "../components/Models3D/Tesla3Dmodel";
 import WaveDelmiter from "../components/Waves/WaveDelmiter";
 import Introduction from "../components/Introduction";
 import SecondWaveDelmiter from "../components/Waves/SecondWaveDelmiter";
-import WorkExperience from "../components/WorkExperience";
+import WorkExperience from "../components/WorkExperienceMobile";
 import ThirdWaveDelmiter from "../components/Waves/ThirdWaveDelmiter";
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
 import LastWaveDelmiter from "../components/Waves/LastWaveDelmiter";
 import ContactMe from "../components/ContactMe";
+import WorkExperienceMobile from "../components/WorkExperienceDesktop";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
           <Introduction />
         </div>
         <SecondWaveDelmiter />
+        <WorkExperienceMobile />
         <WorkExperience />
         <ThirdWaveDelmiter />
         <Technologies />
