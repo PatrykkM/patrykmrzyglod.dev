@@ -1,103 +1,58 @@
-import biotiq from "../assets/img/biotiq.jpeg";
-import ignatium from "../assets/img/ignatium.png";
-import nanovo from "../assets/img/nanovo.png";
+import { WorkExperienceProps } from "./WorkExperience";
 
-const WorkExperience = () => {
-  const JobPositions = [
-    {
-      name: "Frontend Developer",
-      time: "Apr 2022 - Jul 2022",
-      img: nanovo,
-      company: "Nanovo Warmijska 1 30-069",
-      description: `Creating RWD that adapt and look well on various
-      screen sizes and devices, such as desktops, tablets, and
-      smartphones.
-      Implementing JavaScript to add interactivity, dynamic
-      behavior, and animations to web page
-      Identifying and fixing front-end bugs, issues, and
-      inconsistencies through testing and debugging`,
-    },
-    {
-      name: "Frontend Developer",
-      time: "Jan 2022 - Feb 2022",
-      img: biotiq,
-      company: "Biotiq Beauty Salon",
-      description: `I personally crafted the website design from scratch,
-      working independently.
-      I developed the company's website on my own,
-      utilizing front-end technologies
-      I created the UI/UX design for the website starting from
-      the ground up.
-`,
-    },
-    {
-      name: "Network Administrator",
-      time: "Oct 2021 - Nov 2021",
-      img: ignatium,
-      company: "Ignatianum Academy",
-      description: `Installing, configuring, and maintaining network
-      hardware such as routers, switches, firewalls, and
-      wireless access points
-      Assisting users with network-related issues,
-      troubleshooting connectivity problems, and providing
-      technical support for network-related inquiries
-      Maintaining accurate and detailed documentation of
-      the network topology, configurations, and procedures.
-`,
-    },
-  ];
+const WorkExperienceDesktop: React.FC<WorkExperienceProps> = ({
+  JobPositions,
+}) => {
   return (
-    <div className="bg-light-blue hidden lg:block" id="Experience">
-      <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16">
-        <div className="mt-20  flex flex-col text-slate-50">
-          <div className="text-base">What i have done so far</div>
-          <div className="mt-2 text-3xl font-extrabold mb-18 lg:text-6xl">
-            Work Experience
-          </div>
-          {JobPositions.map((position, id) => (
+    <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16 hidden lg:block">
+      <div className="mt-20  flex flex-col text-slate-50">
+        <div className="text-base">What i have done so far</div>
+        <div className="mt-2 text-3xl font-extrabold mb-18 lg:text-6xl">
+          Work Experience
+        </div>
+        {JobPositions.map((position, id) => (
+          <div
+            className="flex w-full   rounded-md  justify-center z-50"
+            key={position.company}
+          >
             <div
-              className="flex w-full   rounded-md  justify-center "
-              key={position.company}
+              className={`${
+                id % 2 === 0 ? `invisible` : `flex`
+              }  bg-Jobs-blue w-4/5    my-7 mx-3 text-sm p-4 rounded-md relative z-10 border-b-2 border-white flex flex-col`}
             >
-              <div
-                className={`${
-                  id % 2 === 0 ? `-z-50` : `flex`
-                }  bg-Jobs-blue w-4/5    my-7 mx-3 text-sm p-4 rounded-md relative z-10 border-b-2 border-white flex flex-col`}
-              >
-                <div className="w-3 h-3 bg-Jobs-blue  absolute -right-1  rotate-45  "></div>
-                <div className="text-2xl font-bold">{position.name}</div>
-                <div>{position.company}</div>
-                <div className="p-4 leading-6">{position.description}</div>
-                <div>{position.time}</div>
-              </div>
-              <div className="w-1/5 flex justify-center">
-                <div className="bg-white w-1 relative">
-                  <div className=" absolute w-16 h-16 left-1/2 top-6 -translate-x-1/2 rounded-full">
-                    <img
-                      src={position.img}
-                      alt=""
-                      className="w-full h-full rounded-full"
-                    />
-                  </div>
+              <div className="w-3 h-3 bg-Jobs-blue  absolute -right-1  rotate-45  "></div>
+              <div className="text-2xl font-bold">{position.name}</div>
+              <div>{position.company}</div>
+              <div className="p-4 leading-6">{position.description}</div>
+              <div>{position.time}</div>
+            </div>
+            <div className="w-1/5 flex justify-center">
+              <div className="bg-white w-1 relative">
+                <div className=" absolute w-16 h-16 left-1/2 top-6 -translate-x-1/2 rounded-full">
+                  <img
+                    src={position.img}
+                    alt=""
+                    className="w-full h-full rounded-full"
+                  />
                 </div>
               </div>
-              <div
-                className={`${
-                  id % 2 !== 0 ? `-z-50` : `flex`
-                }  bg-Jobs-blue w-4/5    my-7 mx-3 text-sm p-4 rounded-md relative z-10 border-b-2 border-white flex flex-col`}
-              >
-                <div className="w-3 h-3 bg-Jobs-blue  absolute -left-1 rotate-45  "></div>
-                <div className="text-2xl font-bold">{position.name}</div>
-                <div>{position.company}</div>
-                <div className="p-4 leading-6">{position.description}</div>
-                <div>{position.time}</div>
-              </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </div>
+            <div
+              className={`${
+                id % 2 !== 0 ? `invisible` : `flex`
+              }  bg-Jobs-blue w-4/5    my-7 mx-3 text-sm p-4 rounded-md relative  border-b-2 border-white flex flex-col`}
+            >
+              <div className="w-3 h-3 bg-Jobs-blue  absolute -left-1 rotate-45  "></div>
+              <div className="text-2xl font-bold">{position.name}</div>
+              <div>{position.company}</div>
+              <div className="p-4 leading-6">{position.description}</div>
+              <div>{position.time}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default WorkExperience;
+export default WorkExperienceDesktop;

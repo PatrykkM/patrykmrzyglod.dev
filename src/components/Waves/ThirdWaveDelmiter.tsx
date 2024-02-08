@@ -16,6 +16,7 @@ const ThirdWaveDelmiter = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         className="bg-main-dark"
+        id="Technologies"
       >
         <path
           fill="#0E2445"
