@@ -22,7 +22,7 @@ const HelloSection = () => {
   return (
     <>
       <div className="lg:mt-36">
-        <section className="flex flex-col text-white mt-5">
+        <section className="flex flex-col text-white mt-5 dark:text-mian-text-light">
           <motion.h1
             initial="offscreen"
             whileInView="onscreen"
@@ -47,13 +47,13 @@ const HelloSection = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.5 }}
             variants={textVariants}
-            className="text-4xl font-bold my-2 outline-text italic sm:text-6xl lg:text-8xl"
+            className="text-4xl font-bold my-2 outline-text italic sm:text-6xl lg:text-8xl dark:outline-text-light"
           >
-            <div>Frontend</div>
-            <div className="mt-2 sm:mt-5">Developer</div>
+            <div className="">Frontend</div>
+            <div className="mt-2 sm:mt-5 ">Developer</div>
           </motion.div>
         </section>
-        <section className="text-slate-200 mt-10 font-medium">
+        <section className="text-slate-200 mt-10 font-medium dark:text-mian-text-light">
           <div className="leading-8 md:w-3/5 sm:text-lg">
             I create user interfaces, develop web applications,
             <span className="gradient-text"> and much more!</span> As a college

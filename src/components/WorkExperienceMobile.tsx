@@ -22,7 +22,7 @@ const WorkExperienceMobile: React.FC<WorkExperienceProps> = ({
   };
 
   return (
-    <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16 lg:hidden">
+    <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16 lg:hidden dark:bg-light-mode-items">
       <div className="mt-20 flex flex-col text-slate-50">
         <div className="text-base">What I have done so far</div>
         <div className="mt-2 text-3xl font-extrabold mb-18 lg:text-6xl">
@@ -52,7 +52,7 @@ const WorkExperienceMobile: React.FC<WorkExperienceProps> = ({
               </div>
             </div>
             <motion.div
-              className="bg-Jobs-blue w-4/5 my-7 mx-3 text-sm p-4 rounded-md relative z-10 border-b-2 border-white"
+              className="bg-Jobs-blue w-4/5 my-7 mx-3 text-sm p-4 rounded-md relative z-10 border-b-2 border-white "
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true }}

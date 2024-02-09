@@ -9,6 +9,10 @@
   -webkit-text-stroke: 1px white;
   color: transparent;
 }
+.outline-text-light {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
 html {
   scroll-behavior: smooth;
 }

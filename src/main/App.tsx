@@ -14,7 +14,7 @@ import WorkExperience from "../components/WorkExperience";
 function App() {
   return (
     <>
-      <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px">
+      <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px dark:bg-main-light">
         <Header />
         <div className="mt-18 px-5 sm:px-10 lg:flex lg:max-w-7xl lg:m-auto lg:px-16">
           <HelloSection />

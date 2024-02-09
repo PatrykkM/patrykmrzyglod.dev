@@ -68,7 +68,9 @@ const Projects = () => {
         variants={headerVariants}
       >
         <p className="uppercase text-sm text-gray-500 sm:text-base">My work</p>
-        <div className="text-3xl font-extrabold mt-2 sm:text-5xl">Projects</div>
+        <div className="text-3xl font-extrabold mt-2 sm:text-5xl dark:text-mian-text-light">
+          Projects
+        </div>
         <p className="mt-4 text-gray-500">
           The purpose of the projects presented here was to demonstrate my
           abilities and background while seeking my initial employment. Every

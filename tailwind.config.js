@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       zIndex: {
@@ -15,6 +16,9 @@ export default {
         "light-blue": "#2B5FDA",
         "Jobs-blue": "#203E83",
         "Grey-Wave": "#151924",
+        "main-light": "#E5EAF5",
+        "mian-text-light": "#0D0D0D",
+        "light-mode-items": "#DAE0EF",
       },
       minWidth: {
         "314px": "314px",

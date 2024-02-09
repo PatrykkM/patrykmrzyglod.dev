@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import { MdLightMode } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
 const Header = () => {
   const [active, setActive] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   type NavItem = {
     name: string;
@@ -28,9 +31,13 @@ const Header = () => {
     const section = document.getElementById(sectionId);
     section?.scrollIntoView({ behavior: "smooth" });
   };
+  const handleDarkMode = () => {
+    document.body.classList.toggle("dark");
+    setDarkMode(!darkMode);
+  };
   return (
     <>
-      <nav className="flex w-full  bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-9999  sm:px-10  lg:items-center lg:px-0">
+      <nav className="flex w-full  bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-9999  sm:px-10  lg:items-center lg:px-0 dark:bg-main-light dark:border-gray-400">
         <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide lg:h-14 lg:max-w-7xl lg:m-auto lg:px-16  ">
           <div className="gradient-text ">PatrykMrzygłód.dev</div>
           <div
@@ -39,7 +46,7 @@ const Header = () => {
           >
             {active ? <RxCross2 /> : <RxHamburgerMenu />}
           </div>
-          <div className=" items-center justify-center text-white hidden sm:flex ">
+          <div className=" items-center justify-center text-white hidden sm:flex  dark:text-black">
             {nav.map((e, id) => (
               <li
                 onClick={() => handleClick(id)}
@@ -70,9 +77,16 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <div className="flex">
-              <div>x</div>
-              <div>x</div>
+            <div className="flex text-white text-xl" onClick={handleDarkMode}>
+              {darkMode ? (
+                <div>
+                  <FaMoon />
+                </div>
+              ) : (
+                <div>
+                  <MdLightMode />
+                </div>
+              )}
             </div>
           </ul>
         </div>

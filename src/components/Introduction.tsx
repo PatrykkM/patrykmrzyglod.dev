@@ -10,7 +10,7 @@ interface Item {
 }
 
 const Introduction: React.FC = () => {
-  const KnowlageItems: Item[] = [
+  const KnowledgeItems: Item[] = [
     {
       name: "React Developer",
       src: <FaReact />,
@@ -25,30 +25,29 @@ const Introduction: React.FC = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const combinedVariants = {
+    hidden: { y: -50, opacity: 0 },
     visible: {
+      y: 0,
       opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        when: "beforeChildren",
-      },
+      transition: { duration: 0.5 },
     },
   };
 
   const itemVariants = {
-    hidden: { y: -20, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        y: { type: "spring", stiffness: 100 },
+        type: "spring",
+        stiffness: 100,
         duration: 0.5,
       },
     },
   };
 
-  const { ref, inView } = useInView({
+  const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -61,16 +60,16 @@ const Introduction: React.FC = () => {
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        variants={containerVariants}
+        variants={combinedVariants}
         className="text-gray-500 uppercase"
       >
         Introduction
       </motion.div>
       <motion.div
-        initial={{ y: -50, opacity: 0 }}
-        animate={inView ? { y: 0, opacity: 1 } : ""}
-        transition={{ duration: 0.5 }}
-        className="font-bold text-3xl my-2 sm:text-5xl lg:text-6xl"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={combinedVariants}
+        className="font-bold text-3xl my-2 sm:text-5xl lg:text-6xl dark:text-mian-text-light"
       >
         Overview
       </motion.div>
@@ -82,23 +81,32 @@ const Introduction: React.FC = () => {
         my quick learning abilities and my commitment to closely collaborating
         with clients to deliver impactful applications.
       </p>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="z-10 sm:flex sm:flex-wrap"
-      >
-        {KnowlageItems.map((item, index) => (
-          <motion.div
-            className="flex flex-col w-full bg-dynamic-menu rounded-xl justify-center items-center h-40 text-xl mt-10 text-center sm:h-64 sm:w-56 mr-6"
-            key={index}
-            variants={itemVariants}
-          >
-            <div className="text-4xl text-blue-300 pb-1">{item.src}</div>
-            <div className="text-blue-600 font-semibold pt-1">{item.name}</div>
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="z-10 sm:flex sm:flex-wrap">
+        {KnowledgeItems.map((item, index) => {
+          const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.1,
+          });
+
+          return (
+            <motion.div
+              className="flex flex-col w-full bg-dynamic-menu rounded-xl justify-center items-center h-40 text-xl mt-10 text-center sm:h-64 sm:w-56 mr-6 dark:bg-light-mode-items"
+              key={index}
+              ref={ref}
+              variants={itemVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+            >
+              <div className="text-4xl text-blue-300 pb-1 dark:text-main-dark">
+                {item.src}
+              </div>
+              <div className="text-blue-600 font-semibold pt-1 dark:text-light-blue">
+                {item.name}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </section>
   );
 };

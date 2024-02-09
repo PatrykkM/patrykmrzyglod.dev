@@ -74,11 +74,11 @@ const Technologies = () => {
 
   return (
     <section
-      className="flex flex-col text-white px-5 mt-17 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16"
+      className="flex flex-col text-white px-5 mt-17 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16 dark:text-light-blue font-semibold"
       id="Technologies"
     >
       <div className="uppercase text-sm text-gray-400">My knowledge of</div>
-      <div className="text-3xl font-extrabold mt-2 lg:text-6xl">
+      <div className="text-3xl font-extrabold mt-2 lg:text-6xl dark:text-mian-text-light">
         Technologies
       </div>
       <motion.div
@@ -91,7 +91,7 @@ const Technologies = () => {
         {MyTechnologies.map((tech, index) => (
           <motion.div
             key={index}
-            className="bg-dynamic-menu flex flex-col justify-center items-center h-36 rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5"
+            className="bg-dynamic-menu flex flex-col justify-center items-center h-36 rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5 dark:bg-light-mode-items"
             variants={itemVariants}
           >
             <div className={`text-4xl mb-1 ${tech.color} sm:text-5xl`}>
