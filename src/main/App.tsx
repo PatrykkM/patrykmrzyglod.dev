@@ -1,4 +1,5 @@
 import "../css/index.css";
+import { useState } from "react";
 import Header from "../components/Header";
 import HelloSection from "../components/HelloSection";
 import Tesla3Dmodel from "../components/Models3D/Tesla3Dmodel";
@@ -12,12 +13,14 @@ import LastWaveDelmiter from "../components/Waves/LastWaveDelmiter";
 import ContactMe from "../components/ContactMe";
 import WorkExperience from "../components/WorkExperience";
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px dark:bg-main-light">
-        <Header />
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className="mt-18 px-5 sm:px-10 lg:flex lg:max-w-7xl lg:m-auto lg:px-16">
-          <HelloSection />
+          <HelloSection darkMode={darkMode} />
           <Tesla3Dmodel />
         </div>
         <WaveDelmiter />

@@ -91,7 +91,7 @@ const Technologies = () => {
         {MyTechnologies.map((tech, index) => (
           <motion.div
             key={index}
-            className="bg-dynamic-menu flex flex-col justify-center items-center h-36 rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5 dark:bg-light-mode-items"
+            className="bg-dynamic-menu flex flex-col justify-center items-center h-36 rounded-xl mt-10 sm:w-52 sm:h-52 sm:flex sm:flex-wrap sm:mr-5 dark:bg-light-mode-items shadow-md"
             variants={itemVariants}
           >
             <div className={`text-4xl mb-1 ${tech.color} sm:text-5xl`}>

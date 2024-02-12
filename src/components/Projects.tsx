@@ -101,7 +101,7 @@ const Projects = () => {
               animate={controls}
               variants={projectVariants}
               key={index}
-              className="bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-8 font-normal sm:w-96 mb-8 "
+              className="bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-8 font-normal sm:w-96 mb-8 dark:bg-light-mode-items dark:text-blue-800"
             >
               <img
                 src={project.img}
@@ -109,8 +109,10 @@ const Projects = () => {
                 className="rounded-lg w-full object-cover max-h-56"
               />
               <div className="mt-3">
-                <span className="text-2xl font-bold">{project.name}</span>
-                <p className="text-sm mt-3 text-gray-400">{project.desc}</p>
+                <span className="text-2xl font-bold ">{project.name}</span>
+                <p className="text-sm mt-3 text-gray-300 dark:text-gray-500 ">
+                  {project.desc}
+                </p>
                 <div className="mt-3 text-sm text-orange-400">
                   {project.techs}
                 </div>

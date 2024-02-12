@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { LuMouse } from "react-icons/lu";
+interface HelloSectionProps {
+  darkMode: boolean;
+}
 
-const HelloSection = () => {
+const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
   const textVariants = {
     offscreen: {
       y: -20,
@@ -47,7 +50,9 @@ const HelloSection = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.5 }}
             variants={textVariants}
-            className="text-4xl font-bold my-2 outline-text italic sm:text-6xl lg:text-8xl dark:outline-text-light"
+            className={`text-4xl font-bold my-2 ${
+              darkMode ? `outline-text-light` : `outline-text`
+            } italic sm:text-6xl lg:text-8xl `}
           >
             <div className="">Frontend</div>
             <div className="mt-2 sm:mt-5 ">Developer</div>

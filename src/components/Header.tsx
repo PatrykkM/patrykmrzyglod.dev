@@ -4,10 +4,14 @@ import { RxCross2 } from "react-icons/rx";
 import { MdLightMode } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
-const Header = () => {
+interface HeaderProps {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   const [active, setActive] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [darkMode, setDarkMode] = useState(false);
 
   type NavItem = {
     name: string;
@@ -46,7 +50,7 @@ const Header = () => {
           >
             {active ? <RxCross2 /> : <RxHamburgerMenu />}
           </div>
-          <div className=" items-center justify-center text-white hidden sm:flex  dark:text-black">
+          <div className=" items-center justify-center text-white hidden sm:flex  dark:text-black cursor-pointer">
             {nav.map((e, id) => (
               <li
                 onClick={() => handleClick(id)}
@@ -60,11 +64,25 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            <div
+              className="flex text-white text-xl dark:text-black ml-10"
+              onClick={handleDarkMode}
+            >
+              {darkMode ? (
+                <div>
+                  <FaMoon />
+                </div>
+              ) : (
+                <div>
+                  <MdLightMode />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>
       {active ? (
-        <div className="fixed bg-dynamic-menu  rounded-3xl right-5 top-20 text-white transition-opacity z-50 sm:hidden">
+        <div className="fixed bg-dynamic-menu  rounded-3xl right-5 top-20 text-white transition-opacity z-50 sm:hidden dark:text-black dark:bg-light-mode-items shadow-lg">
           <ul className=" flex flex-col p-6 items-end justify-around h-full font-semibold text-sm sm:text-base sm:p-8 ">
             {nav.map((e, id) => (
               <li
@@ -77,7 +95,10 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <div className="flex text-white text-xl" onClick={handleDarkMode}>
+            <div
+              className="flex text-white text-xl dark:text-black"
+              onClick={handleDarkMode}
+            >
               {darkMode ? (
                 <div>
                   <FaMoon />
