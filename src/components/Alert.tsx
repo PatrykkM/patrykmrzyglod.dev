@@ -7,20 +7,29 @@ interface AlertProps {
 }
 
 const Alert: React.FC<AlertProps> = ({ darkMode }) => {
-  const [ShowPopUp, SetShowPopUp] = useState(false);
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [siteLoaded, setSiteLoaded] = useState(false);
 
   useEffect(() => {
-    SetShowPopUp((prev) => !prev);
-
-    const timer = setTimeout(() => {
-      SetShowPopUp((prev) => !prev);
+    setTimeout(() => {
+      setSiteLoaded(true);
     }, 1000);
-    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (siteLoaded) {
+      setShowPopUp((prev) => !prev);
+
+      const timer = setTimeout(() => {
+        setShowPopUp((prev) => !prev);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
   }, [darkMode]);
   return (
     <div
       className={`${
-        ShowPopUp ? `translate-y-11` : `-translate-y-5`
+        showPopUp ? `-translate-y-5` : `translate-y-11`
       }  bg-main-dark fixed left-1/2 bottom-0 transform -translate-x-1/2 px-5 py-3 text-sm text-white rounded-2xl flex shadow-2xl items-center dark:text-black  font-medium z-9999 transition-transform dark:bg-light-mode-items`}
     >
       {darkMode ? (
