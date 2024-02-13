@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 import { MdLightMode } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
+import Alert from "./Alert";
 
 interface HeaderProps {
   darkMode: boolean;
@@ -112,6 +113,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
           </ul>
         </div>
       ) : null}
+      <Alert darkMode={darkMode} />
     </>
   );
 };
