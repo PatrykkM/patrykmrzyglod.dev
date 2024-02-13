@@ -30,7 +30,9 @@ function App() {
         <SecondWaveDelmiter />
         <WorkExperience />
         <ThirdWaveDelmiter />
-        <Technologies />
+        <div>
+          <Technologies />
+        </div>
         <Projects />
         <LastWaveDelmiter />
         <ContactMe />

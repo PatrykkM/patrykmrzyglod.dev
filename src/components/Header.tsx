@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
         <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide lg:h-14 lg:max-w-7xl lg:m-auto lg:px-16  ">
           <div className="gradient-text ">PatrykMrzygłód.dev</div>
           <div
-            className="text-2xl  font-bolder text-white transition-opacity cursor-pointer sm:hidden "
+            className="text-2xl  font-bolder text-white transition-opacity cursor-pointer sm:hidden  dark:text-black"
             onClick={() => setActive(!active)}
           >
             {active ? <RxCross2 /> : <RxHamburgerMenu />}

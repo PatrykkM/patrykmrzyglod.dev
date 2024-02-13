@@ -16,7 +16,6 @@ const ThirdWaveDelmiter = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         className="bg-main-dark dark:hidden"
-        id="Technologies"
       >
         <path
           fill="#0E2445"
@@ -39,7 +38,6 @@ const ThirdWaveDelmiter = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         className="bg-main-dark dark:bg-main-light hidden dark:block"
-        id="Technologies"
       >
         <path
           fill="#6B8AE3"
