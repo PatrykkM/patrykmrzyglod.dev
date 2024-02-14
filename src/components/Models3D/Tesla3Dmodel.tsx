@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
 // @ts-ignore
-import { GLTFLoader } from "../../../node_modules/three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // @ts-ignore
-import { OrbitControls } from "../../../node_modules/three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Tesla3Dmodel: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -12,10 +12,18 @@ const Tesla3Dmodel: React.FC = () => {
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
 
   useEffect(() => {
+    const setRendererSize = () => {
+      const width = window.innerWidth > 1024 ? 400 : 310;
+      const height = window.innerWidth > 1024 ? 400 : 310;
+      return { width, height };
+    };
+
+    const { width, height } = setRendererSize();
+
     const scene = new THREE.Scene();
     scene.background = null;
 
-    const camera = new THREE.PerspectiveCamera(75, 300 / 300, 0.01, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.01, 1000);
     camera.position.set(90, 10, 0);
     cameraRef.current = camera;
 
@@ -24,13 +32,10 @@ const Tesla3Dmodel: React.FC = () => {
       alpha: true,
       premultipliedAlpha: false,
     });
+    renderer.setSize(width, height);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(300, 300);
     rendererRef.current = renderer;
-
-    if (mountRef.current) {
-      mountRef.current.appendChild(renderer.domElement);
-    }
+    mountRef.current?.appendChild(renderer.domElement);
 
     const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
     scene.add(ambientLight);
@@ -50,12 +55,11 @@ const Tesla3Dmodel: React.FC = () => {
         model.scale.set(0.2, 0.2, 0.2);
         model.position.set(0, 0, 0);
         scene.add(model);
-
         camera.lookAt(model.position);
       },
       undefined,
       (error: Error) => {
-        console.error("Error:", error);
+        console.error("Error loading model:", error);
       }
     );
 
@@ -68,22 +72,16 @@ const Tesla3Dmodel: React.FC = () => {
       controls.update();
       renderer.render(scene, camera);
     };
-
     animate();
 
     const handleResize = () => {
+      const { width, height } = setRendererSize();
       const camera = cameraRef.current;
       const renderer = rendererRef.current;
-
-      if (camera && renderer && mountRef.current) {
-        camera.aspect =
-          mountRef.current.clientWidth / mountRef.current.clientHeight;
+      if (camera && renderer) {
+        camera.aspect = width / height;
         camera.updateProjectionMatrix();
-        renderer.setSize(
-          mountRef.current.clientWidth,
-          mountRef.current.clientHeight
-        );
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
       }
     };
 
@@ -98,7 +96,7 @@ const Tesla3Dmodel: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center items-center text-white dark:text-main-text-light">
+    <section className="flex flex-col justify-center items-center text-white dark:text-main-text-light dark:text-black">
       <div className="self-center flex mt-2 items-center ml-32">
         <div className="text-3xl mt-6">
           <PiArrowBendLeftDownFill />

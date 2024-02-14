@@ -59,7 +59,7 @@ const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
           </motion.div>
         </section>
         <section className="text-slate-200 mt-10 font-medium dark:text-mian-text-light">
-          <div className="leading-8 md:w-3/5 sm:text-lg">
+          <div className="leading-8 md:w-3/5  sm:text-lg">
             I create user interfaces, develop web applications,
             <span className="gradient-text"> and much more!</span> As a college
             freshman, I have already accumulated almost half year of
