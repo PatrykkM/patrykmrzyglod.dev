@@ -1,6 +1,6 @@
 const LastWaveDelmiter = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 -mb-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"

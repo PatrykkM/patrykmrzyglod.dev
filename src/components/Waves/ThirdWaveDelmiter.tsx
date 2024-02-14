@@ -4,7 +4,7 @@ const ThirdWaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320 "
-        className="-mb-px dark:hidden"
+        className="-mb-1 dark:hidden"
       >
         <path
           fill="#0E2445"
@@ -26,7 +26,7 @@ const ThirdWaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320 "
-        className="-mb-px hidden dark:block"
+        className="-mb-1 hidden dark:block"
       >
         <path
           fill="#6B8AE3"

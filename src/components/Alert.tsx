@@ -29,7 +29,7 @@ const Alert: React.FC<AlertProps> = ({ darkMode }) => {
   return (
     <div
       className={`${
-        showPopUp ? `-translate-y-5` : `translate-y-11`
+        showPopUp ? `-translate-y-5` : `translate-y-16`
       }  bg-main-dark fixed left-1/2 bottom-0 transform -translate-x-1/2 px-5 py-3 text-sm text-white rounded-2xl flex shadow-2xl items-center dark:text-black  font-medium z-9999 transition-transform dark:bg-light-mode-items`}
     >
       {darkMode ? (

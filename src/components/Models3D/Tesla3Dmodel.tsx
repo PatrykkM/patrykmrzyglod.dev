@@ -105,7 +105,7 @@ const Tesla3Dmodel: React.FC = () => {
       </div>
       <div
         ref={mountRef}
-        className="flex justify-center items-center w-80 h-80 bg-transparent lg:w-96 lg:h-96"
+        className="flex justify-center items-center  bg-transparent "
       ></div>
     </section>
   );

@@ -19,7 +19,7 @@ function App() {
     <>
       <div className="flex flex-col overflow-hidden box-border bg-main-dark min-w-314px dark:bg-main-light">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-        <div className="mt-18 px-5 sm:px-10 lg:flex lg:max-w-7xl lg:m-auto lg:px-16">
+        <div className="flex flex-col lg:flex-row justify-between w-full mt-18 px-5 sm:px-10 lg:flex lg:max-w-7xl lg:m-auto lg:px-16 ">
           <HelloSection darkMode={darkMode} />
           <Tesla3Dmodel />
         </div>
