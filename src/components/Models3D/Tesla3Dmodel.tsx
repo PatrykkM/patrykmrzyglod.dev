@@ -41,7 +41,10 @@ const Tesla3Dmodel: React.FC = () => {
 
     const loader = new GLTFLoader();
     loader.load(
-      new URL("../../assets/TeslaModel3D/scene.gltf", import.meta.url).href,
+      new URL(
+        "../../assets/TeslaModel3D-GLB/tesla_2018_model_3.glb",
+        import.meta.url
+      ).href,
       (gltf: any) => {
         const model = gltf.scene;
         model.scale.set(0.2, 0.2, 0.2);
@@ -95,12 +98,12 @@ const Tesla3Dmodel: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center items-center text-white dark:text-mian-text-light">
+    <section className="flex flex-col justify-center items-center text-white dark:text-main-text-light">
       <div className="self-center flex mt-2 items-center ml-32">
         <div className="text-3xl mt-6">
           <PiArrowBendLeftDownFill />
         </div>
-        Try to rotate me
+        Obróć mnie
       </div>
       <div
         ref={mountRef}
