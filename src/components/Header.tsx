@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   };
   return (
     <>
-      <nav className="flex w-full  bg-main-dark  fixed h-18 border-b border-gray-800 px-5   z-9999  sm:px-10  lg:items-center lg:px-0 dark:bg-main-light dark:border-gray-400">
+      <nav className="flex w-full  bg-transparent  fixed h-18 border-b border-gray-800 px-5   z-9999  sm:px-10  lg:items-center lg:px-0  dark:border-gray-400 backdrop-blur-lg backdrop-filter">
         <div className="flex justify-between  items-center w-full  text-lg font-bold tracking-wide lg:h-14 lg:max-w-7xl lg:m-auto lg:px-16  ">
           <div className="gradient-text ">PatrykMrzygłód.dev</div>
           <div

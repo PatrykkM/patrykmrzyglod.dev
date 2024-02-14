@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
 // @ts-ignore
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "../../../node_modules/three/examples/jsm/loaders/GLTFLoader";
 // @ts-ignore
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "../../../node_modules/three/examples/jsm/controls/OrbitControls";
 
 const Tesla3Dmodel: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
