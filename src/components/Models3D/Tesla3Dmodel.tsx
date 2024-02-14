@@ -13,8 +13,8 @@ const Tesla3Dmodel: React.FC = () => {
 
   useEffect(() => {
     const setRendererSize = () => {
-      const width = window.innerWidth > 1024 ? 400 : 310;
-      const height = window.innerWidth > 1024 ? 400 : 310;
+      const width = window.innerWidth >= 1024 ? 400 : 310;
+      const height = window.innerWidth >= 1024 ? 400 : 310;
       return { width, height };
     };
 
