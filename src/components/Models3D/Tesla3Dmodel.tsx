@@ -103,16 +103,11 @@ const Tesla3Dmodel: React.FC = () => {
         <div className="text-3xl mt-6">
           <PiArrowBendLeftDownFill />
         </div>
-        Obróć mnie
+        Try to rotate me!
       </div>
       <div
         ref={mountRef}
-        className="flex justify-center items-center"
-        style={{
-          width: "300px",
-          height: "300px",
-          background: "transparent",
-        }}
+        className="flex justify-center items-center w-80 h-80 bg-transparent lg:w-96 lg:h-96"
       ></div>
     </section>
   );
