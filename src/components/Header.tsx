@@ -31,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   ];
   const handleClick = (id: number) => {
     setActiveIndex(id);
+    setActive(!active);
   };
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -38,7 +39,8 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   };
   const handleDarkMode = () => {
     document.body.classList.toggle("dark");
-    setDarkMode(!darkMode);
+    setDarkMode((prev) => (prev = !prev));
+    setActive(!active);
   };
   return (
     <>

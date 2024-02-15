@@ -35,8 +35,20 @@ const ContactMe = () => {
         </div>
         <div className="mt-4 text-gray-400 dark:text-gray-500">
           I appreciate any communication you can provide via
-          <a href="">email</a>, <a href="">LinkedIn</a>, or the form provided
-          below.
+          <a
+            href="mailto:patrykmrzyglod3@gmail.com"
+            className="gradient-text font-bold ml-1"
+          >
+            email
+          </a>
+          ,
+          <a
+            href="https://www.linkedin.com/in/patrykmrzyg%C5%82%C3%B3d/"
+            className="gradient-text font-bold ml-px mr-1"
+          >
+            LinkedIn
+          </a>
+          or the form provided below.
         </div>
         <form action="" className="mt-5 font-me dark:text-gray-800">
           <div className="mt-8">
