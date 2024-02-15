@@ -12,6 +12,7 @@ import Projects from "../components/Projects";
 import LastWaveDelmiter from "../components/Waves/LastWaveDelmiter";
 import ContactMe from "../components/ContactMe";
 import WorkExperience from "../components/WorkExperience";
+import PlanetModel3D from "../components/Models3D/Planet3Dmodel";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -35,7 +36,12 @@ function App() {
         </div>
         <Projects />
         <LastWaveDelmiter />
-        <ContactMe />
+        <div className="bg-Grey-Wave dark:bg-light-mode-items w-full">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between p-5 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16  ">
+            <PlanetModel3D />
+            <ContactMe />
+          </div>
+        </div>
       </div>
     </>
   );

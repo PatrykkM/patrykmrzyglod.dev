@@ -24,6 +24,10 @@ export default {
         "314px": "314px",
         "1280px": "1280px",
       },
+      width: {
+        112: "28rem",
+        128: "32rem",
+      },
       height: {
         18: "4.5rem",
       },
