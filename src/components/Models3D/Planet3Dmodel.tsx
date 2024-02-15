@@ -15,16 +15,20 @@ const Planet3Dmodel: React.FC = () => {
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.z = 5;
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setClearColor(0x000000, 0);
 
+    renderer.setPixelRatio(window.devicePixelRatio);
+
     const adjustSizeAndScale = (model?: THREE.Object3D) => {
-      const width = window.innerWidth < 1024 ? 300 : 470;
-      const height = window.innerWidth < 1024 ? 300 : 470;
-      renderer.setSize(width, height);
+      const scaleRatio = window.devicePixelRatio;
+      const width =
+        window.innerWidth < 1024 ? 300 * scaleRatio : 470 * scaleRatio;
+      const height =
+        window.innerWidth < 1024 ? 300 * scaleRatio : 470 * scaleRatio;
+      renderer.setSize(width / scaleRatio, height / scaleRatio);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-
       if (model) {
         const scale = window.innerWidth < 1024 ? 1.5 : 3.2;
         model.scale.set(scale, scale, scale);
