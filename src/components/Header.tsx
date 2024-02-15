@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
         </div>
       </nav>
       {active ? (
-        <div className="fixed bg-dynamic-menu  rounded-3xl right-5 top-20 text-white transition-opacity z-50 sm:hidden dark:text-black dark:bg-light-mode-items shadow-lg">
+        <div className="fixed bg-dynamic-menu  rounded-3xl right-5 top-20 text-white transition-opacity z-50 md:hidden dark:text-black dark:bg-light-mode-items shadow-lg">
           <ul className=" flex flex-col p-6 items-end justify-around h-full font-semibold text-sm sm:text-base sm:p-8 ">
             {nav.map((e, id) => (
               <li
@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
               </li>
             ))}
             <div
-              className="flex text-white text-xl dark:text-black"
+              className="flex text-white text-xl dark:text-black cursor-pointer"
               onClick={handleDarkMode}
             >
               {darkMode ? (

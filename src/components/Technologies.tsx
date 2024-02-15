@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaSass, FaHtml5, FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss, SiRedux, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { GrDocker } from "react-icons/gr";
 
 const Technologies = () => {
   const MyTechnologies = [
@@ -50,6 +51,11 @@ const Technologies = () => {
       name: "Git",
       color: "text-orange-700",
     },
+    {
+      icon: <GrDocker />,
+      name: "Docker",
+      color: "text-sky-600",
+    },
   ];
 
   const containerVariants = {
@@ -74,7 +80,7 @@ const Technologies = () => {
 
   return (
     <section
-      className="flex flex-col text-white px-5 mt-17 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16 dark:text-light-blue font-semibold"
+      className="flex flex-col text-white px-5 mt-17 sm:px-10 lg:max-w-7xl lg:m-auto lg:px-16 dark:text-light-blue font-semibold "
       id="Technologies"
     >
       <div className="uppercase text-sm text-gray-400">My knowledge of</div>
