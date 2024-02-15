@@ -30,7 +30,7 @@ const Planet3Dmodel: React.FC = () => {
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       if (model) {
-        const scale = window.innerWidth < 1024 ? 1.5 : 3.2;
+        const scale = window.innerWidth < 1024 ? 1.9 : 3.2;
         model.scale.set(scale, scale, scale);
       }
     };
