@@ -1,67 +1,74 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 // @ts-ignore
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// @ts-ignore
 
-const Planet3Dmodel = () => {
+import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
+
+const Planet3Dmodel: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
-  let model = useRef<THREE.Object3D>();
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(33, 1, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.z = 5;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setClearColor(0x000000, 0);
 
-    const adjustSize = () => {
+    const adjustSizeAndScale = (model?: THREE.Object3D) => {
       const width = window.innerWidth < 1024 ? 300 : 470;
       const height = window.innerWidth < 1024 ? 300 : 470;
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+
+      if (model) {
+        const scale = window.innerWidth < 1024 ? 2 : 3.2;
+        model.scale.set(scale, scale, scale);
+      }
     };
-    adjustSize();
 
     mountRef.current?.appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
+    let model: THREE.Object3D<THREE.Object3DEventMap>;
+
     loader.load(
       new URL(
         "../../assets/PlanetModel3D-GLB/stylized_planet.glb",
         import.meta.url
       ).href,
-      (gltf: any) => {
-        model.current = gltf.scene;
-        scene.add(gltf.scene);
+      (gltf: GLTF) => {
+        model = gltf.scene;
+        scene.add(model);
         gltf.scene.rotation.y = Math.PI / 4;
+        adjustSizeAndScale(model);
       },
       undefined,
-      (error: Error) => {
+      (error: ErrorEvent) => {
         console.error("Error loading model:", error);
       }
     );
 
     const animate = () => {
       requestAnimationFrame(animate);
-
-      if (model.current) {
-        model.current.rotation.y += 0.001;
+      if (model) {
+        model.rotation.y += 0.002;
       }
-
       renderer.render(scene, camera);
     };
     animate();
 
-    window.addEventListener("resize", adjustSize);
+    window.addEventListener("resize", () => adjustSizeAndScale(model));
 
     return () => {
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }
-      window.removeEventListener("resize", adjustSize);
+      window.removeEventListener("resize", () => adjustSizeAndScale(model));
     };
   }, []);
 
