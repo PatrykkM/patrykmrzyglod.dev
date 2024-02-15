@@ -21,17 +21,25 @@ const WorkExperienceDesktop: React.FC<WorkExperienceProps> = ({
   }, [controls, inView]);
 
   const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.3, ease: "easeOut" },
+      transition: { duration: 0.5 },
     },
   };
   return (
     <section className="bg-light-blue -mt-px p-5 sm:px-10 lg:max-w-7xl m-auto lg:px-16 hidden lg:block dark:bg-light-blue">
       <div className="mt-20  flex flex-col text-slate-50">
-        <div className="text-base">What i have done so far</div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={titleVariants}
+          className="text-base"
+        >
+          What i have done so far
+        </motion.div>
         <motion.div
           ref={ref}
           initial="hidden"
