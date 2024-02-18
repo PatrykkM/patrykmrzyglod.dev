@@ -25,6 +25,7 @@ export default {
         "1280px": "1280px",
       },
       width: {
+        92: "22.5rem",
         112: "28rem",
         128: "32rem",
       },

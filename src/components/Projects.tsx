@@ -108,7 +108,7 @@ const Projects = () => {
               animate={controls}
               variants={projectVariants}
               key={index}
-              className="bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-8 font-normal sm:w-96 mb-8 dark:bg-light-mode-items dark:text-blue-800"
+              className="bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-6 font-normal sm:w-92 mb-8 dark:bg-light-mode-items dark:text-blue-800"
             >
               <img
                 src={project.img}
