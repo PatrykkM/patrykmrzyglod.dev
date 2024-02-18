@@ -12,9 +12,12 @@ Welcome to my personal portfolio website, a central showcase of my projects. Thi
 
 Leveraging a robust stack of modern technologies, I've built a portfolio that's not only fast and responsive but also rich in features:
 
-[![React](https://img.shields.io/badge/React-gray?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)<br>
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)<br>
-[![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/)<br>
+[![React](https://img.shields.io/badge/React-gray?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+[![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/)
+
 [![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
 
 ## My Journey
