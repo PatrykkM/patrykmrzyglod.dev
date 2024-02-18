@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Collective from "../assets/img/Collective.jpg";
-import Finance from "../assets/img/Finance.jpg";
+import Finance from "../assets/img/track.png";
+import Bape from "../assets/img/In-ProggresBape.png";
 
 const Projects = () => {
   const headerControls = useAnimation();
@@ -40,6 +41,12 @@ const Projects = () => {
       img: Collective,
       desc: `Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface.`,
       techs: "#React #Tailwindcss",
+    },
+    {
+      name: "BoredApe.com",
+      img: Bape,
+      desc: `in-progres`,
+      techs: "#React #??? #???",
     },
   ];
 
@@ -106,7 +113,7 @@ const Projects = () => {
               <img
                 src={project.img}
                 alt={`Photo of my project named ${project.name}`}
-                className="rounded-lg w-full object-cover max-h-56"
+                className="rounded-lg w-full object-cover h-52"
               />
               <div className="mt-3">
                 <span className="text-2xl font-bold ">{project.name}</span>
