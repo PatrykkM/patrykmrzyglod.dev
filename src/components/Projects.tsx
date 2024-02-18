@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Collective from "../assets/img/Collective.jpg";
-import Finance from "../assets/img/track.png";
+import Finance from "../assets/img/Finance2.png";
 import Bape from "../assets/img/In-ProggresBape.png";
 
 const Projects = () => {
@@ -113,7 +113,7 @@ const Projects = () => {
               <img
                 src={project.img}
                 alt={`Photo of my project named ${project.name}`}
-                className="rounded-lg w-full object-cover h-52"
+                className="rounded-lg w-full object-cover h-52 "
               />
               <div className="mt-3">
                 <span className="text-2xl font-bold ">{project.name}</span>
