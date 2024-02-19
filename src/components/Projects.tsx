@@ -112,11 +112,15 @@ const Projects = () => {
               key={index}
               className="flex flex-col  bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-6 font-normal sm:w-92 mb-8 dark:bg-light-mode-items dark:text-blue-800"
             >
-              <a href={project.link} target="_blank">
+              <a
+                href={project.link}
+                target="_blank"
+                className="overflow-hidden rounded-lg"
+              >
                 <img
                   src={project.img}
                   alt={`Photo of my project named ${project.name}`}
-                  className="rounded-lg w-full object-cover h-52 "
+                  className="rounded-lg w-full object-cover h-52 hover:scale-105 transition-all"
                 />
               </a>
               <div className="flex flex-col mt-3 flex-grow">
