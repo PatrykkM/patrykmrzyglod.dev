@@ -31,6 +31,7 @@ const Projects = () => {
     {
       name: "Finance",
       img: Finance,
+      link: `https://patrykkm.github.io/FinanceApp/`,
       desc: `FinanceApp is a finance application that allows users to simulate the buying and selling
         of stocks from top global companies. It aims to provide a brokerage-like experience, enabling
         users to monitor markets and invest in stocks virtually`,
@@ -39,6 +40,7 @@ const Projects = () => {
     {
       name: "Collective",
       img: Collective,
+      link: `https://patrykkm.github.io/Collective/`,
       desc: `Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface.`,
       techs: "#React #Tailwindcss",
     },
@@ -110,11 +112,13 @@ const Projects = () => {
               key={index}
               className="flex flex-col  bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-6 font-normal sm:w-92 mb-8 dark:bg-light-mode-items dark:text-blue-800"
             >
-              <img
-                src={project.img}
-                alt={`Photo of my project named ${project.name}`}
-                className="rounded-lg w-full object-cover h-52 "
-              />
+              <a href={project.link} target="_blank">
+                <img
+                  src={project.img}
+                  alt={`Photo of my project named ${project.name}`}
+                  className="rounded-lg w-full object-cover h-52 "
+                />
+              </a>
               <div className="flex flex-col mt-3 flex-grow">
                 <span className="text-2xl font-bold">{project.name}</span>
                 <p className="text-sm mt-3 text-gray-300 dark:text-gray-500 ">
