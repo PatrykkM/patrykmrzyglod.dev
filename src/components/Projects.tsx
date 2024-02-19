@@ -117,7 +117,7 @@ const Projects = () => {
                   <img
                     src={project.img}
                     alt={`Photo of my project named ${project.name}`}
-                    className="w-full h-52 object-cover transition-all duration-300 ease-in-out hover:scale-105" // Tylko transformacja tutaj
+                    className="w-full h-52 object-cover transition-all duration-300 ease-in-out hover:scale-105 backface-visibility"
                   />
                 </a>
               </div>
