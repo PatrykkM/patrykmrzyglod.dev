@@ -7,7 +7,7 @@ interface HelloSectionProps {
 const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
   const textVariants = {
     offscreen: {
-      y: -20,
+      y: -50,
       opacity: 0,
     },
     onscreen: {
