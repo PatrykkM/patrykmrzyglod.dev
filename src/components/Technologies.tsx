@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
 import { FaSass, FaHtml5, FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiRedux, SiTypescript } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiRedux,
+  SiTypescript,
+  SiThreedotjs,
+  SiFramer,
+} from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrDocker } from "react-icons/gr";
+import {} from "react-icons/si";
 
 const Technologies = () => {
   const MyTechnologies = [
@@ -28,7 +35,7 @@ const Technologies = () => {
     },
     {
       icon: <SiRedux />,
-      name: "Redux",
+      name: "Redux Toolkit",
       color: "text-purple-600",
     },
     {
@@ -55,6 +62,16 @@ const Technologies = () => {
       icon: <GrDocker />,
       name: "Docker",
       color: "text-sky-600",
+    },
+    {
+      icon: <SiThreedotjs />,
+      name: "Three.js",
+      color: "text-black",
+    },
+    {
+      icon: <SiFramer />,
+      name: "Framer",
+      color: "text-sky-400",
     },
   ];
 
