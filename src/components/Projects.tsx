@@ -120,7 +120,7 @@ const Projects = () => {
                 <img
                   src={project.img}
                   alt={`Photo of my project named ${project.name}`}
-                  className="rounded-lg w-full object-cover h-52 hover:scale-105 transition-all"
+                  className=" w-full object-cover h-52 hover:scale-105 transition-all"
                 />
               </a>
               <div className="flex flex-col mt-3 flex-grow">
