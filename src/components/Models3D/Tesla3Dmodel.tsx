@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
 // @ts-ignore
@@ -10,6 +10,7 @@ const Tesla3Dmodel: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const setRendererSize = () => {
@@ -56,6 +57,7 @@ const Tesla3Dmodel: React.FC = () => {
         model.position.set(0, 0, 0);
         scene.add(model);
         camera.lookAt(model.position);
+        setIsLoading(false);
       },
       undefined,
       (error: Error) => {
@@ -105,8 +107,14 @@ const Tesla3Dmodel: React.FC = () => {
       </div>
       <div
         ref={mountRef}
-        className="flex justify-center items-center  bg-transparent "
-      ></div>
+        className="relative flex justify-center items-center  bg-transparent "
+      >
+        {isLoading ? (
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="animate-spin rounded-full h-20 w-20  sm:h-32 sm:w-32 border-2 border-t-2 border-t-transparent border-indigo-600"></div>
+          </div>
+        ) : null}
+      </div>
     </section>
   );
 };
