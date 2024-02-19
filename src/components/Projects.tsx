@@ -110,19 +110,17 @@ const Projects = () => {
               animate={controls}
               variants={projectVariants}
               key={index}
-              className="flex flex-col  bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-6 font-normal sm:w-92 mb-8 dark:bg-light-mode-items dark:text-blue-800"
+              className="flex flex-col   bg-dynamic-menu mt-18 rounded-lg p-5 sm:mr-6 font-normal sm:w-92 mb-8 dark:bg-light-mode-items dark:text-blue-800"
             >
-              <a
-                href={project.link}
-                target="_blank"
-                className="overflow-hidden rounded-lg"
-              >
-                <img
-                  src={project.img}
-                  alt={`Photo of my project named ${project.name}`}
-                  className=" w-full object-cover h-52 hover:scale-105 transition-all"
-                />
-              </a>
+              <div className="overflow-hidden rounded-lg">
+                <a href={project.link} target="_blank" className="">
+                  <img
+                    src={project.img}
+                    alt={`Photo of my project named ${project.name}`}
+                    className="w-full h-52 object-cover transition-all duration-300 ease-in-out hover:scale-105" // Tylko transformacja tutaj
+                  />
+                </a>
+              </div>
               <div className="flex flex-col mt-3 flex-grow">
                 <span className="text-2xl font-bold">{project.name}</span>
                 <p className="text-sm mt-3 text-gray-300 dark:text-gray-500 ">
