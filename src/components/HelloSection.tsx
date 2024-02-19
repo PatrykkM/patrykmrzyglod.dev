@@ -15,16 +15,17 @@ const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 120,
+        ease: "easeInOut",
+        stiffness: 80,
         damping: 10,
-        duration: 0.3,
+        duration: 1,
       },
     },
   };
 
   return (
     <>
-      <div className="lg:mt-36">
+      <div className="lg:mt-36 flex flex-col flex-grow">
         <section className="flex flex-col text-white mt-5 dark:text-mian-text-light">
           <motion.h1
             initial="offscreen"

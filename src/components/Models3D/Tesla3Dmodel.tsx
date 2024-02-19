@@ -111,7 +111,7 @@ const Tesla3Dmodel: React.FC = () => {
       >
         {isLoading ? (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="animate-spin rounded-full h-20 w-20  sm:h-32 sm:w-32 border-2 border-t-2 border-t-transparent border-indigo-600"></div>
+            <div className="animate-spin rounded-full h-20 w-20  sm:h-32 sm:w-32 border-2 border-t-2 border-t-transparent border-indigo-500"></div>
           </div>
         ) : null}
       </div>
