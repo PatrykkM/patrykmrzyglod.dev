@@ -1,4 +1,5 @@
-import { NavItem } from "./common";
+import { JobPositionTypes } from "./common";
+import { NavItemTypes } from "./common";
 
 export interface HeaderProps {
 	darkMode: boolean;
@@ -6,10 +7,13 @@ export interface HeaderProps {
 }
 export interface ActiveNavMobileProps {
 	activeMenu: boolean;
-	nav: NavItem[];
+	nav: NavItemTypes[];
 	handleClick: (id: number) => void;
 	activeIndex: number | null;
 	scrollToSection: (sectionId: string) => void;
 	handleDarkMode: () => void;
 	darkMode: boolean;
+}
+export interface WorkExperienceProps {
+	JobPositions: JobPositionTypes[];
 }

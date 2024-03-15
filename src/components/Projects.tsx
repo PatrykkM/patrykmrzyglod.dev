@@ -3,9 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import Collective from "../assets/img/Collective.jpg";
-import Finance from "../assets/img/Finance2.png";
-import Bape from "../assets/img/In-ProggresBape.png";
+import { MyProjects } from "../constans";
 
 const Projects = () => {
 	const headerControls = useAnimation();
@@ -28,32 +26,6 @@ const Projects = () => {
 			transition: { duration: 0.6, ease: "easeOut" },
 		},
 	};
-
-	const MyProjects = [
-		{
-			name: "Finance",
-			img: Finance,
-			link: `https://patrykkm.github.io/FinanceApp/`,
-			desc: `FinanceApp is a finance application that allows users to simulate the buying and selling
-        of stocks from top global companies. It aims to provide a brokerage-like experience, enabling
-        users to monitor markets and invest in stocks virtually`,
-			techs: "#React #Redux #Tailwindcss",
-		},
-		{
-			name: "Collective",
-			img: Collective,
-			link: `https://patrykkm.github.io/Collective/`,
-			desc: `Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface.`,
-			techs: "#React #Tailwindcss",
-		},
-		{
-			name: "BoredApe.com",
-			img: Bape,
-			link: `https://patrykkm.github.io/BoredApeClub/`,
-			desc: `in-progres`,
-			techs: "#React #ReduxToolkit #Tailwindcss",
-		},
-	];
 
 	const projectVariants = {
 		offscreen: {

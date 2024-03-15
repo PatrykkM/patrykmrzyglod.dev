@@ -1,31 +1,11 @@
 import { motion } from "framer-motion";
 
 import React from "react";
-import { FaReact } from "react-icons/fa";
-import { MdOutlineWebAsset, MdPhoneIphone } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
 
-interface Item {
-	name: string;
-	src: JSX.Element;
-}
+import { KnowledgeItems } from "../constans";
 
 const Introduction: React.FC = () => {
-	const KnowledgeItems: Item[] = [
-		{
-			name: "React Developer",
-			src: <FaReact />,
-		},
-		{
-			name: "Web Developer",
-			src: <MdOutlineWebAsset />,
-		},
-		{
-			name: "Responsive Web Designer",
-			src: <MdPhoneIphone />,
-		},
-	];
-
 	const combinedVariants = {
 		hidden: { y: -50, opacity: 0 },
 		visible: {
@@ -94,7 +74,9 @@ const Introduction: React.FC = () => {
 							initial="hidden"
 							animate={inView ? "visible" : "hidden"}
 						>
-							<div className="pb-1 text-4xl text-blue-300 dark:text-main-dark">{item.src}</div>
+							<div className="pb-1 text-4xl text-blue-300 dark:text-main-dark">
+								<item.src />
+							</div>
 							<div className="pt-1 font-semibold text-blue-600 dark:text-light-blue">
 								{item.name}
 							</div>
