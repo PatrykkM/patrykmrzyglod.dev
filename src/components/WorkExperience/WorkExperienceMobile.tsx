@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-import { WorkExperienceProps } from "./WorkExperience";
+import { WorkExperienceProps } from "../../types/propsTypes";
 
-const WorkExperienceMobile: React.FC<WorkExperienceProps> = ({ JobPositions }) => {
+const WorkExperienceMobile = ({ JobPositions }: WorkExperienceProps) => {
 	const infoVariants = {
 		offscreen: {
 			x: 100,

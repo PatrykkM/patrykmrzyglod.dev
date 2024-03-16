@@ -36,13 +36,13 @@ const ContactMe = () => {
 			setProcessing((prev) => !prev); //Będzie TRUE czyli błąd bedzie aktwyny Procesuje sie
 			setTimeout(() => {
 				emailjs
-					.sendForm(TEMPLATE_ID, TEMPLATE_ID, formRef.current!, USER_ID)
+					.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current!, USER_ID)
 					.then(() => {
 						setActionForm((prev) => ({
 							...prev,
 							correct: !prev.correct,
 						}));
-						formRef.current?.reset();
+						formRef.current?.reset(); //TODO:Redux persist jak ktos wysle ,mozna razy wysłać kolorki zalezne od powodzenia sie akcji
 					})
 					.catch(() => {
 						setActionForm((prev) => ({
@@ -51,9 +51,10 @@ const ContactMe = () => {
 						}));
 					});
 				setProcessing((prev) => !prev);
-			}, 2000);
+			}, 2000); // koniec procesowania
 		}
 	};
+	console.log(actionForm);
 	return (
 		<section className="text-white lg:w-128" id="Contact">
 			<motion.div
