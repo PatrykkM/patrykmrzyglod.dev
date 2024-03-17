@@ -2,18 +2,23 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 
 import { useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { UserSentFormCorrectly, UserSentFormError } from "../assets/redux/slices/userSentForm";
+import { RootState } from "../assets/redux/store";
 
 const ContactMe = () => {
+	const dispatch = useDispatch();
 	const formRef = useRef<HTMLFormElement>(null);
 	const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
 	const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID as string;
 	const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+	const isUserSendFormCorrectly = useSelector((state: RootState) => state.userSentFrom.correct);
+	const isUserSendFormError = useSelector((state: RootState) => state.userSentFrom.error);
 
-	const [actionForm, setActionForm] = useState({
-		error: false,
-		correct: false,
-	});
 	const [processing, setProcessing] = useState(false);
+	const [shake, setShake] = useState(false);
+	const [isShaking, setIsShaking] = useState(false);
 
 	const formVariants = {
 		offscreen: {
@@ -32,29 +37,38 @@ const ContactMe = () => {
 	};
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (formRef.current) {
-			setProcessing((prev) => !prev); //Będzie TRUE czyli błąd bedzie aktwyny Procesuje sie
+		if (formRef.current && !isUserSendFormCorrectly && !isUserSendFormError && !processing) {
+			setProcessing((prev) => !prev);
+			emailjs
+				.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current!, USER_ID)
+				.then(() => {
+					formRef.current?.reset();
+					dispatch(UserSentFormCorrectly());
+				})
+				.catch(() => {
+					dispatch(UserSentFormError(true));
+				});
 			setTimeout(() => {
-				emailjs
-					.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current!, USER_ID)
-					.then(() => {
-						setActionForm((prev) => ({
-							...prev,
-							correct: !prev.correct,
-						}));
-						formRef.current?.reset(); //TODO:Redux persist jak ktos wysle ,mozna razy wysłać kolorki zalezne od powodzenia sie akcji
-					})
-					.catch(() => {
-						setActionForm((prev) => ({
-							...prev,
-							error: !prev.error,
-						}));
-					});
 				setProcessing((prev) => !prev);
-			}, 2000); // koniec procesowania
+				setTimeout(() => {
+					dispatch(UserSentFormError(false));
+				}, 3000);
+			}, 2000);
+		} else {
+			formRef.current?.reset();
 		}
 	};
-	console.log(actionForm);
+	const handleShakeAlert = () => {
+		if (isShaking === false) {
+			setShake(true);
+			setIsShaking(true);
+
+			setTimeout(() => {
+				setShake(false);
+				setIsShaking(false);
+			}, 700);
+		}
+	};
 	return (
 		<section className="text-white lg:w-128" id="Contact">
 			<motion.div
@@ -116,15 +130,27 @@ const ContactMe = () => {
 						/>
 					</div>
 					<button
+						onClick={handleShakeAlert}
 						type="submit"
-						className="w-22 mt-7 flex h-12 w-24 items-center  justify-center rounded-2xl bg-light-blue font-medium  dark:text-white"
+						className={`w-22 mt-7 flex h-12 w-24 items-center justify-center rounded-2xl  font-medium dark:text-white ${isUserSendFormError && !processing ? `bg-red-600` : ``} ${isUserSendFormCorrectly && !processing ? `bg-green-500` : `bg-light-blue`}`}
 					>
 						{processing ? (
 							<div className="border-Light-Green ml-2 h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-t-transparent"></div>
+						) : isUserSendFormCorrectly ? (
+							<p>Sent!</p>
+						) : isUserSendFormError ? (
+							<p>Error</p>
 						) : (
 							<p>Send</p>
 						)}
 					</button>
+					{isUserSendFormCorrectly && !processing ? (
+						<div className="mt-6 text-xs">
+							<p className={`${shake ? `animate-shake` : ``}`}>
+								* Thank you, your email has been sent.
+							</p>
+						</div>
+					) : null}
 				</form>
 			</motion.div>
 		</section>
