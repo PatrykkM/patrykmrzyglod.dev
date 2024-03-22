@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import "react-icons/si";
 
-import { MyTechnologies } from "../constans";
+import { MyTechnologies } from "../../constans";
 
 const Technologies = () => {
 	const containerVariants = {

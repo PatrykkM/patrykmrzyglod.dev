@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { WorkExperienceProps } from "../../types/propsTypes";
+import { WorkExperienceProps } from "../../../types/propsTypes";
 
 const WorkExperienceDesktop: React.FC<WorkExperienceProps> = ({ JobPositions }) => {
 	const controls = useAnimation();

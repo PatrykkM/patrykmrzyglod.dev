@@ -48,7 +48,7 @@ const Tesla3Dmodel: React.FC = () => {
 
 		const loader = new GLTFLoader();
 		loader.load(
-			new URL("../../assets/TeslaModel3D-GLB/tesla_2018_model_3.glb", import.meta.url).href,
+			new URL("../../../assets/TeslaModel3D-GLB/tesla_2018_model_3.glb", import.meta.url).href,
 			(gltf: any) => {
 				const model = gltf.scene;
 				model.scale.set(0.2, 0.2, 0.2);

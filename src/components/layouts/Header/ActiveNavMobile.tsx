@@ -1,7 +1,7 @@
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 
-import { ActiveNavMobileProps } from "../../types/propsTypes";
+import { ActiveNavMobileProps } from "../../../types/propsTypes";
 
 const ActiveNavMobile = ({
 	activeMenu,

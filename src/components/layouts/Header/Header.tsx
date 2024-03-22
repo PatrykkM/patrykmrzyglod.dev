@@ -4,8 +4,8 @@ import { MdLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 
-import { nav } from "../../constans";
-import { HeaderProps } from "../../types/propsTypes";
+import { nav } from "../../../constans/index";
+import { HeaderProps } from "../../../types/propsTypes";
 import Alert from "../Alert";
 import ActiveNavMobile from "./ActiveNavMobile";
 

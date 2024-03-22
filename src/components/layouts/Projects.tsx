@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { MyProjects } from "../constans";
+import { MyProjects } from "../../constans";
 
 const Projects = () => {
 	const headerControls = useAnimation();

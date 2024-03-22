@@ -1,4 +1,4 @@
-import { JobPositions } from "../../constans";
+import { JobPositions } from "../../../constans";
 import WorkExperienceDesktop from "./WorkExperienceDesktop";
 import WorkExperienceMobile from "./WorkExperienceMobile";
 

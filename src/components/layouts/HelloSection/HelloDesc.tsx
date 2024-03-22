@@ -2,11 +2,9 @@ import { motion } from "framer-motion";
 
 import { LuMouse } from "react-icons/lu";
 
-interface HelloSectionProps {
-	darkMode: boolean;
-}
+import { HelloSectionProps } from "../../../types/propsTypes";
 
-const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
+const HelloDesc = ({ darkMode }: HelloSectionProps) => {
 	const textVariants = {
 		offscreen: {
 			y: -50,
@@ -80,4 +78,4 @@ const HelloSection: React.FC<HelloSectionProps> = ({ darkMode }) => {
 	);
 };
 
-export default HelloSection;
+export default HelloDesc;

@@ -1,12 +1,21 @@
+import { motion } from "framer-motion";
 import * as THREE from "three";
 // @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // @ts-ignore
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-const Planet3Dmodel: React.FC = () => {
+import { Planet3DformVariants } from "../../../utils/motion";
+
+const Planet3Dmodel = () => {
+	const motionOpt = {
+		initial: "offscreen",
+		whileInView: "onscreen",
+		viewport: { once: true },
+		variants: Planet3DformVariants,
+	};
 	const mountRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -38,7 +47,7 @@ const Planet3Dmodel: React.FC = () => {
 		let model: THREE.Object3D<THREE.Object3DEventMap>;
 
 		loader.load(
-			new URL("../../assets/PlanetModel3D-GLB/stylized_planet.glb", import.meta.url).href,
+			new URL("../../../assets/PlanetModel3D-GLB/stylized_planet.glb", import.meta.url).href,
 			(gltf: GLTF) => {
 				model = gltf.scene;
 				scene.add(model);
@@ -71,9 +80,11 @@ const Planet3Dmodel: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="bg-Grey-Wave dark:bg-light-mode-items">
-			<div ref={mountRef} className="flex h-full w-full justify-center"></div>
-		</div>
+		<motion.div {...motionOpt}>
+			<div className="bg-Grey-Wave dark:bg-light-mode-items">
+				<div ref={mountRef} className="flex h-full w-full justify-center"></div>
+			</div>
+		</motion.div>
 	);
 };
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { WorkExperienceProps } from "../../types/propsTypes";
+import { WorkExperienceProps } from "../../../types/propsTypes";
 
 const WorkExperienceMobile = ({ JobPositions }: WorkExperienceProps) => {
 	const infoVariants = {

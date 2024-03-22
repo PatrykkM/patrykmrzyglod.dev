@@ -17,3 +17,6 @@ export interface ActiveNavMobileProps {
 export interface WorkExperienceProps {
 	JobPositions: JobPositionTypes[];
 }
+export interface HelloSectionProps {
+	darkMode: boolean;
+}
