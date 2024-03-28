@@ -4,16 +4,15 @@ import { ContactformVariants } from "../../../utils/motion";
 import FormContact from "./FormContact";
 
 const ContactMeSection = () => {
-	const motionOpt = {
-		initial: "offscreen",
-		whileInView: "onscreen",
-		viewport: { once: true },
-		variants: ContactformVariants,
-	};
-
 	return (
 		<section className="text-white lg:w-128" id="Contact">
-			<motion.div {...motionOpt} className="rounded-xl bg-main-dark p-7 dark:bg-main-light">
+			<motion.div
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{ once: true }}
+				variants={ContactformVariants}
+				className="rounded-xl  bg-main-dark p-7 dark:bg-main-light"
+			>
 				<div className="mt-2 text-sm uppercase text-gray-400 dark:text-gray-500">Get in touch</div>
 				<div className="my-2 text-3xl font-bold dark:text-black sm:text-5xl"> Contact</div>
 				<div className="mt-4 text-gray-400 dark:text-gray-500">

@@ -34,6 +34,9 @@ const Technologies = () => {
 			<div className="mt-2 text-3xl font-extrabold dark:text-mian-text-light lg:text-6xl">
 				Technologies
 			</div>
+			<p className="font-base mt-5 text-xs font-light">
+				*Technologies are listed in order of proficiency, from highest to lowest.
+			</p>
 			<motion.div
 				className="sm:flex sm:flex-wrap"
 				variants={containerVariants}

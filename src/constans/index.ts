@@ -1,12 +1,20 @@
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaReact, FaSass } from "react-icons/fa";
-import { GrDocker } from "react-icons/gr";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
+import { GrDocker, GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdOutlineWebAsset, MdPhoneIphone } from "react-icons/md";
-import { SiFramer, SiRedux, SiTailwindcss, SiThreedotjs, SiTypescript } from "react-icons/si";
+import {
+	SiDotnet,
+	SiFramer,
+	SiRedux,
+	SiTailwindcss,
+	SiThreedotjs,
+	SiTypescript,
+} from "react-icons/si";
 
 import Collective from "../assets/img/Collective.jpg";
 import Finance from "../assets/img/Finance2.png";
 import Bape from "../assets/img/In-ProggresBape.png";
+import AdminPanel from "../assets/img/adminPanel.jpg";
 import biotiq from "../assets/img/biotiq.jpeg";
 import ignatium from "../assets/img/ignatium.png";
 import nanovo from "../assets/img/nanovo.png";
@@ -81,6 +89,11 @@ export const KnowledgeItems = [
 ];
 export const MyTechnologies = [
 	{
+		icon: FaReact,
+		name: "React",
+		color: "text-cyan-400",
+	},
+	{
 		icon: FaHtml5,
 		name: "HTML5",
 		color: "text-orange-600",
@@ -91,24 +104,9 @@ export const MyTechnologies = [
 		color: " text-sky-500",
 	},
 	{
-		icon: FaReact,
-		name: "React",
-		color: "text-cyan-400",
-	},
-	{
 		icon: SiTypescript,
 		name: "Typescript",
 		color: "text-blue-900",
-	},
-	{
-		icon: SiRedux,
-		name: "Redux Toolkit",
-		color: "text-purple-600",
-	},
-	{
-		icon: FaSass,
-		name: "Sass",
-		color: "text-pink-400",
 	},
 	{
 		icon: IoLogoJavascript,
@@ -121,14 +119,29 @@ export const MyTechnologies = [
 		color: "text-cyan-600",
 	},
 	{
+		icon: SiRedux,
+		name: "Redux Toolkit",
+		color: "text-purple-600",
+	},
+	{
 		icon: FaGitAlt,
 		name: "Git",
 		color: "text-orange-700",
 	},
 	{
-		icon: GrDocker,
-		name: "Docker",
-		color: "text-sky-600",
+		icon: FaSass,
+		name: "Sass",
+		color: "text-pink-400",
+	},
+	{
+		icon: SiFramer,
+		name: "Framer",
+		color: "text-sky-400",
+	},
+	{
+		icon: GrMysql,
+		name: "Mysql",
+		color: "text-sky-800",
 	},
 	{
 		icon: SiThreedotjs,
@@ -136,9 +149,19 @@ export const MyTechnologies = [
 		color: "text-black",
 	},
 	{
-		icon: SiFramer,
-		name: "Framer",
-		color: "text-sky-400",
+		icon: FaNodeJs,
+		name: "NodeJs",
+		color: "text-lime-500",
+	},
+	{
+		icon: GrDocker,
+		name: "Docker",
+		color: "text-sky-600",
+	},
+	{
+		icon: SiDotnet,
+		name: ".NET",
+		color: "text-violet-600",
 	},
 ];
 
@@ -150,7 +173,7 @@ export const MyProjects = [
 		desc: `FinanceApp is a finance application that allows users to simulate the buying and selling
         of stocks from top global companies. It aims to provide a brokerage-like experience, enabling
         users to monitor markets and invest in stocks virtually`,
-		techs: "#React #Redux #Tailwindcss",
+		techs: "#React #Redux #Tailwindcss #Chart.js",
 	},
 	{
 		name: "Collective",
@@ -160,10 +183,17 @@ export const MyProjects = [
 		techs: "#React #Tailwindcss",
 	},
 	{
-		name: "BoredApe.com",
+		name: "BoredApeClub",
 		img: Bape,
 		link: `https://patrykkm.github.io/BoredApeClub/`,
-		desc: `in-progres`,
+		desc: `The Bored Ape Club is an NFT Shop & Club, your go-to platform for delving into the exciting world of NFTs. This application stands as a beacon of modern design and functionality, offering a seamless, responsive experience across all devices. Here, you can buy and sell NFTs, all showcased in an aesthetically pleasing design enhanced by tools like Framer.`,
 		techs: "#React #ReduxToolkit #Tailwindcss",
+	},
+	{
+		name: "ClinicPatientDashboard",
+		img: AdminPanel,
+		link: `https://github.com/PatrykkM/ClinicPatientDashboard`,
+		desc: `This full-stack application serves as a sophisticated admin panel that streamlines the management of client data. It features a clean, modern interface that allows administrators to efficiently add, remove, edit, and search for clients.`,
+		techs: "#React #ReduxToolkit #Tailwindcss #Express.js #MySql",
 	},
 ];

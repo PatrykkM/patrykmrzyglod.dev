@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import * as THREE from "three";
 // @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -7,15 +6,7 @@ import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 import { useEffect, useRef } from "react";
 
-import { Planet3DformVariants } from "../../../utils/motion";
-
 const Planet3Dmodel = () => {
-	const motionOpt = {
-		initial: "offscreen",
-		whileInView: "onscreen",
-		viewport: { once: true },
-		variants: Planet3DformVariants,
-	};
 	const mountRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -80,11 +71,9 @@ const Planet3Dmodel = () => {
 	}, []);
 
 	return (
-		<motion.div {...motionOpt}>
-			<div className="bg-Grey-Wave dark:bg-light-mode-items">
-				<div ref={mountRef} className="flex h-full w-full justify-center"></div>
-			</div>
-		</motion.div>
+		<div className="bg-Grey-Wave dark:bg-light-mode-items">
+			<div ref={mountRef} className="flex h-full w-full justify-center"></div>
+		</div>
 	);
 };
 
