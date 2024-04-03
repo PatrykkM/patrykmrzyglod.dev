@@ -81,3 +81,20 @@ export const workExperienceMobileVariants = {
 		},
 	},
 };
+export const helloTextVariants = {
+	offscreen: {
+		y: -50,
+		opacity: 0,
+	},
+	onscreen: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			type: "spring",
+			ease: "easeInOut",
+			stiffness: 80,
+			damping: 10,
+			duration: 1,
+		},
+	},
+};

@@ -3,24 +3,14 @@ import { motion } from "framer-motion";
 import { LuMouse } from "react-icons/lu";
 
 import { HelloSectionProps } from "../../../types/propsTypes";
+import { helloTextVariants } from "../../../utils/motion";
 
 const HelloDesc = ({ darkMode }: HelloSectionProps) => {
-	const textVariants = {
-		offscreen: {
-			y: -50,
-			opacity: 0,
-		},
-		onscreen: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				type: "spring",
-				ease: "easeInOut",
-				stiffness: 80,
-				damping: 10,
-				duration: 1,
-			},
-		},
+	const motionProps = {
+		initial: "offscreen",
+		whileInView: "onscreen",
+		viewport: { once: true, amount: 0.5 },
+		variants: helloTextVariants,
 	};
 
 	return (
@@ -28,29 +18,20 @@ const HelloDesc = ({ darkMode }: HelloSectionProps) => {
 			<div className="flex flex-grow flex-col lg:mt-36">
 				<section className="mt-5 flex flex-col text-white dark:text-mian-text-light">
 					<motion.h1
-						initial="offscreen"
-						whileInView="onscreen"
-						viewport={{ once: true, amount: 0.5 }}
-						variants={textVariants}
+						{...motionProps}
 						className="flex items-center text-5xl font-bold sm:text-7xl lg:text-8xl"
 					>
 						<div>Hello</div>
 						<div className="mb-1 ml-1">👋</div>
 					</motion.h1>
 					<motion.h2
-						initial="offscreen"
-						whileInView="onscreen"
-						viewport={{ once: true, amount: 0.5 }}
-						variants={textVariants}
+						{...motionProps}
 						className="gradient-text mt-2 text-4xl font-bold sm:my-5 sm:text-6xl lg:text-8xl"
 					>
 						I'm Patryk
 					</motion.h2>
 					<motion.div
-						initial="offscreen"
-						whileInView="onscreen"
-						viewport={{ once: true, amount: 0.5 }}
-						variants={textVariants}
+						{...motionProps}
 						className={`my-2 text-4xl font-bold ${
 							darkMode ? `outline-text-light` : `outline-text`
 						} italic sm:text-6xl lg:text-8xl `}

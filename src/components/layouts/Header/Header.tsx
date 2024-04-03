@@ -37,22 +37,22 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 	};
 	return (
 		<>
-			<nav className="fixed z-9999  flex  h-18 w-full border-b border-gray-800 bg-transparent   px-5  backdrop-blur-lg  backdrop-filter dark:border-gray-400  sm:px-10 lg:items-center lg:px-0">
-				<div className="flex w-full  items-center justify-between  text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16  ">
-					<div className="gradient-text ">PatrykMrzygłód.dev</div>
+			<nav className="fixed z-9999 flex h-18 w-full border-b border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter dark:border-gray-400 sm:px-10 lg:items-center lg:px-0">
+				<div className="flex w-full items-center justify-between text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16">
+					<h2 className="gradient-text">PatrykMrzygłód.dev</h2>
 					<div
-						className="font-bolder  cursor-pointer text-2xl text-white transition-opacity dark:text-black  md:hidden"
+						className="font-bolder cursor-pointer text-2xl text-white transition-opacity dark:text-black md:hidden"
 						onClick={() => setActiveMenu(!activeMenu)}
 					>
 						{activeMenu ? <RxCross2 /> : <RxHamburgerMenu />}
 					</div>
-					<div className=" hidden cursor-pointer items-center justify-center text-white  dark:text-black md:flex">
+					<div className="hidden cursor-pointer items-center justify-center text-white  dark:text-black md:flex">
 						{nav.map((e, id) => (
 							<li
 								onClick={() => handleClick(id)}
 								className={`${
 									activeIndex === id ? "gradient-text" : ""
-								}  ml-10 list-none text-base font-medium`}
+								} ml-10 list-none text-base font-medium`}
 								key={e.name}
 							>
 								<a href={`#${e.name}`} onClick={() => scrollToSection(e.name)}>

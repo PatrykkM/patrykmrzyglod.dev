@@ -18,6 +18,7 @@ const FormContact = () => {
 	const [processing, setProcessing] = useState(false);
 	const [shake, setShake] = useState(false);
 	const [isShaking, setIsShaking] = useState(false);
+
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (formRef.current && !isUserSendFormCorrectly && !isUserSendFormError && !processing) {
@@ -41,6 +42,7 @@ const FormContact = () => {
 			formRef.current?.reset();
 		}
 	};
+
 	const handleShakeAlert = () => {
 		if (isShaking === false) {
 			setShake(true);
@@ -52,6 +54,7 @@ const FormContact = () => {
 			}, 700);
 		}
 	};
+
 	return (
 		<form className="font-me mt-5 dark:text-gray-800" onSubmit={(e) => sendEmail(e)} ref={formRef}>
 			<div className="mt-8">

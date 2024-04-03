@@ -13,9 +13,9 @@ const ContactMeSection = () => {
 				variants={contactformVariants}
 				className="rounded-xl  bg-main-dark p-7 dark:bg-main-light"
 			>
-				<div className="mt-2 text-sm uppercase text-gray-400 dark:text-gray-500">Get in touch</div>
-				<div className="my-2 text-3xl font-bold dark:text-black sm:text-5xl"> Contact</div>
-				<div className="mt-4 text-gray-400 dark:text-gray-500">
+				<p className="mt-2 text-sm uppercase text-gray-400 dark:text-gray-500">Get in touch</p>
+				<h3 className="my-2 text-3xl font-bold dark:text-black sm:text-5xl"> Contact</h3>
+				<p className="mt-4 text-gray-400 dark:text-gray-500">
 					I appreciate any communication you can provide via
 					<a href="mailto:patrykmrzyglod3@gmail.com" className="gradient-text ml-1 font-bold">
 						email
@@ -28,7 +28,7 @@ const ContactMeSection = () => {
 						LinkedIn
 					</a>
 					or the form provided below.
-				</div>
+				</p>
 				<FormContact />
 			</motion.div>
 		</section>
