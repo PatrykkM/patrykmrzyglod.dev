@@ -38,3 +38,22 @@ export const projectsHeaderVariants = {
 		transition: { duration: 0.6, ease: "easeOut" },
 	},
 };
+
+export const SingleTechnologyVariants = {
+	hidden: { y: 20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+		transition: { duration: 0.4 },
+	},
+};
+export const techsContainerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			when: "beforeChildren",
+			staggerChildren: 0.2,
+		},
+	},
+};

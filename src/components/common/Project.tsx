@@ -30,7 +30,7 @@ const Project = ({ index, project }: ProjectsProps) => {
 			className="mb-8 mt-18 flex flex-col rounded-lg bg-dynamic-menu p-5 font-normal dark:bg-light-mode-items dark:text-blue-800 sm:mr-6 sm:w-92"
 		>
 			<div className="overflow-hidden rounded-lg">
-				<a href={project.link} target="_blank" className="">
+				<a href={project.link} target="_blank">
 					<img
 						src={project.img}
 						alt={`Photo of my project named ${project.name}`}

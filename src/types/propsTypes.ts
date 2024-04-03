@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 import { JobPositionTypes } from "./common";
 import { NavItemTypes } from "./common";
 
@@ -28,5 +30,13 @@ export interface ProjectsProps {
 		link: string;
 		desc: string;
 		techs: string;
+	};
+}
+export interface TechProps {
+	index: number;
+	tech: {
+		icon: IconType;
+		name: string;
+		color: string;
 	};
 }
