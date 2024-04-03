@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { MyProjects } from "../../constans";
+import { projectsHeaderVariants } from "../../utils/motion";
+import Project from "../common/Project";
 
 const Projects = () => {
 	const headerControls = useAnimation();
@@ -18,38 +20,13 @@ const Projects = () => {
 		}
 	}, [headerControls, headerInView]);
 
-	const headerVariants = {
-		hidden: { opacity: 0, y: -50 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6, ease: "easeOut" },
-		},
-	};
-
-	const projectVariants = {
-		offscreen: {
-			x: -100,
-			opacity: 0,
-		},
-		onscreen: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: "spring",
-				bounce: 0.4,
-				duration: 0.8,
-			},
-		},
-	};
-
 	return (
 		<section className="mt-18 flex flex-col px-5 font-medium text-white sm:px-10 lg:m-auto lg:mt-18 lg:max-w-7xl lg:px-16">
 			<motion.div
 				ref={headerRef}
 				initial="hidden"
 				animate={headerControls}
-				variants={headerVariants}
+				variants={projectsHeaderVariants}
 			>
 				<p className="text-sm uppercase text-gray-500 sm:text-base">My work</p>
 				<div className="mt-2 text-3xl font-extrabold dark:text-mian-text-light sm:text-5xl">
@@ -64,45 +41,9 @@ const Projects = () => {
 				</p>
 			</motion.div>
 			<div className="flex-wrap justify-center sm:flex sm:justify-start">
-				{MyProjects.map((project, index) => {
-					const [ref, inView] = useInView({
-						triggerOnce: true,
-						threshold: 0.3,
-					});
-					const controls = useAnimation();
-
-					useEffect(() => {
-						if (inView) {
-							controls.start("onscreen");
-						}
-					}, [controls, inView]);
-
-					return (
-						<motion.div
-							ref={ref}
-							initial="offscreen"
-							animate={controls}
-							variants={projectVariants}
-							key={index}
-							className="mb-8 mt-18 flex flex-col rounded-lg bg-dynamic-menu p-5 font-normal dark:bg-light-mode-items dark:text-blue-800 sm:mr-6 sm:w-92"
-						>
-							<div className="overflow-hidden rounded-lg">
-								<a href={project.link} target="_blank" className="">
-									<img
-										src={project.img}
-										alt={`Photo of my project named ${project.name}`}
-										className="h-52 w-full object-cover "
-									/>
-								</a>
-							</div>
-							<div className="mt-3 flex flex-grow flex-col">
-								<span className="text-2xl font-bold">{project.name}</span>
-								<p className="mt-3 text-sm text-gray-300 dark:text-gray-500">{project.desc}</p>
-							</div>
-							<div className="mt-3 text-sm text-orange-400">{project.techs}</div>
-						</motion.div>
-					);
-				})}
+				{MyProjects.map((project, index) => (
+					<Project key={index} index={index} project={project} />
+				))}
 			</div>
 		</section>
 	);

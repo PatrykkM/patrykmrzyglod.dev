@@ -20,3 +20,13 @@ export interface WorkExperienceProps {
 export interface HelloSectionProps {
 	darkMode: boolean;
 }
+export interface ProjectsProps {
+	index: number;
+	project: {
+		name: string;
+		img: string;
+		link: string;
+		desc: string;
+		techs: string;
+	};
+}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { ContactformVariants } from "../../../utils/motion";
+import { contactformVariants } from "../../../utils/motion";
 import FormContact from "./FormContact";
 
 const ContactMeSection = () => {
@@ -10,7 +10,7 @@ const ContactMeSection = () => {
 				initial="offscreen"
 				whileInView="onscreen"
 				viewport={{ once: true }}
-				variants={ContactformVariants}
+				variants={contactformVariants}
 				className="rounded-xl  bg-main-dark p-7 dark:bg-main-light"
 			>
 				<div className="mt-2 text-sm uppercase text-gray-400 dark:text-gray-500">Get in touch</div>
