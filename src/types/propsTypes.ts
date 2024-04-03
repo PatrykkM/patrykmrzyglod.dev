@@ -40,3 +40,7 @@ export interface TechProps {
 		color: string;
 	};
 }
+export interface SingleWorkExperienceProps {
+	position: JobPositionTypes;
+	id: number;
+}

@@ -57,3 +57,27 @@ export const techsContainerVariants = {
 		},
 	},
 };
+export const workExperienceTitleVariants = {
+	hidden: { opacity: 0, y: -50 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.5 },
+	},
+};
+export const workExperienceMobileVariants = {
+	offscreen: {
+		x: 100,
+		opacity: 0,
+	},
+	onscreen: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			type: "spring",
+			stiffness: 100,
+			damping: 20,
+			duration: 0.5,
+		},
+	},
+};
