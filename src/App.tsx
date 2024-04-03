@@ -10,7 +10,7 @@ import LastWaveDelmiter from "./components/layouts/Waves/LastWaveDelmiter";
 import SecondWaveDelmiter from "./components/layouts/Waves/SecondWaveDelmiter";
 import ThirdWaveDelmiter from "./components/layouts/Waves/ThirdWaveDelmiter";
 import WaveDelmiter from "./components/layouts/Waves/WaveDelmiter";
-import WorkExperience from "./components/layouts/WorkExperience/WorkExperience";
+import WorkExperience from "./components/layouts/WorkExperience";
 import "./css/index.css";
 
 function App() {

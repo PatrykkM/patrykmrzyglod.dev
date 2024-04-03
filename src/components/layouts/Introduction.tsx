@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 
-import React from "react";
 import { useInView } from "react-intersection-observer";
 
 import { KnowledgeItems } from "../../constants";
 
-const Introduction: React.FC = () => {
+const Introduction = () => {
 	const combinedVariants = {
 		hidden: { y: -50, opacity: 0 },
 		visible: {
@@ -36,22 +35,22 @@ const Introduction: React.FC = () => {
 	return (
 		<div className="mt-18 px-5 sm:px-10 lg:mt-0 lg:p-0">
 			<section ref={ref} className="flex flex-col text-white lg:m-auto lg:max-w-7xl lg:px-16 ">
-				<motion.div
+				<motion.p
 					initial="hidden"
 					animate={inView ? "visible" : "hidden"}
 					variants={combinedVariants}
 					className="uppercase text-gray-500"
 				>
 					Introduction
-				</motion.div>
-				<motion.div
+				</motion.p>
+				<motion.h2
 					initial="hidden"
 					animate={inView ? "visible" : "hidden"}
 					variants={combinedVariants}
 					className="my-2 text-3xl font-bold dark:text-mian-text-light sm:text-5xl lg:text-6xl"
 				>
 					Overview
-				</motion.div>
+				</motion.h2>
 				<p className="leading-7 text-gray-500">
 					I am an experienced software engineer with strong skills in JavaScript and TypeScript,
 					focusing on front-end development using frameworks like React. My expertise includes
@@ -75,12 +74,10 @@ const Introduction: React.FC = () => {
 								initial="hidden"
 								animate={inView ? "visible" : "hidden"}
 							>
-								<div className="pb-1 text-4xl text-blue-300 dark:text-main-dark">
+								<p className="pb-1 text-4xl text-blue-300 dark:text-main-dark">
 									<item.src />
-								</div>
-								<div className="pt-1 font-semibold text-blue-600 dark:text-light-blue">
-									{item.name}
-								</div>
+								</p>
+								<p className="pt-1 font-semibold text-blue-600 dark:text-light-blue">{item.name}</p>
 							</motion.div>
 						);
 					})}

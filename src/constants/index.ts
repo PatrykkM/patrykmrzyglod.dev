@@ -156,7 +156,7 @@ export const MyTechnologies = [
 	{
 		icon: GrDocker,
 		name: "Docker",
-		color: "text-sky-600",
+		color: "text-sky-500",
 	},
 	{
 		icon: SiDotnet,

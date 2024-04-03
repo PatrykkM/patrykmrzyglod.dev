@@ -1,3 +1,12 @@
+export const titleOfSectionVariants = {
+	offscreen: { opacity: 0, y: -50 },
+	onscreen: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.5 },
+	},
+};
+
 export const contactformVariants = {
 	offscreen: {
 		x: -100,
@@ -39,7 +48,7 @@ export const projectsHeaderVariants = {
 	},
 };
 
-export const SingleTechnologyVariants = {
+export const singleTechnologyVariants = {
 	hidden: { y: 20, opacity: 0 },
 	visible: {
 		y: 0,
@@ -57,14 +66,7 @@ export const techsContainerVariants = {
 		},
 	},
 };
-export const workExperienceTitleVariants = {
-	hidden: { opacity: 0, y: -50 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.5 },
-	},
-};
+
 export const workExperienceMobileVariants = {
 	offscreen: {
 		x: 100,
@@ -81,7 +83,8 @@ export const workExperienceMobileVariants = {
 		},
 	},
 };
-export const helloTextVariants = {
+
+export const helloSectionTitleVariants = {
 	offscreen: {
 		y: -50,
 		opacity: 0,

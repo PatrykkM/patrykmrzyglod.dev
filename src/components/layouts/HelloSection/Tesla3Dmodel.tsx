@@ -101,7 +101,7 @@ const Tesla3Dmodel: React.FC = () => {
 				<div className="mt-6 text-3xl">
 					<PiArrowBendLeftDownFill />
 				</div>
-				Try to rotate me!
+				<p>Try to rotate me!</p>
 			</div>
 			<div ref={mountRef} className="relative flex items-center justify-center  bg-transparent ">
 				{isLoading ? (
