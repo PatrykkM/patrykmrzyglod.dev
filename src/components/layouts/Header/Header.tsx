@@ -4,8 +4,9 @@ import { MdLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 
-import { nav } from "../../../constans/index";
+import { nav } from "../../../constants/index";
 import { HeaderProps } from "../../../types/propsTypes";
+import NavItem from "../../common/NavItem";
 import Alert from "../Alert";
 import ActiveNavMobile from "./ActiveNavMobile";
 
@@ -13,19 +14,22 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 	const [activeMenu, setActiveMenu] = useState(false);
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-	const handleClick = (id: number) => {
-		setActiveIndex(id);
-		setActiveMenu((prev) => (prev = !prev));
-	};
 	const scrollToSection = (sectionId: string) => {
 		const section = document.getElementById(sectionId);
 		section?.scrollIntoView({ behavior: "smooth" });
 	};
+
 	const handleDarkMode = () => {
 		document.body.classList.toggle("dark");
 		setDarkMode((prev) => (prev = !prev));
 		setActiveMenu((prev) => (prev = !prev));
 	};
+
+	const handleClick = (id: number) => {
+		setActiveIndex(id);
+		setActiveMenu((prev) => !prev);
+	};
+
 	const ActiveNavMobileProps = {
 		activeMenu: activeMenu,
 		nav: nav,
@@ -35,6 +39,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 		handleDarkMode: handleDarkMode,
 		darkMode: darkMode,
 	};
+
 	return (
 		<>
 			<nav className="fixed z-9999 flex h-18 w-full border-b border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter dark:border-gray-400 sm:px-10 lg:items-center lg:px-0">
@@ -48,17 +53,14 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 					</div>
 					<div className="hidden cursor-pointer items-center justify-center text-white  dark:text-black md:flex">
 						{nav.map((e, id) => (
-							<li
-								onClick={() => handleClick(id)}
-								className={`${
-									activeIndex === id ? "gradient-text" : ""
-								} ml-10 list-none text-base font-medium`}
-								key={e.name}
-							>
-								<a href={`#${e.name}`} onClick={() => scrollToSection(e.name)}>
-									{e.name}
-								</a>
-							</li>
+							<NavItem
+								e={e}
+								id={id}
+								key={id}
+								scrollToSection={scrollToSection}
+								handleClick={handleClick}
+								activeIndex={activeIndex}
+							/>
 						))}
 						<div className="ml-10 flex text-xl text-white dark:text-black" onClick={handleDarkMode}>
 							{darkMode ? (

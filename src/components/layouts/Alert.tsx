@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 
-interface AlertProps {
-	darkMode: boolean;
-}
+import { AlertProps } from "../../types/propsTypes";
 
-const Alert: React.FC<AlertProps> = ({ darkMode }) => {
+const Alert = ({ darkMode }: AlertProps) => {
 	const [showPopUp, setShowPopUp] = useState(false);
 	const [siteLoaded, setSiteLoaded] = useState(false);
 
@@ -26,6 +24,7 @@ const Alert: React.FC<AlertProps> = ({ darkMode }) => {
 			return () => clearTimeout(timer);
 		}
 	}, [darkMode]);
+
 	return (
 		<div
 			className={`${

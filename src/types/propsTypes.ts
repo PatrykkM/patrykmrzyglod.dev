@@ -16,12 +16,15 @@ export interface ActiveNavMobileProps {
 	handleDarkMode: () => void;
 	darkMode: boolean;
 }
+
 export interface WorkExperienceProps {
 	JobPositions: JobPositionTypes[];
 }
+
 export interface HelloSectionProps {
 	darkMode: boolean;
 }
+
 export interface ProjectsProps {
 	index: number;
 	project: {
@@ -32,6 +35,7 @@ export interface ProjectsProps {
 		techs: string;
 	};
 }
+
 export interface TechProps {
 	index: number;
 	tech: {
@@ -40,7 +44,20 @@ export interface TechProps {
 		color: string;
 	};
 }
+
 export interface SingleWorkExperienceProps {
 	position: JobPositionTypes;
 	id: number;
+}
+export interface NavProps {
+	e: {
+		name: string;
+	};
+	id: number;
+	scrollToSection: (sectionId: string) => void;
+	handleClick: (id: number) => void;
+	activeIndex: number | null;
+}
+export interface AlertProps {
+	darkMode: boolean;
 }

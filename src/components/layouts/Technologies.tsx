@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { MyTechnologies } from "../../constans";
+import { MyTechnologies } from "../../constants";
 import { techsContainerVariants } from "../../utils/motion";
 import Technology from "../common/Technology";
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
-import { KnowledgeItems } from "../../constans";
+import { KnowledgeItems } from "../../constants";
 
 const Introduction: React.FC = () => {
 	const combinedVariants = {

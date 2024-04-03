@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { MyProjects } from "../../constans";
+import { MyProjects } from "../../constants";
 import { projectsHeaderVariants } from "../../utils/motion";
 import Project from "../common/Project";
 
