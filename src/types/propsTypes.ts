@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 
+import { JobPositionTypes } from "./common";
 import { NavItemTypes } from "./common";
 
 export interface HeaderProps {
@@ -14,6 +15,10 @@ export interface ActiveNavMobileProps {
 	scrollToSection: (sectionId: string) => void;
 	handleDarkMode: () => void;
 	darkMode: boolean;
+}
+
+export interface WorkExperienceProps {
+	JobPositions: JobPositionTypes[];
 }
 
 export interface HelloSectionProps {
@@ -40,6 +45,10 @@ export interface TechProps {
 	};
 }
 
+export interface SingleWorkExperienceProps {
+	position: JobPositionTypes;
+	id: number;
+}
 export interface NavProps {
 	e: {
 		name: string;
