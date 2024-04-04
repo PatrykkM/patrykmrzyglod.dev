@@ -44,7 +44,7 @@ const Project = ({ index, project }: ProjectsProps) => {
 			</div>
 			<div className="flex flex-wrap">
 				{project.techs.map((e, id) => (
-					<p className={`${e.color} mr-[3px] mt-3 text-sm`} key={id}>
+					<p className={`${e.color} mr-[1px] mt-3 text-sm lg:mr-[3px]`} key={id}>
 						#{e.name}
 					</p>
 				))}
