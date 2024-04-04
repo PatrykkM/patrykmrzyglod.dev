@@ -16,6 +16,8 @@ As you navigate through my work, you will get to know me—not just as a develop
 
 ✉️ **Direct Communication**: Features integrated contact form powered by EmailJS, facilitating effortless communication and collaboration opportunities directly through the portfolio.
 
+🧹 Clean Code & Organized Structure: Emphasizes the importance of clean code and meticulous organization within project folders, ensuring not only the efficiency and maintainability of the codebase but also a smooth collaboration process for developers.
+
 ## Technologies
 
 Leveraging a robust stack of modern technologies, I've built a portfolio that's not only fast and responsive but also rich in features:
