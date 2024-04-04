@@ -32,7 +32,12 @@ export interface ProjectsProps {
 		img: string;
 		link: string;
 		desc: string;
-		techs: string;
+		techs: [
+			{
+				name: string;
+				color: string;
+			},
+		];
 	};
 }
 

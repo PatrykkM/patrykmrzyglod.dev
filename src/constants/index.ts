@@ -167,33 +167,53 @@ export const MyTechnologies = [
 
 export const MyProjects = [
 	{
+		name: "BoredApeClub",
+		img: Bape,
+		link: `https://patrykkm.github.io/BoredApeClub/`,
+		desc: `The Bored Ape Club is an NFT Shop & Club. This application stands as a beacon of modern design and functionality, offering a seamless, responsive experience across all devices. Here, you can buy and sell NFTs, all showcased in an aesthetically pleasing design enhanced by tools like Framer.`,
+		techs: [
+			{ name: `React`, color: `text-cyan-400` },
+			{ name: `Tailwindcss`, color: `text-cyan-600` },
+			{ name: `ReduxToolkit`, color: `text-purple-600` },
+			{ name: `Framer`, color: `text-sky-400` },
+		],
+	},
+	{
 		name: "Finance",
 		img: Finance,
 		link: `https://patrykkm.github.io/FinanceApp/`,
 		desc: `FinanceApp is a finance application that allows users to simulate the buying and selling
         of stocks from top global companies. It aims to provide a brokerage-like experience, enabling
         users to monitor markets and invest in stocks virtually`,
-		techs: "#React #Redux #Tailwindcss #Chart.js",
+		techs: [
+			{ name: `React`, color: `text-cyan-400` },
+			{ name: `Tailwindcss`, color: `text-cyan-600` },
+			{ name: `ChartJS`, color: `text-rose-500` },
+			{ name: `Redux`, color: `text-purple-600` },
+		],
 	},
 	{
 		name: "Collective",
 		img: Collective,
 		link: `https://patrykkm.github.io/Collective/`,
 		desc: `Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface.`,
-		techs: "#React #Tailwindcss",
+		techs: [
+			{ name: `React`, color: `text-cyan-400` },
+			{ name: `Tailwindcss`, color: `text-cyan-600` },
+		],
 	},
-	{
-		name: "BoredApeClub",
-		img: Bape,
-		link: `https://patrykkm.github.io/BoredApeClub/`,
-		desc: `The Bored Ape Club is an NFT Shop & Club, your go-to platform for delving into the exciting world of NFTs. This application stands as a beacon of modern design and functionality, offering a seamless, responsive experience across all devices. Here, you can buy and sell NFTs, all showcased in an aesthetically pleasing design enhanced by tools like Framer.`,
-		techs: "#React #ReduxToolkit #Tailwindcss",
-	},
+
 	{
 		name: "ClinicPatientDashboard",
 		img: AdminPanel,
 		link: `https://github.com/PatrykkM/ClinicPatientDashboard`,
 		desc: `This full-stack application serves as a sophisticated admin panel that streamlines the management of client data. It features a clean, modern interface that allows administrators to efficiently add, remove, edit, and search for clients.`,
-		techs: "#React #ReduxToolkit #Tailwindcss #Express.js #MySql",
+		techs: [
+			{ name: `React`, color: `text-cyan-400` },
+			{ name: `Tailwindcss`, color: `text-cyan-600` },
+			{ name: `MySql`, color: `text-sky-800` },
+			{ name: `Express.js`, color: `text-white` },
+			{ name: `ReduxToolkit`, color: `text-purple-600` },
+		],
 	},
 ];

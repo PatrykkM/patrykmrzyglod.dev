@@ -42,7 +42,13 @@ const Project = ({ index, project }: ProjectsProps) => {
 				<h3 className="text-2xl font-bold">{project.name}</h3>
 				<p className="mt-3 text-sm text-gray-300 dark:text-gray-500">{project.desc}</p>
 			</div>
-			<div className="mt-3 text-sm text-orange-400">{project.techs}</div>
+			<div className="flex flex-wrap">
+				{project.techs.map((e, id) => (
+					<p className={`${e.color} mr-[3px] mt-3 text-sm`} key={id}>
+						#{e.name}
+					</p>
+				))}
+			</div>
 		</motion.div>
 	);
 };
