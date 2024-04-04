@@ -8,6 +8,10 @@ Welcome to my personal portfolio website, a central showcase of my projects. Thi
 
 🖥️ **Responsive & Interactive**: With a focus on responsive design, this portfolio is accessible on any device, ensuring a smooth user experience that adjusts to any screen size or resolution.
 
+🌟 **Interactive 3D Models**: Explore controllable 3D models using Three.js, enhancing the visual interaction within the portfolio, offering a hands-on experience with detailed and high-quality graphics.
+
+✉️ **Direct Communication**: Features integrated contact form powered by EmailJS, facilitating effortless communication and collaboration opportunities directly through the portfolio.
+
 ## Technologies
 
 Leveraging a robust stack of modern technologies, I've built a portfolio that's not only fast and responsive but also rich in features:
