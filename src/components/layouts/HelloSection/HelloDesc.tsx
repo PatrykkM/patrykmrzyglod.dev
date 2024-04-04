@@ -24,12 +24,12 @@ const HelloDesc = ({ darkMode }: HelloSectionProps) => {
 						<h1>Hello</h1>
 						<h1 className="mb-1 ml-1">👋</h1>
 					</motion.div>
-					<motion.h2
+					<motion.h1
 						{...motionProps}
 						className="gradient-text mt-2 text-4xl font-bold sm:my-5 sm:text-6xl lg:text-8xl"
 					>
 						I'm Patryk
-					</motion.h2>
+					</motion.h1>
 					<motion.div
 						{...motionProps}
 						className={`my-2 text-4xl font-bold ${

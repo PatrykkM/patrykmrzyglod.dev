@@ -33,14 +33,14 @@ const Alert = ({ darkMode }: AlertProps) => {
 		>
 			{darkMode ? (
 				<>
-					<div>Hello Sunshine</div>
+					<p>Hello Sunshine</p>
 					<div className="ml-2 text-xl text-yellow-500">
 						<MdLightMode />
 					</div>
 				</>
 			) : (
 				<>
-					<div>Hello Darkness</div>
+					<p>Hello Darkness</p>
 					<div className="ml-2 text-lg text-yellow-300">
 						<FaMoon />
 					</div>

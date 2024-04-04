@@ -25,10 +25,10 @@ const SingleWorkExperienceMobile = ({ position, id }: SingleWorkExperienceProps)
 				variants={workExperienceMobileVariants}
 			>
 				<div className="absolute -left-1 h-3 w-3 rotate-45 bg-Jobs-blue"></div>
-				<div className="text-2xl font-bold">{position.name}</div>
-				<div>{position.company}</div>
-				<div className="p-4 leading-6">{position.description}</div>
-				<div>{position.time}</div>
+				<p className="text-2xl font-bold">{position.name}</p>
+				<p>{position.company}</p>
+				<p className="p-4 leading-6">{position.description}</p>
+				<p>{position.time}</p>
 			</motion.div>
 		</div>
 	);

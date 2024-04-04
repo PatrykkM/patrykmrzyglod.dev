@@ -15,9 +15,9 @@ const Projects = () => {
 		<section className="mt-18 flex flex-col px-5 font-medium text-white sm:px-10 lg:m-auto lg:mt-18 lg:max-w-7xl lg:px-16">
 			<motion.div {...titleMotionProps}>
 				<p className="text-sm uppercase text-gray-500 sm:text-base">My work</p>
-				<div className="mt-2 text-3xl font-extrabold dark:text-mian-text-light sm:text-5xl">
+				<h2 className="mt-2 text-3xl font-extrabold dark:text-mian-text-light sm:text-5xl">
 					Projects
-				</div>
+				</h2>
 				<p className="mt-4 text-gray-500">
 					The purpose of the projects presented here was to demonstrate my abilities and background
 					while seeking my initial employment. Every project is succinctly summarized, including

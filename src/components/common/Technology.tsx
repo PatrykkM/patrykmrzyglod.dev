@@ -13,7 +13,7 @@ const Technology = ({ tech, index }: TechProps) => {
 			<div className={`mb-1 text-4xl ${tech.color} sm:text-5xl`}>
 				<tech.icon />
 			</div>
-			<div className="mt-2">{tech.name}</div>
+			<p className="mt-2">{tech.name}</p>
 		</motion.div>
 	);
 };

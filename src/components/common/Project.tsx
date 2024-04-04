@@ -39,7 +39,7 @@ const Project = ({ index, project }: ProjectsProps) => {
 				</a>
 			</div>
 			<div className="mt-3 flex flex-grow flex-col">
-				<span className="text-2xl font-bold">{project.name}</span>
+				<h3 className="text-2xl font-bold">{project.name}</h3>
 				<p className="mt-3 text-sm text-gray-300 dark:text-gray-500">{project.desc}</p>
 			</div>
 			<div className="mt-3 text-sm text-orange-400">{project.techs}</div>

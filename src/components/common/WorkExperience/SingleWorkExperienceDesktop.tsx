@@ -9,10 +9,10 @@ const SingleWorkExperienceDesktop = ({ position, id }: SingleWorkExperienceProps
 				}  relative z-10 mx-3 my-7 flex w-4/5 flex-col rounded-md border-b-2 border-white bg-Jobs-blue p-4 text-sm`}
 			>
 				<div className="absolute -right-1 h-3 w-3 rotate-45 bg-Jobs-blue"></div>
-				<div className="text-2xl font-bold">{position.name}</div>
-				<div>{position.company}</div>
-				<div className="p-4 leading-6">{position.description}</div>
-				<div>{position.time}</div>
+				<p className="text-2xl font-bold">{position.name}</p>
+				<p>{position.company}</p>
+				<p className="p-4 leading-6">{position.description}</p>
+				<p>{position.time}</p>
 			</div>
 			<div className="flex w-1/5 justify-center">
 				<div className="relative w-1 bg-white">
@@ -27,10 +27,10 @@ const SingleWorkExperienceDesktop = ({ position, id }: SingleWorkExperienceProps
 				}  relative mx-3 my-7 flex w-4/5 flex-col rounded-md border-b-2  border-white bg-Jobs-blue p-4 text-sm`}
 			>
 				<div className="absolute -left-1 h-3 w-3 rotate-45 bg-Jobs-blue"></div>
-				<div className="text-2xl font-bold">{position.name}</div>
-				<div>{position.company}</div>
-				<div className="p-4 leading-6">{position.description}</div>
-				<div>{position.time}</div>
+				<p className="text-2xl font-bold">{position.name}</p>
+				<p>{position.company}</p>
+				<p className="p-4 leading-6">{position.description}</p>
+				<p>{position.time}</p>
 			</div>
 		</div>
 	);
