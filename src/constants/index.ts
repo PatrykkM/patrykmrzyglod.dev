@@ -9,6 +9,8 @@ import {
 	SiTailwindcss,
 	SiThreedotjs,
 	SiTypescript,
+	SiFlutter,
+	SiSpringboot
 } from "react-icons/si";
 
 import Collective from "../assets/img/Collective.jpg";
@@ -18,6 +20,7 @@ import AdminPanel from "../assets/img/adminPanel.jpg";
 import biotiq from "../assets/img/biotiq.jpeg";
 import ignatium from "../assets/img/ignatium.png";
 import nanovo from "../assets/img/nanovo.png";
+import codenauts from "../assets/img/codenauts.jpg";
 
 export const nav = [
 	{
@@ -31,6 +34,16 @@ export const nav = [
 	},
 ];
 export const JobPositions = [
+	{
+		name: "FullStack Developer",
+		time: "Apr 2024 - Current",
+		img: codenauts,
+		company: "CodeNauts",
+		description: `At CodeNauts, I develop software, web applications, 
+		and mobile apps using Java Spring Boot, React, Gatsby, Next.js, and Flutter. 
+		My work focuses on delivering responsive and interactive solutions tailored 
+		for business needs across web and mobile platforms.`,
+	},
 	{
 		name: "Frontend Developer",
 		time: "Apr 2022 - Jul 2022",
@@ -163,6 +176,17 @@ export const MyTechnologies = [
 		name: ".NET",
 		color: "text-violet-600",
 	},
+	{
+		icon: SiSpringboot,
+		name: "Springboot",
+		color: "text-lime-400",
+	},
+	{
+		icon: SiFlutter,
+		name: "Flutter",
+		color: "text-sky-500",
+	},
+	
 ];
 
 export const MyProjects = [

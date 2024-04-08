@@ -15,7 +15,7 @@ const WorkExperience = () => {
 
 	return (
 		<div className="bg-light-blue" id="Experience">
-			<section className="m-auto -mt-px bg-light-blue p-5 dark:bg-light-blue sm:px-10  lg:max-w-7xl lg:px-16">
+			<section className="m-auto -mt-px bg-light-blue p-5 dark:bg-light-blue sm:px-10  lg:max-w-7xl lg:px-16 ">
 				<div className="mt-20 flex flex-col text-slate-50">
 					<motion.div {...titleMotionProps}>
 						<p className="text-base">What i have done so far</p>
