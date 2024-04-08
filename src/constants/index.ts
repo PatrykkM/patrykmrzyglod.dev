@@ -1,4 +1,4 @@
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass,FaLaptopCode } from "react-icons/fa";
 import { GrDocker, GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdOutlineWebAsset, MdPhoneIphone } from "react-icons/md";
@@ -21,6 +21,8 @@ import biotiq from "../assets/img/biotiq.jpeg";
 import ignatium from "../assets/img/ignatium.png";
 import nanovo from "../assets/img/nanovo.png";
 import codenauts from "../assets/img/codenauts.jpg";
+
+
 
 export const nav = [
 	{
@@ -90,6 +92,10 @@ export const KnowledgeItems = [
 	{
 		name: "React Developer",
 		src: FaReact,
+	},
+	{
+		name: "FullStack Developer",
+		src: FaLaptopCode,
 	},
 	{
 		name: "Web Developer",

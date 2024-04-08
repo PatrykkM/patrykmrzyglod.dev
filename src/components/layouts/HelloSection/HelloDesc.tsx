@@ -36,13 +36,14 @@ const HelloDesc = ({ darkMode }: HelloSectionProps) => {
 							darkMode ? `outline-text-light` : `outline-text`
 						} italic sm:text-6xl lg:text-8xl `}
 					>
-						<h1 className="">Frontend</h1>
+						<h1 className="">FullStack</h1>
 						<h1 className="mt-2 sm:mt-5 ">Developer</h1>
 					</motion.div>
 				</section>
 				<section className="mt-10 font-medium text-slate-200 dark:text-mian-text-light">
 					<p className="leading-8 sm:text-lg  lg:w-96">
-						I create user interfaces, develop web applications,
+						I design mobile apps, develop backend systems, and widely understood software, including
+						frontend development
 						<span className="gradient-text "> and much more!</span> As a college freshman, I have
 						already accumulated almost half year of professional experience in the field and possess
 						a strong passion for continuous development and growth. 📈
