@@ -5,7 +5,6 @@ import { MdOutlineWebAsset, MdPhoneIphone } from "react-icons/md";
 import {
 	SiDotnet,
 	SiExpo,
-	SiFlutter,
 	SiFramer,
 	SiNextdotjs,
 	SiRedux,
