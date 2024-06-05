@@ -1,16 +1,18 @@
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass,FaLaptopCode } from "react-icons/fa";
+import { FaGitAlt, FaJava, FaLaptopCode, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import { GrDocker, GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdOutlineWebAsset, MdPhoneIphone } from "react-icons/md";
 import {
 	SiDotnet,
+	SiExpo,
+	SiFlutter,
 	SiFramer,
+	SiNextdotjs,
 	SiRedux,
+	SiSpringboot,
 	SiTailwindcss,
 	SiThreedotjs,
 	SiTypescript,
-	SiFlutter,
-	SiSpringboot
 } from "react-icons/si";
 
 import Collective from "../assets/img/Collective.jpg";
@@ -18,11 +20,9 @@ import Finance from "../assets/img/Finance2.png";
 import Bape from "../assets/img/In-ProggresBape.png";
 import AdminPanel from "../assets/img/adminPanel.jpg";
 import biotiq from "../assets/img/biotiq.jpeg";
+import codenauts from "../assets/img/codenauts.jpg";
 import ignatium from "../assets/img/ignatium.png";
 import nanovo from "../assets/img/nanovo.png";
-import codenauts from "../assets/img/codenauts.jpg";
-
-
 
 export const nav = [
 	{
@@ -42,7 +42,7 @@ export const JobPositions = [
 		img: codenauts,
 		company: "CodeNauts",
 		description: `At CodeNauts, I develop software, web applications, 
-		and mobile apps using Java Spring Boot, React, Gatsby, Next.js, and Flutter. 
+		and mobile apps using React , Next.js, TypeScript, TailiwindCss, Java, Spring Boot, Expo, React Native .....
 		My work focuses on delivering responsive and interactive solutions tailored 
 		for business needs across web and mobile platforms.`,
 	},
@@ -98,12 +98,12 @@ export const KnowledgeItems = [
 		src: FaLaptopCode,
 	},
 	{
-		name: "Web Developer",
-		src: MdOutlineWebAsset,
+		name: "Mobile Developer",
+		src: MdPhoneIphone,
 	},
 	{
-		name: "Responsive Web Designer",
-		src: MdPhoneIphone,
+		name: "Web Developer",
+		src: MdOutlineWebAsset,
 	},
 ];
 export const MyTechnologies = [
@@ -113,14 +113,14 @@ export const MyTechnologies = [
 		color: "text-cyan-400",
 	},
 	{
-		icon: FaHtml5,
-		name: "HTML5",
-		color: "text-orange-600",
+		icon: FaReact,
+		name: "React Native",
+		color: "text-cyan-700",
 	},
 	{
-		icon: FaCss3Alt,
-		name: "CSS3",
-		color: " text-sky-500",
+		icon: SiNextdotjs,
+		name: "Next.js",
+		color: "text-black",
 	},
 	{
 		icon: SiTypescript,
@@ -138,6 +138,11 @@ export const MyTechnologies = [
 		color: "text-cyan-600",
 	},
 	{
+		icon: SiExpo,
+		name: "Expo",
+		color: "text-black",
+	},
+	{
 		icon: SiRedux,
 		name: "Redux Toolkit",
 		color: "text-purple-600",
@@ -151,6 +156,16 @@ export const MyTechnologies = [
 		icon: FaSass,
 		name: "Sass",
 		color: "text-pink-400",
+	},
+	{
+		icon: FaJava,
+		name: "Java",
+		color: "text-orange-500",
+	},
+	{
+		icon: SiSpringboot,
+		name: "Springboot",
+		color: "text-lime-400",
 	},
 	{
 		icon: SiFramer,
@@ -182,17 +197,6 @@ export const MyTechnologies = [
 		name: ".NET",
 		color: "text-violet-600",
 	},
-	{
-		icon: SiSpringboot,
-		name: "Springboot",
-		color: "text-lime-400",
-	},
-	{
-		icon: SiFlutter,
-		name: "Flutter",
-		color: "text-sky-500",
-	},
-	
 ];
 
 export const MyProjects = [
