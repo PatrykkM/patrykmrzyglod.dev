@@ -9,9 +9,9 @@ import { RootState } from "../../../redux/store";
 const FormContact = () => {
 	const dispatch = useDispatch();
 	const formRef = useRef<HTMLFormElement>(null);
-	const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
-	const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID as string;
-	const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+	const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+	const USER_ID = import.meta.env.VITE_USER_ID;
+	const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 	const isUserSendFormCorrectly = useSelector((state: RootState) => state.userSentFrom.correct);
 	const isUserSendFormError = useSelector((state: RootState) => state.userSentFrom.error);
 
