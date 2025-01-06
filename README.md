@@ -1,4 +1,4 @@
-# Hello
+# Hello 👋
 
 Welcome to my personal portfolio website, a central showcase of my projects and a testament to my journey in the tech world. This platform goes beyond highlighting my experiences, skills, and the innovative solutions I've crafted along the way; it also offers a glimpse into who I am both professionally and personally.
 
