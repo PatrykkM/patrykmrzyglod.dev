@@ -1,0 +1,12 @@
+{
+  "helloSection": {
+    "greeting": "Hello",
+    "name": "I'm Patryk",
+    "role": {
+      "line1": "FullStack",
+      "line2": "Developer"
+    },
+    "description": "I design mobile apps, develop backend systems, and widely understood software, including frontend development and much more! As a college freshman, I have already accumulated almost half year of professional experience in the field and possess a strong passion for continuous development and growth. 📈",
+    "scrollHint": "scroll down to know me better"
+  }
+}

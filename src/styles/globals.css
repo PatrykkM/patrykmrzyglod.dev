@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+.gradient-text {
+  background-image: linear-gradient(to right, rgb(255, 179, 0), royalblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.outline-text {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+.outline-text-light {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
+.backface-visibility {
+  backface-visibility: hidden;
+}

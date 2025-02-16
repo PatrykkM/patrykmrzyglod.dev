@@ -1,0 +1,12 @@
+{
+  "helloSection": {
+    "greeting": "Hallo",
+    "name": "Ich bin Patryk",
+    "role": {
+      "line1": "FullStack",
+      "line2": "Entwickler"
+    },
+    "description": "Ich entwickle mobile Apps, Backend-Systeme und Software im weitesten Sinne, einschließlich Frontend-Entwicklung und vieles mehr! Als Student im ersten Jahr habe ich bereits ein halbes Jahr Berufserfahrung in der Branche gesammelt und besitze eine starke Leidenschaft für kontinuierliche Entwicklung und Wachstum. 📈",
+    "scrollHint": "nach unten scrollen, um mich besser kennenzulernen"
+  }
+}
