@@ -3,6 +3,7 @@ import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import { animate } from "framer-motion";
 
 import Alert from "../../common/Alert";
 import NavItem from "../../common/NavItem";
@@ -31,7 +32,17 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
-    section?.scrollIntoView({ behavior: "smooth" });
+    if (section) {
+      const yOffset = -100;
+      const targetPosition =
+        section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      animate(window.scrollY, targetPosition, {
+        duration: 0.8,
+        onUpdate: (value) => window.scrollTo(0, value),
+        ease: [0.32, 0.72, 0, 1],
+      });
+    }
   };
 
   const handleDarkMode = () => {
@@ -57,16 +68,16 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 
   return (
     <>
-      <header className="fixed z-9999 flex w-full border-b border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter dark:border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5">
+      <header className="fixed z-9999 flex w-full border-b dark:border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5">
         <div className="flex w-full items-center justify-between text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16">
           <h2 className="gradient-text">PatrykMrzygłód.dev</h2>
           <div
-            className="font-bolder cursor-pointer text-2xl text-white transition-opacity dark:text-black md:hidden"
+            className="font-bolder cursor-pointer text-2xl dark:text-text-dark-mode transition-opacity text-text-light-mode md:hidden"
             onClick={() => setActiveMenu(!activeMenu)}
           >
             {activeMenu ? <RxCross2 /> : <RxHamburgerMenu />}
           </div>
-          <div className="hidden cursor-pointer items-center justify-center text-white  dark:text-black md:flex">
+          <div className="hidden cursor-pointer items-center justify-center dark:text-text-dark-mode  text-text-light-mode md:flex">
             {nav.map((e, id) => (
               <NavItem
                 e={e}
@@ -78,7 +89,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               />
             ))}
             <div
-              className="ml-10 flex text-xl text-white dark:text-black"
+              className="ml-10 flex text-xl text-text-light-mode dark:text-text-dark-mode"
               onClick={handleDarkMode}
             >
               {darkMode ? <FaMoon /> : <MdLightMode />}

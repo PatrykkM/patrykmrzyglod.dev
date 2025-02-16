@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -49,7 +50,8 @@ const config: Config = {
         "Jobs-blue": "#203E83",
         "Grey-Wave": "#151924",
         "main-light": "#E5EAF5",
-        "mian-text-light": "#0D0D0D",
+        "text-light-mode": "#0D0D0D",
+        "text-dark-mode": "#FFFFFF",
         "light-mode-items": "#DAE0EF",
       },
       minWidth: {

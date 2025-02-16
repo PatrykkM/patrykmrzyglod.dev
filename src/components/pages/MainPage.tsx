@@ -17,9 +17,9 @@ export const MainPage = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="box-border flex min-w-314px flex-col overflow-hidden bg-main-light">
+    <div className="box-border flex min-w-314px flex-col overflow-hidden bg-main-light dark:bg-main-dark">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <HelloSectionWrapper darkMode={darkMode} />
+      <HelloSectionWrapper />
       <FirstWaveDelmiter />
       <Introduction />
       <SecondWaveDelmiter />

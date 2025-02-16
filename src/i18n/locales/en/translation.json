@@ -1,4 +1,14 @@
 {
+  "navigation": {
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "contact": "Contact"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "What I use",
+    "description": "Throughout my journey as a developer, I've worked with various technologies. Here are the main tools and frameworks I'm proficient in:"
+  },
   "helloSection": {
     "greeting": "Hello",
     "name": "I'm Patryk",
@@ -8,5 +18,59 @@
     },
     "description": "I design mobile apps, develop backend systems, and widely understood software, including frontend development and much more! As a college freshman, I have already accumulated almost half year of professional experience in the field and possess a strong passion for continuous development and growth. 📈",
     "scrollHint": "scroll down to know me better"
+  },
+  "introduction": {
+    "title": "Introduction",
+    "overview": "Overview",
+    "description": "I am an experienced software engineer with strong skills in JavaScript and TypeScript, focusing on front-end development using frameworks like React. My expertise includes creating efficient, scalable, and user-friendly solutions that address real-world problems. I am known for my quick learning abilities and my commitment to closely collaborating with clients to deliver impactful applications."
+  },
+  "workExperience": {
+    "title": "What i have done so far",
+    "subtitle": "Work Experience"
+  },
+  "projects": {
+    "title": "My work",
+    "subtitle": "Projects",
+    "description": "The purpose of the projects presented here was to demonstrate my abilities and background while seeking my initial employment. Every project is succinctly summarized, including links to their respective code repositories. These works were developed earlier, and I am currently working on more sophisticated and polished projects. Keep an eye out for updates!",
+    "items": {
+      "boredApeClub": {
+        "desc": "The Bored Ape Club is an NFT Shop & Club. This application stands as a beacon of modern design and functionality, offering a seamless, responsive experience across all devices. Here, you can buy and sell NFTs, all showcased in an aesthetically pleasing design enhanced by tools like Framer."
+      },
+      "finance": {
+        "desc": "FinanceApp is a finance application that allows users to simulate the buying and selling of stocks from top global companies. It aims to provide a brokerage-like experience, enabling users to monitor markets and invest in stocks virtually"
+      },
+      "collective": {
+        "desc": "Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface."
+      },
+      "clinicDashboard": {
+        "desc": "This full-stack application serves as a sophisticated admin panel that streamlines the management of client data. It features a clean, modern interface that allows administrators to efficiently add, remove, edit, and search for clients."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send",
+      "sent": "Sent!",
+      "error": "Error",
+      "thankYou": "* Thank you, your email has been sent."
+    }
+  },
+  "jobPositions": {
+    "codenauts": {
+      "name": "FullStack Developer",
+      "description": "At CodeNauts, I develop software, web applications, and mobile apps using React, Next.js, TypeScript, TailiwindCss, Java, Spring Boot, Expo, React Native. My work focuses on delivering responsive and interactive solutions tailored for business needs across web and mobile platforms."
+    },
+    "nanovo": {
+      "name": "Frontend Developer",
+      "description": "Creating RWD that adapt and look well on various screen sizes and devices, such as desktops, tablets, and smartphones. Implementing JavaScript to add interactivity, dynamic behavior, and animations to web page. Identifying and fixing front-end bugs, issues, and inconsistencies through testing and debugging"
+    },
+    "ignatium": {
+      "name": "Network Administrator",
+      "description": "Installing, configuring, and maintaining network hardware such as routers, switches, firewalls, and wireless access points. Assisting users with network-related issues, troubleshooting connectivity problems, and providing technical support for network-related inquiries. Maintaining accurate and detailed documentation of the network topology, configurations, and procedures."
+    }
   }
 }

@@ -1,4 +1,14 @@
 {
+  "navigation": {
+    "experience": "Erfahrung",
+    "technologies": "Technologien",
+    "contact": "Kontakt"
+  },
+  "technologies": {
+    "title": "Technologien",
+    "subtitle": "Was ich verwende",
+    "description": "Während meiner Entwicklerlaufbahn habe ich mit verschiedenen Technologien gearbeitet. Hier sind die wichtigsten Tools und Frameworks, in denen ich versiert bin:"
+  },
   "helloSection": {
     "greeting": "Hallo",
     "name": "Ich bin Patryk",
@@ -8,5 +18,59 @@
     },
     "description": "Ich entwickle mobile Apps, Backend-Systeme und Software im weitesten Sinne, einschließlich Frontend-Entwicklung und vieles mehr! Als Student im ersten Jahr habe ich bereits ein halbes Jahr Berufserfahrung in der Branche gesammelt und besitze eine starke Leidenschaft für kontinuierliche Entwicklung und Wachstum. 📈",
     "scrollHint": "nach unten scrollen, um mich besser kennenzulernen"
+  },
+  "introduction": {
+    "title": "Einführung",
+    "overview": "Überblick",
+    "description": "Ich bin ein erfahrener Softwareentwickler mit fundierten Kenntnissen in JavaScript und TypeScript, spezialisiert auf Frontend-Entwicklung mit Frameworks wie React. Meine Expertise umfasst die Entwicklung effizienter, skalierbarer und benutzerfreundlicher Lösungen für reale Probleme. Ich bin bekannt für meine schnelle Auffassungsgabe und mein Engagement für eine enge Zusammenarbeit mit Kunden, um wirkungsvolle Anwendungen zu liefern."
+  },
+  "workExperience": {
+    "title": "Was ich bisher gemacht habe",
+    "subtitle": "Berufserfahrung"
+  },
+  "projects": {
+    "title": "Meine Arbeit",
+    "subtitle": "Projekte",
+    "description": "Die hier vorgestellten Projekte dienten dazu, meine Fähigkeiten und meinen Hintergrund bei der Suche nach meiner ersten Anstellung zu demonstrieren. Jedes Projekt wird kurz zusammengefasst und enthält Links zu den jeweiligen Code-Repositories. Diese Arbeiten wurden früher entwickelt, und ich arbeite derzeit an anspruchsvolleren und ausgereifteren Projekten. Bleiben Sie dran für Updates!",
+    "items": {
+      "boredApeClub": {
+        "desc": "Der Bored Ape Club ist ein NFT-Shop & Club. Diese Anwendung ist ein Leuchtturm modernen Designs und Funktionalität, der ein nahtloses, responsives Erlebnis auf allen Geräten bietet. Hier können Sie NFTs kaufen und verkaufen, alles präsentiert in einem ästhetisch ansprechenden Design, das durch Tools wie Framer verbessert wird."
+      },
+      "finance": {
+        "desc": "FinanceApp ist eine Finanzanwendung, die es Benutzern ermöglicht, den Kauf und Verkauf von Aktien führender globaler Unternehmen zu simulieren. Sie zielt darauf ab, eine maklerähnliche Erfahrung zu bieten und ermöglicht es Benutzern, Märkte zu überwachen und virtuell in Aktien zu investieren."
+      },
+      "collective": {
+        "desc": "Collective ist eine innovative E-Commerce-Plattform, die den Online-Einkauf mit ihrem bahnbrechenden Design und außergewöhnlicher Benutzererfahrung neu definiert. Bei Collective liegt der Fokus auf einer intuitiven, benutzerfreundlichen Oberfläche."
+      },
+      "clinicDashboard": {
+        "desc": "Diese Full-Stack-Anwendung dient als ausgereiftes Admin-Panel, das die Verwaltung von Kundendaten optimiert. Es bietet eine übersichtliche, moderne Benutzeroberfläche, die es Administratoren ermöglicht, Kunden effizient hinzuzufügen, zu entfernen, zu bearbeiten und zu suchen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "message": "Ihre Nachricht",
+      "send": "Senden",
+      "sent": "Gesendet!",
+      "error": "Fehler",
+      "thankYou": "* Vielen Dank, Ihre E-Mail wurde gesendet."
+    }
+  },
+  "jobPositions": {
+    "codenauts": {
+      "name": "FullStack Entwickler",
+      "description": "Bei CodeNauts entwickle ich Software, Webanwendungen und mobile Apps mit React, Next.js, TypeScript, TailiwindCss, Java, Spring Boot, Expo und React Native. Meine Arbeit konzentriert sich darauf, responsive und interaktive Lösungen zu liefern, die auf die geschäftlichen Anforderungen für Web- und Mobile-Plattformen zugeschnitten sind."
+    },
+    "nanovo": {
+      "name": "Frontend Entwickler",
+      "description": "Entwicklung von RWD, die sich an verschiedene Bildschirmgrößen und Geräte wie Desktops, Tablets und Smartphones anpassen. Implementierung von JavaScript für Interaktivität, dynamisches Verhalten und Animationen auf Webseiten. Identifizierung und Behebung von Frontend-Bugs, Problemen und Inkonsistenzen durch Tests und Debugging."
+    },
+    "ignatium": {
+      "name": "Netzwerkadministrator",
+      "description": "Installation, Konfiguration und Wartung von Netzwerk-Hardware wie Routern, Switches, Firewalls und WLAN-Zugangspunkten. Unterstützung von Benutzern bei netzwerkbezogenen Problemen, Fehlerbehebung bei Verbindungsproblemen und technischer Support für netzwerkbezogene Anfragen. Führung genauer und detaillierter Dokumentation der Netzwerktopologie, Konfigurationen und Verfahren."
+    }
   }
 }

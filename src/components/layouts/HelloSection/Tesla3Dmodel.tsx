@@ -157,8 +157,8 @@ const Tesla3Dmodel: React.FC = () => {
   }, []);
 
   return (
-    <section className="dark:text-main-text-light flex flex-col items-center justify-center text-white dark:text-black">
-      <div className="ml-32 mt-2 flex items-center self-center">
+    <section className="dark:text-main-text-light flex flex-col items-center justify-center text-text-light-mode dark:text-text-dark-mode">
+      <div className="ml-32 mt-2 flex items-center self-center  ">
         <div className="mt-6 text-3xl">
           <PiArrowBendLeftDownFill />
         </div>

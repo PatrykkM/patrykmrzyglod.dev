@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { LuMouse } from "react-icons/lu";
 
-const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
+const HelloDesc = () => {
   const { t } = useTranslation();
   const motionProps = {
     initial: "offscreen",
@@ -13,8 +13,8 @@ const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
   };
 
   return (
-    <div className="flex flex-grow flex-col lg:mt-36">
-      <div className="mt-5 flex flex-col text-mian-text-light">
+    <div className="flex flex-grow flex-col ">
+      <div className="mt-5 flex flex-col text-text-light-mode dark:text-text-dark-mode">
         <motion.div
           {...motionProps}
           className="flex items-center text-5xl font-bold sm:text-7xl lg:text-8xl"
@@ -30,13 +30,13 @@ const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
         </motion.h1>
         <motion.div
           {...motionProps}
-          className={`my-2 text-4xl font-bold outline-text italic sm:text-6xl lg:text-8xl `}
+          className={`my-2 text-4xl font-bold outline-text-light dark:outline-text-dark-mode italic sm:text-6xl lg:text-8xl`}
         >
           <h1>{t("helloSection.role.line1")}</h1>
           <h1 className="mt-2 sm:mt-5">{t("helloSection.role.line2")}</h1>
         </motion.div>
       </div>
-      <div className="mt-10 font-medium text-slate-200 dark:text-mian-text-light">
+      <div className="mt-10 font-medium dark:text-text-dark-mode text-text-light-mode">
         <p className="leading-8 sm:text-lg lg:w-96">
           {t("helloSection.description")}
         </p>

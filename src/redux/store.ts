@@ -1,14 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
 import { isUserSent } from "./slices/userSentForm";
+import storage from "./storage";
 
-const PersistConfig = {
+const persistConfig = {
   key: "root",
   storage,
+  whitelist: ["userSentFrom"],
 };
 
-const persistedReducer = persistReducer(PersistConfig, isUserSent.reducer);
+const persistedReducer = persistReducer(persistConfig, isUserSent.reducer);
+
 export const store = configureStore({
   reducer: {
     userSentFrom: persistedReducer,
@@ -16,18 +18,10 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [
-          "persist/PERSIST",
-          "persist/REHYDRATE",
-          "persist/PAUSE",
-          "persist/PURGE",
-          "persist/REGISTER",
-        ],
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
       },
     }),
 });
 
 export const persistor = persistStore(store);
-
 export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;

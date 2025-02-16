@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text-light-theme: #0d0d0d;
+  --text-dark-theme: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,13 +14,11 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 body {
   color: var(--foreground);
   background: var(--background);
 }
+
 .gradient-text {
   background-image: linear-gradient(to right, rgb(255, 179, 0), royalblue);
   -webkit-background-clip: text;
@@ -28,14 +26,16 @@ body {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
 .outline-text-light {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--text-light-theme);
   color: transparent;
 }
-.outline-text {
-  -webkit-text-stroke: 1px black;
-  color: transparent;
+
+.dark .outline-text-light {
+  -webkit-text-stroke: 1px var(--text-dark-theme);
 }
+
 .backface-visibility {
   backface-visibility: hidden;
 }
