@@ -14,7 +14,7 @@ const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
 
   return (
     <div className="flex flex-grow flex-col lg:mt-36">
-      <section className="mt-5 flex flex-col text-white dark:text-mian-text-light">
+      <div className="mt-5 flex flex-col text-mian-text-light">
         <motion.div
           {...motionProps}
           className="flex items-center text-5xl font-bold sm:text-7xl lg:text-8xl"
@@ -30,15 +30,13 @@ const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
         </motion.h1>
         <motion.div
           {...motionProps}
-          className={`my-2 text-4xl font-bold ${
-            darkMode ? `outline-text-light` : `outline-text`
-          } italic sm:text-6xl lg:text-8xl `}
+          className={`my-2 text-4xl font-bold outline-text italic sm:text-6xl lg:text-8xl `}
         >
           <h1>{t("helloSection.role.line1")}</h1>
           <h1 className="mt-2 sm:mt-5">{t("helloSection.role.line2")}</h1>
         </motion.div>
-      </section>
-      <section className="mt-10 font-medium text-slate-200 dark:text-mian-text-light">
+      </div>
+      <div className="mt-10 font-medium text-slate-200 dark:text-mian-text-light">
         <p className="leading-8 sm:text-lg lg:w-96">
           {t("helloSection.description")}
         </p>
@@ -48,7 +46,7 @@ const HelloDesc = ({ darkMode }: { darkMode: boolean }) => {
           </div>
           <p className="ml-2">{t("helloSection.scrollHint")}</p>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

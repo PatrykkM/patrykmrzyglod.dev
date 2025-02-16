@@ -57,7 +57,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 
   return (
     <>
-      <nav className="fixed z-9999 flex w-full border-b border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter dark:border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5">
+      <header className="fixed z-9999 flex w-full border-b border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter dark:border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5">
         <div className="flex w-full items-center justify-between text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16">
           <h2 className="gradient-text">PatrykMrzygłód.dev</h2>
           <div
@@ -85,7 +85,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
             </div>
           </div>
         </div>
-      </nav>
+      </header>
       <HeaderMobile {...ActiveNavMobileProps} />
       <Alert darkMode={darkMode} />
     </>

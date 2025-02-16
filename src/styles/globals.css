@@ -28,11 +28,11 @@ body {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.outline-text {
+.outline-text-light {
   -webkit-text-stroke: 1px white;
   color: transparent;
 }
-.outline-text-light {
+.outline-text {
   -webkit-text-stroke: 1px black;
   color: transparent;
 }
