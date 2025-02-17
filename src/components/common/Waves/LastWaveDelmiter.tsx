@@ -1,11 +1,7 @@
 const LastWaveDelmiter = () => {
   return (
-    <div className="-mb-1 mt-5 w-full text-[#DAE0EF] dark:text-[#151924]">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        className="dark:hidden"
-      >
+    <div className="w-full text-[#DAE0EF] dark:text-[#151924]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="currentColor"
           fillOpacity="1"

@@ -6,13 +6,17 @@ import { MdLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 import { animate } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import Alert from "../../common/Alert";
 import NavItem from "../../common/NavItem";
 import HeaderMobile from "./HeaderMobile";
 
 const Header = () => {
+  const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
   const [darkMode, setDarkMode] = useState(true);
+
   const nav = [
     {
       name: "Experience",
@@ -60,6 +64,12 @@ const Header = () => {
     setActiveMenu((prev) => !prev);
   };
 
+  const toggleLanguage = () => {
+    const newLang = currentLang === "de" ? "en" : "de";
+    i18n.changeLanguage(newLang);
+    setCurrentLang(newLang);
+  };
+
   const ActiveNavMobileProps = {
     activeMenu: activeMenu,
     nav: nav,
@@ -86,7 +96,7 @@ const Header = () => {
           >
             {activeMenu ? <RxCross2 /> : <RxHamburgerMenu />}
           </div>
-          <div className="hidden cursor-pointer items-center justify-center dark:text-text-dark-mode  text-text-light-mode md:flex">
+          <div className="hidden cursor-pointer items-center justify-center dark:text-text-dark-mode text-text-light-mode md:flex gap-10">
             {nav.map((e, id) => (
               <NavItem
                 e={e}
@@ -98,15 +108,21 @@ const Header = () => {
               />
             ))}
             <div
-              className="ml-10 flex text-xl text-text-light-mode dark:text-text-dark-mode"
+              className="cursor-pointer font-medium"
+              onClick={toggleLanguage}
+            >
+              {currentLang.toUpperCase()}
+            </div>
+            <div
+              className="flex text-xl text-text-light-mode dark:text-text-dark-mode"
               onClick={handleDarkMode}
             >
               {darkMode ? <FaMoon /> : <MdLightMode />}
             </div>
           </div>
         </div>
+        <HeaderMobile {...ActiveNavMobileProps} />
       </header>
-      <HeaderMobile {...ActiveNavMobileProps} />
       <Alert darkMode={darkMode} setIsAnimating={setIsAnimating} />
     </>
   );

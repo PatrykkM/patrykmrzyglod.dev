@@ -13,39 +13,32 @@ const HelloDesc = () => {
   };
 
   return (
-    <div className="flex flex-grow flex-col ">
-      <div className="mt-5 flex flex-col text-text-light-mode dark:text-text-dark-mode">
+    <div className="flex flex-grow flex-col gap-12">
+      <div className="flex flex-col lg:items-center text-text-light-mode dark:text-text-dark-mode gap-6 text-5xl font-bold sm:text-[78px]">
         <motion.div
           {...motionProps}
-          className="flex items-center text-5xl font-bold sm:text-7xl lg:text-8xl"
+          className="flex lg:items-center flex-col lg:flex-row gap-4"
         >
-          <h1>{t("helloSection.greeting")}</h1>
-          <h1 className="mb-1 ml-1">👋</h1>
+          <h1>{t("helloSection.greeting")}! 👋</h1>
+          <h1 className="gradient-text">{t("helloSection.name")}</h1>
         </motion.div>
         <motion.h1
           {...motionProps}
-          className="gradient-text mt-2 text-4xl font-bold sm:my-5 sm:text-6xl lg:text-8xl"
+          className={`text-5xl sm:text-7xl font-bold outline-text-light dark:outline-text-dark-mode italic lg:text-center leading-snug`}
         >
-          {t("helloSection.name")}
+          {t("helloSection.softwareEngineer")}
         </motion.h1>
-        <motion.div
-          {...motionProps}
-          className={`my-2 text-4xl font-bold outline-text-light dark:outline-text-dark-mode italic sm:text-6xl lg:text-8xl`}
-        >
-          <h1>{t("helloSection.role.line1")}</h1>
-          <h1 className="mt-2 sm:mt-5">{t("helloSection.role.line2")}</h1>
-        </motion.div>
       </div>
-      <div className="mt-10 font-medium dark:text-text-dark-mode text-text-light-mode">
-        <p className="leading-8 sm:text-lg lg:w-96">
+      <div className="w-full">
+        <p className="leading-8 sm:text-lg font-medium dark:text-text-dark-mode text-text-light-mode lg:text-center">
           {t("helloSection.description")}
         </p>
-        <div className="mt-10 flex items-center">
-          <div className="text-2xl font-extrabold">
-            <LuMouse />
-          </div>
-          <p className="ml-2">{t("helloSection.scrollHint")}</p>
+      </div>
+      <div className="flex items-center">
+        <div className="text-2xl font-extrabold">
+          <LuMouse />
         </div>
+        <p className="ml-2">{t("helloSection.scrollHint")}</p>
       </div>
     </div>
   );

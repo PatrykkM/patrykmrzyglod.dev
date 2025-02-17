@@ -11,7 +11,7 @@ const Projects = () => {
     variants: titleOfSectionVariants,
   };
   return (
-    <section className="mt-18 flex flex-col px-5 font-medium text-text-light-mode dark:text-text-dark-mode sm:px-10  lg:mt-18 lg:max-w-7xl lg:px-16">
+    <section className="mt-18 flex flex-col px-5 font-medium text-text-light-mode dark:text-text-dark-mode sm:px-10 lg:mt-18 lg:max-w-7xl lg:px-16 ">
       <motion.div {...titleMotionProps}>
         <p className="text-sm uppercase text-gray-500 sm:text-base">My work</p>
         <h2 className="mt-2 text-3xl font-extrabold dark:text-mian-text-light sm:text-5xl">

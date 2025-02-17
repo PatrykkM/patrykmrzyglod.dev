@@ -13,7 +13,7 @@ const Technologies = () => {
   };
   return (
     <section
-      className="mt-17 flex flex-col px-5 font-semibold m:px-10 lg:m-auto lg:max-w-7xl lg:px-16"
+      className="flex flex-col px-5 font-semibold m:px-10  lg:max-w-7xl lg:px-16"
       id="Technologies"
     >
       <motion.div {...titleMotionProps}>
