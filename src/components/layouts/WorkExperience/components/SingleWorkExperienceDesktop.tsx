@@ -32,6 +32,9 @@ const SingleWorkExperienceDesktop = ({
               alt={`Logo of ${position.company}`}
               fill
               className="rounded-full object-cover"
+              placeholder="blur"
+              quality={100}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

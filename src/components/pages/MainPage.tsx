@@ -15,7 +15,7 @@ import ContactMeWrapper from "../layouts/ContactMe/ContactMe";
 
 export const MainPage = () => {
   return (
-    <div className="box-border flex min-w-314px flex-col overflow-hidden bg-main-light dark:bg-main-dark items-center">
+    <div className="relative box-border flex min-w-314px flex-col bg-main-light dark:bg-main-dark items-center ">
       <Header />
       <HelloSectionWrapper />
       <FirstWaveDelmiter />

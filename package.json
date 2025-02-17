@@ -25,6 +25,7 @@
     "react-redux": "^9.2.0",
     "react-scroll": "^1.9.2",
     "redux-persist": "^6.0.0",
+    "tailwind-scrollbar": "^4.0.0",
     "three": "^0.173.0",
     "yup": "^1.6.1"
   },

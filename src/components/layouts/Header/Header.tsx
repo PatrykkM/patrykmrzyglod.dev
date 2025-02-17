@@ -72,9 +72,14 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed z-9999 flex w-full border-b dark:border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5">
+      <header className="fixed z-9999 w-full flex border-b dark:border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5 top-0 left-0">
         <div className="flex w-full items-center justify-between text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16">
-          <h2 className="gradient-text">PatrykMrzygłód.dev</h2>
+          <h2
+            className="gradient-text cursor-pointer"
+            onClick={() => scrollToSection("Hello")}
+          >
+            PatrykMrzygłód.dev
+          </h2>
           <div
             className="font-bolder cursor-pointer text-2xl dark:text-text-dark-mode transition-opacity text-text-light-mode md:hidden"
             onClick={() => setActiveMenu(!activeMenu)}
