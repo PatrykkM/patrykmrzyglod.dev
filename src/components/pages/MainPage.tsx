@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Header from "../layouts/Header/Header";
 import HelloSectionWrapper from "../layouts/HelloSection/HelloSectionWrapper";
 import FirstWaveDelmiter from "../common/Waves/FirstWaveDelmiter";
@@ -14,11 +14,9 @@ import Projects from "../layouts/Projects/Projects";
 import ContactMeWrapper from "../layouts/ContactMe/ContactMe";
 
 export const MainPage = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <div className="box-border flex min-w-314px flex-col overflow-hidden bg-main-light dark:bg-main-dark">
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="box-border flex min-w-314px flex-col overflow-hidden bg-main-light dark:bg-main-dark items-center">
+      <Header />
       <HelloSectionWrapper />
       <FirstWaveDelmiter />
       <Introduction />

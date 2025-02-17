@@ -10,16 +10,15 @@ const ContactMeSection = () => {
         whileInView="onscreen"
         viewport={{ once: true }}
         variants={contactformVariants}
-        className="rounded-xl  bg-main-dark p-7 dark:bg-main-light"
+        className="rounded-xl dark:bg-main-dark p-7 bg-main-light shadow-sm"
       >
-        <p className="mt-2 text-sm uppercase text-gray-400 dark:text-gray-500">
+        <p className="mt-2 text-sm uppercase dark:text-gray-400 text-gray-500">
           Get in touch
         </p>
-        <h3 className="my-2 text-3xl font-bold dark:text-black sm:text-5xl">
-          {" "}
+        <h3 className="my-2 text-3xl font-bold text-text-light-mode dark:text-text-dark-mode sm:text-5xl">
           Contact
         </h3>
-        <p className="mt-4 text-gray-400 dark:text-gray-500">
+        <p className="mt-4 dark:text-gray-400 text-gray-500">
           I appreciate any communication you can provide via
           <a
             href="mailto:patrykmrzyglod3@gmail.com"

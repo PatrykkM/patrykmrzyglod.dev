@@ -6,7 +6,7 @@ import { GLTFLoader, GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 import React, { useEffect, useRef, useState } from "react";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
-
+import Skeleton from "@/components/common/Skeleton";
 interface ThreeJSRefs {
   scene: THREE.Scene | null;
   camera: THREE.PerspectiveCamera | null;
@@ -158,7 +158,7 @@ const Tesla3Dmodel: React.FC = () => {
 
   return (
     <section className="dark:text-main-text-light flex flex-col items-center justify-center text-text-light-mode dark:text-text-dark-mode">
-      <div className="ml-32 mt-2 flex items-center self-center  ">
+      <div className="ml-32 mt-2 flex items-center self-center">
         <div className="mt-6 text-3xl">
           <PiArrowBendLeftDownFill />
         </div>
@@ -168,11 +168,7 @@ const Tesla3Dmodel: React.FC = () => {
         ref={mountRef}
         className="relative flex items-center justify-center bg-transparent"
       >
-        {isLoading ? (
-          <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform">
-            <div className="h-20 w-20 animate-spin rounded-full border-2 border-t-2 border-indigo-500 border-t-transparent sm:h-32 sm:w-32"></div>
-          </div>
-        ) : null}
+        {isLoading ? <Skeleton /> : null}
       </div>
     </section>
   );

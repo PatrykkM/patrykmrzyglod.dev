@@ -17,13 +17,15 @@ const Technology = ({
   return (
     <motion.div
       key={index}
-      className="mt-10 flex   h-36 flex-col items-center justify-center rounded-xl bg-dynamic-menu shadow-md dark:bg-light-mode-items sm:mr-5 sm:flex sm:h-52 sm:w-52 sm:flex-wrap"
+      className="mt-10 flex   h-36 flex-col items-center justify-center rounded-xl dark:bg-dynamic-menu shadow-md bg-light-mode-items sm:mr-5 sm:flex sm:h-52 sm:w-52 sm:flex-wrap"
       variants={singleTechnologyVariants}
     >
       <div className={`mb-1 text-4xl ${tech.color} sm:text-5xl`}>
         <tech.icon />
       </div>
-      <p className="mt-2 text-cyan-400">{tech.name}</p>
+      <p className="mt-2 text-light-blue dark:text-text-dark-mode">
+        {tech.name}
+      </p>
     </motion.div>
   );
 };

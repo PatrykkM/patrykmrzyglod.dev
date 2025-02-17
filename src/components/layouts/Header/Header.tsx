@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -9,12 +11,8 @@ import Alert from "../../common/Alert";
 import NavItem from "../../common/NavItem";
 import HeaderMobile from "./HeaderMobile";
 
-interface HeaderProps {
-  darkMode: boolean;
-  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
+const Header = () => {
+  const [darkMode, setDarkMode] = useState(true);
   const nav = [
     {
       name: "Experience",
@@ -29,6 +27,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
 
   const [activeMenu, setActiveMenu] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -45,7 +44,12 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
     }
   };
 
+  useEffect(() => {
+    document.body.classList.add("dark");
+  }, []);
+
   const handleDarkMode = () => {
+    if (isAnimating) return;
     document.body.classList.toggle("dark");
     setDarkMode((prev) => (prev = !prev));
     setActiveMenu((prev) => (prev = !prev));
@@ -98,7 +102,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
         </div>
       </header>
       <HeaderMobile {...ActiveNavMobileProps} />
-      <Alert darkMode={darkMode} />
+      <Alert darkMode={darkMode} setIsAnimating={setIsAnimating} />
     </>
   );
 };

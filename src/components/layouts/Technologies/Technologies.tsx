@@ -18,10 +18,10 @@ const Technologies = () => {
     >
       <motion.div {...titleMotionProps}>
         <p className="text-sm uppercase text-gray-400">My knowledge of</p>
-        <h2 className="mt-2 text-3xl font-extrabold dark:text-mian-text-light lg:text-6xl">
+        <h2 className="mt-2 text-3xl font-extrabold dark:text-text-dark-mode text-text-light-mode lg:text-6xl">
           Technologies
         </h2>
-        <p className="font-base mt-5 text-xs font-light dark:text-gray-500">
+        <p className="font-base mt-5 text-xs font-normal text-gray-400">
           *Technologies are listed in order of proficiency, from highest to
           lowest.
         </p>

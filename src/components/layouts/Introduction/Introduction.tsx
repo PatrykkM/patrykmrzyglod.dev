@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
-
 import { KnowledgeItems } from "@/constans";
 
 const Introduction = () => {
@@ -27,7 +25,12 @@ const Introduction = () => {
     },
   };
 
-  const [ref, inView] = useInView({
+  const [sectionRef, sectionInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [itemsRef, itemsInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -35,12 +38,12 @@ const Introduction = () => {
   return (
     <div className="mt-18 px-5 sm:px-10 lg:mt-0 lg:p-0">
       <section
-        ref={ref}
-        className="flex flex-col text-white lg:m-auto lg:max-w-7xl lg:px-16 "
+        ref={sectionRef}
+        className="flex flex-col dark:text-text-dark-mode text-text-light-mode lg:m-auto lg:max-w-7xl lg:px-16"
       >
         <motion.p
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={sectionInView ? "visible" : "hidden"}
           variants={combinedVariants}
           className="uppercase text-gray-500"
         >
@@ -48,7 +51,7 @@ const Introduction = () => {
         </motion.p>
         <motion.h2
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={sectionInView ? "visible" : "hidden"}
           variants={combinedVariants}
           className="my-2 text-3xl font-bold dark:text-mian-text-light sm:text-5xl lg:text-6xl"
         >
@@ -62,31 +65,23 @@ const Introduction = () => {
           for my quick learning abilities and my commitment to closely
           collaborating with clients to deliver impactful applications.
         </p>
-        <div className="z-10 sm:flex sm:flex-wrap">
-          {KnowledgeItems.map((item, index) => {
-            const [ref, inView] = useInView({
-              triggerOnce: true,
-              threshold: 0.1,
-            });
-
-            return (
-              <motion.div
-                className="mr-6 mt-10 flex h-40 w-full flex-col items-center justify-center rounded-xl bg-dynamic-menu text-center text-xl dark:bg-light-mode-items sm:h-64 sm:w-56"
-                key={index}
-                ref={ref}
-                variants={itemVariants}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-              >
-                <p className="pb-1 text-4xl text-blue-300 dark:text-main-dark">
-                  <item.src />
-                </p>
-                <p className="pt-1 font-semibold text-blue-600 dark:text-light-blue">
-                  {item.name}
-                </p>
-              </motion.div>
-            );
-          })}
+        <div className="z-10 sm:flex sm:flex-wrap" ref={itemsRef}>
+          {KnowledgeItems.map((item, index) => (
+            <motion.div
+              className="mr-6 mt-10 flex h-40 w-full flex-col items-center justify-center rounded-xl dark:bg-dynamic-menu text-center text-xl bg-light-mode-items sm:h-64 sm:w-56"
+              key={index}
+              variants={itemVariants}
+              initial="hidden"
+              animate={itemsInView ? "visible" : "hidden"}
+            >
+              <p className="pb-1 text-4xl dark:text-blue-300 text-main-dark">
+                <item.src />
+              </p>
+              <p className="pt-1 font-semibold dark:text-blue-600 text-light-blue">
+                {item.name}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>

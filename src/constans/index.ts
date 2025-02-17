@@ -53,7 +53,7 @@ export const JobPositions = [
   },
   {
     name: "Frontend Developer",
-    time: "Apr 2022 - Jul 2022",
+    time: "Apr 2022 - May 2022",
     img: nanovo,
     company: "Nanovo Warmijska 1 30-069",
     description: `Creating RWD that adapt and look well on various

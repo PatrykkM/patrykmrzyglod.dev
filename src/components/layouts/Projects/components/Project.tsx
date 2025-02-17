@@ -38,7 +38,7 @@ const Project = ({
       animate={controls}
       variants={projectVariants}
       key={index}
-      className="mb-8 mt-18 flex flex-col rounded-lg bg-dynamic-menu p-5 font-normal dark:bg-light-mode-items dark:text-blue-800 sm:mr-6 sm:w-92"
+      className="mb-8 mt-18 flex flex-col rounded-lg dark:bg-dynamic-menu p-5 font-normal bg-light-mode-items sm:mr-6 sm:w-92 shadow-md"
     >
       <div className="overflow-hidden rounded-lg">
         <a href={project.link} target="_blank">
@@ -53,8 +53,10 @@ const Project = ({
         </a>
       </div>
       <div className="mt-3 flex flex-grow flex-col">
-        <h3 className="text-2xl font-bold">{project.name}</h3>
-        <p className="mt-3 text-sm text-gray-300 dark:text-gray-500">
+        <h3 className="text-2xl font-bold text-blue-800 dark:text-text-dark-mode">
+          {project.name}
+        </h3>
+        <p className="mt-3 text-sm dark:text-gray-300 text-gray-500">
           {project.desc}
         </p>
       </div>
