@@ -24,6 +24,7 @@
     "react-intersection-observer": "^9.15.1",
     "react-redux": "^9.2.0",
     "react-scroll": "^1.9.2",
+    "react-world-flags": "^1.6.0",
     "redux-persist": "^6.0.0",
     "tailwind-scrollbar": "^4.0.0",
     "three": "^0.173.0",

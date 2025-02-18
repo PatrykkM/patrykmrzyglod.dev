@@ -4,6 +4,11 @@
     "Technologies": "Technologies",
     "Contact": "Contact"
   },
+  "alert": {
+    "hello": "Hello",
+    "helloDarkness": "Hello Darkness",
+    "helloSunshine": "Hello Sunshine"
+  },
   "helloSection": {
     "greeting": "Hello",
     "name": "I'm Patryk",

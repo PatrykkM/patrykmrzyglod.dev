@@ -1,4 +1,9 @@
 {
+  "alert": {
+    "hello": "Hallo",
+    "helloDarkness": "Hallo Dunkelheit",
+    "helloSunshine": "Hallo Sonne"
+  },
   "nav": {
     "Experience": "Erfahrung",
     "Technologies": "Technologien",

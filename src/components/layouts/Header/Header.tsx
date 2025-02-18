@@ -12,10 +12,28 @@ import Alert from "../../common/Alert";
 import NavItem from "../../common/NavItem";
 import HeaderMobile from "./HeaderMobile";
 
+export enum DarkMode {
+  LIGHT = "light",
+  DARK = "dark",
+}
+
+export enum Language {
+  DE = "de",
+  EN = "en",
+}
+
+export type AlertAction = DarkMode | Language;
+
 const Header = () => {
   const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState(i18n.language);
-  const [darkMode, setDarkMode] = useState(true);
+  const [currentLang, setCurrentLang] = useState<Language>(
+    i18n.language as Language
+  );
+  const [darkMode, setDarkMode] = useState<DarkMode>(DarkMode.DARK);
+
+  const [alertAction, setAlertAction] = useState<AlertAction | undefined>(
+    DarkMode.DARK
+  );
 
   const nav = [
     {
@@ -52,22 +70,24 @@ const Header = () => {
     document.body.classList.add("dark");
   }, []);
 
-  const handleDarkMode = () => {
+  const handleDarkMode: (mode: DarkMode) => void = (mode) => {
     if (isAnimating) return;
     document.body.classList.toggle("dark");
-    setDarkMode((prev) => (prev = !prev));
+    setDarkMode(mode);
     setActiveMenu((prev) => (prev = !prev));
+    setAlertAction(mode);
   };
 
-  const handleClick = (id: number) => {
+  const handleClick: (id: number) => void = (id) => {
     setActiveIndex(id);
     setActiveMenu((prev) => !prev);
   };
 
-  const toggleLanguage = () => {
-    const newLang = currentLang === "de" ? "en" : "de";
+  const toggleLanguage: () => void = () => {
+    const newLang = currentLang === Language.DE ? Language.EN : Language.DE;
     i18n.changeLanguage(newLang);
     setCurrentLang(newLang);
+    setAlertAction(newLang);
   };
 
   const ActiveNavMobileProps = {
@@ -115,17 +135,22 @@ const Header = () => {
             >
               {currentLang.toUpperCase()}
             </div>
-            <div
-              className="flex text-xl text-text-light-mode dark:text-text-dark-mode"
-              onClick={handleDarkMode}
-            >
-              {darkMode ? <FaMoon /> : <MdLightMode />}
+            <div className="flex text-xl text-text-light-mode dark:text-text-dark-mode">
+              {darkMode === DarkMode.DARK ? (
+                <div onClick={() => handleDarkMode(DarkMode.LIGHT)}>
+                  <FaMoon />
+                </div>
+              ) : (
+                <div onClick={() => handleDarkMode(DarkMode.DARK)}>
+                  <MdLightMode />
+                </div>
+              )}
             </div>
           </div>
         </div>
         <HeaderMobile {...ActiveNavMobileProps} />
       </header>
-      <Alert darkMode={darkMode} setIsAnimating={setIsAnimating} />
+      <Alert alertAction={alertAction} setIsAnimating={setIsAnimating} />
     </>
   );
 };

@@ -1,15 +1,15 @@
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 import NavItem from "../../common/NavItem";
-
+import { DarkMode } from "./Header";
 interface ActiveNavMobileProps {
   activeMenu: boolean;
   nav: { name: string }[];
   handleClick: (id: number) => void;
   activeIndex: number | null;
   scrollToSection: (sectionId: string) => void;
-  handleDarkMode: () => void;
-  darkMode: boolean;
+  handleDarkMode: (mode: DarkMode) => void;
+  darkMode: DarkMode;
   toggleLanguage: () => void;
   currentLang: string;
 }
@@ -42,7 +42,7 @@ const ActiveNavMobile = ({
             ))}
           </ul>
           <div className="flex gap-4 items-center">
-            <div onClick={handleDarkMode}>
+            <div onClick={() => handleDarkMode(darkMode)}>
               {darkMode ? <FaMoon size={18} /> : <MdLightMode size={18} />}
             </div>
             <div className="font-semibold" onClick={toggleLanguage}>
