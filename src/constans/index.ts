@@ -20,13 +20,14 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-import Collective from "public/img/collective.jpg";
-import Finance from "public/img/finance.png";
-import Bape from "public/img/in-progress-bape.png";
-import AdminPanel from "public/img/admin-panel.jpg";
-import codenauts from "public/img/codenauts.jpg";
-import ignatium from "public/img/ignatium.png";
-import nanovo from "public/img/nanovo.png";
+import Collective from "/public/img/collective.jpg";
+import Finance from "/public/img/finance.png";
+import AdminPanel from "/public/img/admin-panel.jpg";
+import codenauts from "/public/img/codenauts.jpg";
+import ignatium from "/public/img/ignatium.png";
+import nanovo from "/public/img/nanovo.png";
+import Bape from "/public/img/bape.png";
+
 import { AiOutlineCluster } from "react-icons/ai";
 
 export const nav = [
