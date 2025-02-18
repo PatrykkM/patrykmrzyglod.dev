@@ -14,7 +14,8 @@
     "name": "Ich bin Patryk",
     "softwareEngineer": "Software Entwickler",
     "description": "Ich bin ein Softwareentwickler, spezialisiert auf FinTech, SaaS, Geschäftsanwendungen, mobile Apps und Systemarchitektur. Ich bin auch Informatikstudent. Neben der Arbeit widme ich meine Freizeit anspruchsvollen persönlichen Projekten, strebe danach, Englisch auf muttersprachlichem Niveau zu sprechen und verbessere kontinuierlich meine Fähigkeiten in Java (Spring Boot). 🚀",
-    "scrollHint": "nach unten scrollen, um mehr zu erfahren"
+    "scrollHint": "nach unten scrollen, um mehr zu erfahren",
+    "tryToRotateMe!": "Versuche mich zu drehen!"
   },
   "introduction": {
     "title": "Einführung",
@@ -26,6 +27,8 @@
     "systemArchitecture": "System Architekt"
   },
   "jobs": {
+    "subtitle": "Was ich bisher gemacht habe",
+    "title": "Erfahrung",
     "CodeNauts": {
       "title": "Software Entwickler",
       "time": "Jan 2024 - Heute",

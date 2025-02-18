@@ -26,7 +26,7 @@ export const MainPage = () => {
   }
 
   return (
-    <div className="box-border min-w-314px flex flex-col bg-main-light dark:bg-main-dark min-h-screen overflow-x-hidden items-center">
+    <div className="box-border min-w-314px flex flex-col bg-main-light dark:bg-main-dark min-h-screen overflow-x-hidden items-center transition-all duration-300">
       <Header />
       <HelloSectionWrapper />
       <FirstWaveDelmiter />

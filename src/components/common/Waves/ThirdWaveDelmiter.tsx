@@ -4,7 +4,7 @@ const ThirdWaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320 "
-        className="-mb-3 text-[#E5EAF5] dark:text-[#0A0F1A]"
+        className="-mb-3 text-[#E5EAF5] dark:text-[#0A0F1A] transition-colors duration-300"
       >
         <path
           fill="currentColor"

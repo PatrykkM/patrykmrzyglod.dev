@@ -1,6 +1,6 @@
 const LastWaveDelmiter = () => {
   return (
-    <div className="w-full text-[#DAE0EF] dark:text-[#151924]">
+    <div className="w-full text-[#DAE0EF] dark:text-[#151924] transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="currentColor"

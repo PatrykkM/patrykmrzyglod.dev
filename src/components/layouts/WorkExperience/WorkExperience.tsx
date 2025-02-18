@@ -3,8 +3,9 @@ import { JobPositions } from "@/constans";
 import { titleOfSectionVariants } from "@/utils/motion";
 import SingleWorkExperienceDesktop from "./components/SingleWorkExperienceDesktop";
 import SingleWorkExperienceMobile from "./components/SingleWorkExperienceMobile";
-
+import { useTranslation } from "react-i18next";
 const WorkExperience = () => {
+  const { t } = useTranslation();
   const titleMotionProps = {
     initial: "offscreen",
     whileInView: "onscreen",
@@ -17,9 +18,9 @@ const WorkExperience = () => {
       <section className="-mt-px  p-5  sm:px-10  lg:max-w-7xl lg:px-16">
         <div className="mt-20 flex flex-col text-slate-50">
           <motion.div {...titleMotionProps}>
-            <p className="text-base">What i have done so far</p>
+            <p className="text-base">{t("jobs.subtitle")}</p>
             <h2 className="mb-18 mt-2 text-3xl font-extrabold lg:text-6xl">
-              Work Experience
+              {t("jobs.title")}
             </h2>
           </motion.div>
           <div className="block lg:hidden">

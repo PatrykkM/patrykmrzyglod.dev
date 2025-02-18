@@ -7,6 +7,7 @@ import { GLTFLoader, GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import React, { useEffect, useRef, useState } from "react";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
 import Skeleton from "@/components/common/Skeleton";
+import { useTranslation } from "react-i18next";
 interface ThreeJSRefs {
   scene: THREE.Scene | null;
   camera: THREE.PerspectiveCamera | null;
@@ -15,6 +16,7 @@ interface ThreeJSRefs {
 }
 
 const Tesla3Dmodel: React.FC = () => {
+  const { t } = useTranslation();
   const mountRef = useRef<HTMLDivElement>(null);
   const threeRefs = useRef<ThreeJSRefs>({
     scene: null,
@@ -162,7 +164,7 @@ const Tesla3Dmodel: React.FC = () => {
         <div className="mt-6 text-3xl">
           <PiArrowBendLeftDownFill />
         </div>
-        <p>Try to rotate me!</p>
+        <p>{t("helloSection.tryToRotateMe!")}</p>
       </div>
       <div
         ref={mountRef}

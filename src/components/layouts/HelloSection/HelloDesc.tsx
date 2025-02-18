@@ -13,8 +13,8 @@ const HelloDesc = () => {
   };
 
   return (
-    <div className="flex flex-grow flex-col gap-12">
-      <div className="flex flex-col lg:items-center text-text-light-mode dark:text-text-dark-mode gap-6 text-5xl font-bold sm:text-[78px]">
+    <div className="flex flex-grow flex-col gap-12 text-text-light-mode dark:text-text-dark-mode">
+      <div className="flex flex-col lg:items-center  gap-6 text-5xl font-bold sm:text-[78px]">
         <motion.div
           {...motionProps}
           className="flex lg:items-center flex-col lg:flex-row gap-4"
@@ -24,13 +24,13 @@ const HelloDesc = () => {
         </motion.div>
         <motion.h1
           {...motionProps}
-          className={`text-5xl sm:text-7xl font-bold outline-text-light dark:outline-text-dark-mode italic lg:text-center leading-snug`}
+          className={`text-5xl sm:text-7xl font-bold outline-text-light italic lg:text-center leading-snug`}
         >
           {t("helloSection.softwareEngineer")}
         </motion.h1>
       </div>
       <div className="w-full">
-        <p className="leading-8 sm:text-lg font-medium dark:text-text-dark-mode text-text-light-mode lg:text-center">
+        <p className="leading-8 sm:text-lg font-medium  lg:text-center">
           {t("helloSection.description")}
         </p>
       </div>

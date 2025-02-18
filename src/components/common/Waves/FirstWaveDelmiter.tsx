@@ -4,7 +4,7 @@ const FirstWaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="dark:text-[#203E83] text-[#B0C1EB]"
+        className="dark:text-[#203E83] text-[#B0C1EB] transition-colors duration-300"
       >
         <path
           fill="currentColor"
@@ -15,7 +15,7 @@ const FirstWaveDelmiter = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="rotate-180  -mt-5 lg:-mt-[130px] text-[#B0C1EB] dark:text-[#203E83]"
+        className="rotate-180  -mt-5 lg:-mt-[130px] text-[#B0C1EB] dark:text-[#203E83] transition-colors duration-300"
       >
         <path
           fill="currentColor"
