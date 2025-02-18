@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 interface NavItemProps {
@@ -31,9 +32,13 @@ const NavItem = ({
       }  text-base md:list-none md:text-base md:font-medium`}
       key={e.name}
     >
-      <a href={`#${e.name}`} onClick={handleNavClick}>
+      <Link
+        className="cursor-pointer"
+        href={`#${e.name}`}
+        onClick={handleNavClick}
+      >
         {t(`nav.${e.name}`)}
-      </a>
+      </Link>
     </li>
   );
 };

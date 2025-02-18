@@ -71,9 +71,9 @@ const Introduction = () => {
               initial="hidden"
               animate={itemsInView ? "visible" : "hidden"}
             >
-              <p className="pb-1 text-4xl dark:text-blue-300 text-main-dark">
+              <div className="pb-1 text-4xl dark:text-blue-300 text-main-dark">
                 <item.src />
-              </p>
+              </div>
               <p className="pt-1 font-semibold dark:text-blue-600 text-light-blue">
                 {t(`introduction.${item.name}`)}
               </p>

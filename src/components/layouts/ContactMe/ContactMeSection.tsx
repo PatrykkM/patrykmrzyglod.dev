@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
+import Link from "next/link";
 import { contactformVariants } from "../../../utils/motion";
 import FormContact from "./FormContact";
 
@@ -24,19 +24,19 @@ const ContactMeSection = () => {
         </h3>
         <p className="mt-4 dark:text-gray-400 text-gray-500">
           {t("contact.description")}
-          <a
+          <Link
             href="mailto:patrykmrzyglod3@gmail.com"
             className="gradient-text ml-1 font-bold"
           >
             {t("contact.email")}
-          </a>
+          </Link>
           ,
-          <a
+          <Link
             href="https://www.linkedin.com/in/patrykmrzyg%C5%82%C3%B3d/"
             className="gradient-text ml-px mr-1 font-bold"
           >
             LinkedIn
-          </a>
+          </Link>
           {t("contact.formBelow")}
         </p>
         <FormContact />

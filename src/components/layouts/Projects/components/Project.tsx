@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
+import Link from "next/link";
 const Project = ({
   index,
   project,
@@ -41,7 +41,7 @@ const Project = ({
       className="mb-8 mt-18 flex flex-col rounded-lg dark:bg-dynamic-menu p-5 font-normal bg-light-mode-items sm:mr-6 sm:w-92 shadow-md"
     >
       <div className="overflow-hidden rounded-lg">
-        <a href={project.link} target="_blank">
+        <Link href={project.link} target="_blank">
           <div className="relative h-52 w-full">
             <Image
               src={project.img}
@@ -53,7 +53,7 @@ const Project = ({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-        </a>
+        </Link>
       </div>
       <div className="mt-3 flex flex-grow flex-col">
         <h3 className="text-2xl font-bold text-blue-800 dark:text-text-dark-mode">
