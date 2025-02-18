@@ -78,6 +78,8 @@ const Header = () => {
     scrollToSection: scrollToSection,
     handleDarkMode: handleDarkMode,
     darkMode: darkMode,
+    toggleLanguage: toggleLanguage,
+    currentLang: currentLang,
   };
 
   return (

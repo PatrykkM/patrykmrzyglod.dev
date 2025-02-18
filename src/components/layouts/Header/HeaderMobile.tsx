@@ -10,6 +10,8 @@ interface ActiveNavMobileProps {
   scrollToSection: (sectionId: string) => void;
   handleDarkMode: () => void;
   darkMode: boolean;
+  toggleLanguage: () => void;
+  currentLang: string;
 }
 
 const ActiveNavMobile = ({
@@ -20,12 +22,14 @@ const ActiveNavMobile = ({
   scrollToSection,
   handleDarkMode,
   darkMode,
+  toggleLanguage,
+  currentLang,
 }: ActiveNavMobileProps) => {
   return (
     <>
       {activeMenu ? (
-        <div className="fixed right-5 top-20 z-50 rounded-3xl dark:bg-dynamic-menu text-text-light-mode shadow-lg transition-opacity bg-light-mode-items dark:text-text-dark-mode md:hidden">
-          <ul className="flex h-full flex-col items-end justify-around p-6 text-sm font-semibold sm:p-8 sm:text-base">
+        <div className="p-6 fixed right-5 top-20 z-50 rounded-3xl dark:bg-dynamic-menu text-text-light-mode shadow-lg transition-opacity bg-light-mode-items dark:text-text-dark-mode md:hidden flex flex-col items-end justify-around gap-4">
+          <ul className="flex h-full flex-col items-end justify-around gap-4 text-sm font-semibold sm:p-8 sm:text-base">
             {nav.map((e, id) => (
               <NavItem
                 e={e}
@@ -36,13 +40,15 @@ const ActiveNavMobile = ({
                 activeIndex={activeIndex}
               />
             ))}
-            <div
-              className="flex cursor-pointer text-xl text-text-light-mode dark:text-text-dark-mode"
-              onClick={handleDarkMode}
-            >
-              {darkMode ? <FaMoon /> : <MdLightMode />}
-            </div>
           </ul>
+          <div className="flex gap-4 items-center">
+            <div onClick={handleDarkMode}>
+              {darkMode ? <FaMoon size={18} /> : <MdLightMode size={18} />}
+            </div>
+            <div className="font-semibold" onClick={toggleLanguage}>
+              {currentLang.toUpperCase()}
+            </div>
+          </div>
         </div>
       ) : null}
     </>

@@ -14,7 +14,7 @@ const HelloDesc = () => {
 
   return (
     <div className="flex flex-grow flex-col gap-12 text-text-light-mode dark:text-text-dark-mode">
-      <div className="flex flex-col lg:items-center  gap-6 text-5xl font-bold sm:text-[78px]">
+      <div className="flex flex-col lg:items-center  lg:gap-6 text-5xl font-bold sm:text-[78px]">
         <motion.div
           {...motionProps}
           className="flex lg:items-center flex-col lg:flex-row gap-4"

@@ -14,7 +14,7 @@ const Technologies = () => {
   const { t } = useTranslation();
   return (
     <section
-      className="flex flex-col px-5 font-semibold m:px-10  lg:max-w-7xl lg:px-16"
+      className="flex flex-col px-5 font-semibold m:px-10  lg:max-w-7xl lg:px-16 pt-10"
       id="Technologies"
     >
       <motion.div {...titleMotionProps}>

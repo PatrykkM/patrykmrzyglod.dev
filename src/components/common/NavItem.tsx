@@ -28,7 +28,7 @@ const NavItem = ({
     <li
       className={`${
         activeIndex === id ? "gradient-text" : ""
-      } mb-3 md:mb-0  md:list-none md:text-base md:font-medium`}
+      }  text-base md:list-none md:text-base md:font-medium`}
       key={e.name}
     >
       <a href={`#${e.name}`} onClick={handleNavClick}>
