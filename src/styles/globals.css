@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-light-theme: #0d0d0d;
+  --text-dark-theme: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, rgb(255, 179, 0), royalblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.outline-text-light {
+  -webkit-text-stroke: 1px var(--text-light-theme);
+  color: transparent;
+}
+
+.dark .outline-text-light {
+  -webkit-text-stroke: 1px var(--text-dark-theme);
+}
+
+.backface-visibility {
+  backface-visibility: hidden;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}

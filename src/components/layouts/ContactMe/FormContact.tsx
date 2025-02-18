@@ -1,116 +1,170 @@
 import emailjs from "emailjs-com";
-
-import { useRef, useState } from "react";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
-import { UserSentFormCorrectly, UserSentFormError } from "../../../redux/slices/userSentForm";
+import {
+  UserSentFormCorrectly,
+  UserSentFormError,
+} from "../../../redux/slices/userSentForm";
 import { RootState } from "../../../redux/store";
 
+type FormValues = {
+  from_name: string;
+  from_email: string;
+  message: string;
+};
+
+type FormField = {
+  name: keyof FormValues;
+  label: string;
+  type: string;
+  placeholder: string;
+  rows?: number;
+};
+
 const FormContact = () => {
-	const dispatch = useDispatch();
-	const formRef = useRef<HTMLFormElement>(null);
-	const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-	const USER_ID = import.meta.env.VITE_USER_ID;
-	const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-	const isUserSendFormCorrectly = useSelector((state: RootState) => state.userSentFrom.correct);
-	const isUserSendFormError = useSelector((state: RootState) => state.userSentFrom.error);
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+  const isUserSendFormCorrectly = useSelector(
+    (state: RootState) => state.userSentFrom.correct
+  );
+  const isUserSendFormError = useSelector(
+    (state: RootState) => state.userSentFrom.error
+  );
 
-	const [processing, setProcessing] = useState(false);
-	const [shake, setShake] = useState(false);
-	const [isShaking, setIsShaking] = useState(false);
+  const formFields: FormField[] = [
+    {
+      name: "from_name",
+      label: t("contact.form.nameLabel"),
+      type: "text",
+      placeholder: t("contact.form.namePlaceholder"),
+    },
+    {
+      name: "from_email",
+      label: t("contact.form.emailLabel"),
+      type: "email",
+      placeholder: t("contact.form.emailPlaceholder"),
+    },
+    {
+      name: "message",
+      label: t("contact.form.messageLabel"),
+      type: "textarea",
+      placeholder: t("contact.form.messagePlaceholder"),
+      rows: 10,
+    },
+  ];
 
-	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		if (formRef.current && !isUserSendFormCorrectly && !isUserSendFormError && !processing) {
-			setProcessing((prev) => !prev);
-			emailjs
-				.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current!, USER_ID)
-				.then(() => {
-					formRef.current?.reset();
-					dispatch(UserSentFormCorrectly());
-				})
-				.catch(() => {
-					dispatch(UserSentFormError(true));
-				});
-			setTimeout(() => {
-				setProcessing((prev) => !prev);
-				setTimeout(() => {
-					dispatch(UserSentFormError(false));
-				}, 3000);
-			}, 2000);
-		} else {
-			formRef.current?.reset();
-		}
-	};
+  const initialValues: FormValues = {
+    from_name: "",
+    from_email: "",
+    message: "",
+  };
 
-	const handleShakeAlert = () => {
-		if (isShaking === false) {
-			setShake(true);
-			setIsShaking(true);
+  const handleSubmit = async (
+    values: FormValues,
+    {
+      resetForm,
+      setSubmitting,
+    }: { resetForm: () => void; setSubmitting: (value: boolean) => void }
+  ) => {
+    if (!isUserSendFormCorrectly && !isUserSendFormError) {
+      try {
+        await emailjs.send(
+          SERVICE_ID ?? "",
+          TEMPLATE_ID ?? "",
+          values,
+          USER_ID
+        );
+        resetForm();
+        dispatch(UserSentFormCorrectly());
+      } catch {
+        dispatch(UserSentFormError(true));
+      } finally {
+        setSubmitting(false);
+        setTimeout(() => {
+          dispatch(UserSentFormError(false));
+        }, 3000);
+      }
+    } else {
+      resetForm();
+    }
+  };
 
-			setTimeout(() => {
-				setShake(false);
-				setIsShaking(false);
-			}, 700);
-		}
-	};
+  return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={Yup.object({
+        from_name: Yup.string().required(t("contact.form.nameRequired")),
+        from_email: Yup.string()
+          .email(t("contact.form.invalidEmail"))
+          .required(t("contact.form.emailRequired")),
+        message: Yup.string().required(t("contact.form.messageRequired")),
+      })}
+      onSubmit={handleSubmit}
+    >
+      {({ isSubmitting, errors, touched }) => (
+        <Form className="font-me mt-5 dark:text-gray-800">
+          {formFields.map((field) => (
+            <div key={field.name} className="mt-8">
+              <label
+                htmlFor={field.name}
+                className="dark:text-text-dark-mode text-text-light-mode"
+              >
+                {field.label}
+              </label>
+              <Field
+                type={field.type}
+                as={field.type === "textarea" ? "textarea" : undefined}
+                className={`mt-3 w-full rounded-lg dark:bg-dynamic-menu px-3 py-4 bg-light-mode-items text-text-light-mode dark:text-text-dark-mode`}
+                placeholder={field.placeholder}
+                rows={field.rows}
+                id={field.name}
+                name={field.name}
+              />
+              {errors[field.name] && touched[field.name] && (
+                <div className="text-red-500 text-xs mt-1 font-semibold">
+                  {errors[field.name]}
+                </div>
+              )}
+            </div>
+          ))}
 
-	return (
-		<form className="font-me mt-5 dark:text-gray-800" onSubmit={(e) => sendEmail(e)} ref={formRef}>
-			<div className="mt-8">
-				<label htmlFor="from_name">Your Name</label>
-				<input
-					type="text"
-					className="mt-3 w-full  rounded-lg bg-dynamic-menu px-3 py-4 dark:bg-light-mode-items"
-					placeholder="What's your name"
-					id="from_name"
-					name="from_name"
-				/>
-			</div>
-			<div className="mt-8">
-				<label htmlFor="from_email">Your Email</label>
-				<input
-					type="email"
-					name="from_email"
-					id="from_email"
-					className="mt-3 w-full  rounded-lg bg-dynamic-menu px-3 py-4 dark:bg-light-mode-items"
-					placeholder="What's your email"
-				/>
-			</div>
-			<div className="mt-8">
-				<label htmlFor="message">Your Message</label>
-				<textarea
-					className="mt-3 flex w-full items-start justify-start rounded-lg bg-dynamic-menu px-3 py-4 dark:bg-light-mode-items"
-					placeholder="What's your message"
-					rows={10}
-					name="message"
-					id="message"
-				/>
-			</div>
-			<button
-				onClick={handleShakeAlert}
-				type="submit"
-				className={`w-22 mt-7 flex h-12 w-24 items-center justify-center rounded-2xl  font-medium dark:text-white ${isUserSendFormError && !processing ? `bg-red-600` : ``} ${isUserSendFormCorrectly && !processing ? `bg-green-500` : `bg-light-blue`}`}
-			>
-				{processing ? (
-					<div className="border-Light-Green ml-2 h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-t-transparent"></div>
-				) : isUserSendFormCorrectly ? (
-					<p>Sent!</p>
-				) : isUserSendFormError ? (
-					<p>Error</p>
-				) : (
-					<p>Send</p>
-				)}
-			</button>
-			{isUserSendFormCorrectly && !processing ? (
-				<div className="mt-6 text-xs">
-					<p className={`${shake ? `animate-shake` : ``}`}>
-						* Thank you, your email has been sent.
-					</p>
-				</div>
-			) : null}
-		</form>
-	);
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className={`w-22 mt-7 flex h-12 w-24 items-center justify-center rounded-2xl font-medium dark:text-white ${
+              isUserSendFormError && !isSubmitting ? `bg-red-500` : ``
+            } ${
+              isUserSendFormCorrectly && !isSubmitting
+                ? `bg-green-500`
+                : `bg-light-blue`
+            }`}
+          >
+            {isSubmitting ? (
+              <div className="border-Light-Green ml-2 h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-t-transparent"></div>
+            ) : isUserSendFormCorrectly ? (
+              <p>{t("contact.form.sent")}</p>
+            ) : isUserSendFormError ? (
+              <p>{t("contact.form.error")}</p>
+            ) : (
+              <p>{t("contact.form.send")}</p>
+            )}
+          </button>
+
+          {isUserSendFormCorrectly && !isSubmitting && (
+            <div className="mt-6 text-xs text-green-500 font-semibold">
+              <p>{t("contact.form.thankYou")}</p>
+            </div>
+          )}
+        </Form>
+      )}
+    </Formik>
+  );
 };
 
 export default FormContact;

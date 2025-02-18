@@ -1,63 +1,47 @@
+import { helloSectionTitleVariants } from "@/utils/motion";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 import { LuMouse } from "react-icons/lu";
 
-import { HelloSectionProps } from "../../../types/propsTypes";
-import { helloSectionTitleVariants } from "../../../utils/motion";
+const HelloDesc = () => {
+  const { t } = useTranslation();
+  const motionProps = {
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: { once: true, amount: 0.5 },
+    variants: helloSectionTitleVariants,
+  };
 
-const HelloDesc = ({ darkMode }: HelloSectionProps) => {
-	const motionProps = {
-		initial: "offscreen",
-		whileInView: "onscreen",
-		viewport: { once: true, amount: 0.5 },
-		variants: helloSectionTitleVariants,
-	};
-
-	return (
-		<>
-			<div className="flex flex-grow flex-col lg:mt-36">
-				<section className="mt-5 flex flex-col text-white dark:text-mian-text-light">
-					<motion.div
-						{...motionProps}
-						className="flex items-center text-5xl font-bold sm:text-7xl lg:text-8xl"
-					>
-						<h1>Hello</h1>
-						<h1 className="mb-1 ml-1">👋</h1>
-					</motion.div>
-					<motion.h1
-						{...motionProps}
-						className="gradient-text mt-2 text-4xl font-bold sm:my-5 sm:text-6xl lg:text-8xl"
-					>
-						I'm Patryk
-					</motion.h1>
-					<motion.div
-						{...motionProps}
-						className={`my-2 text-4xl font-bold ${
-							darkMode ? `outline-text-light` : `outline-text`
-						} italic sm:text-6xl lg:text-8xl `}
-					>
-						<h1 className="">FullStack</h1>
-						<h1 className="mt-2 sm:mt-5 ">Developer</h1>
-					</motion.div>
-				</section>
-				<section className="mt-10 font-medium text-slate-200 dark:text-mian-text-light">
-					<p className="leading-8 sm:text-lg  lg:w-96">
-						I design mobile apps, develop backend systems, and widely understood software, including
-						frontend development
-						<span className="gradient-text "> and much more!</span> As a college freshman, I have
-						already accumulated almost half year of professional experience in the field and possess
-						a strong passion for continuous development and growth. 📈
-					</p>
-					<div className="mt-10 flex items-center">
-						<div className="text-2xl font-extrabold">
-							<LuMouse />
-						</div>
-						<p className="ml-2">scroll down to know me better</p>
-					</div>
-				</section>
-			</div>
-		</>
-	);
+  return (
+    <div className="flex flex-grow flex-col gap-12 text-text-light-mode dark:text-text-dark-mode">
+      <div className="flex flex-col lg:items-center  lg:gap-6 text-5xl font-bold sm:text-[78px]">
+        <motion.div
+          {...motionProps}
+          className="flex lg:items-center flex-col lg:flex-row gap-4"
+        >
+          <h1>{t("helloSection.greeting")}! 👋</h1>
+          <h1 className="gradient-text">{t("helloSection.name")}</h1>
+        </motion.div>
+        <motion.h1
+          {...motionProps}
+          className={`text-5xl sm:text-7xl font-bold outline-text-light italic lg:text-center leading-snug`}
+        >
+          {t("helloSection.softwareEngineer")}
+        </motion.h1>
+      </div>
+      <div className="w-full">
+        <p className="leading-8 sm:text-lg font-medium  lg:text-center">
+          {t("helloSection.description")}
+        </p>
+      </div>
+      <div className="flex items-center">
+        <div className="text-2xl font-extrabold">
+          <LuMouse />
+        </div>
+        <p className="ml-2">{t("helloSection.scrollHint")}</p>
+      </div>
+    </div>
+  );
 };
 
 export default HelloDesc;
