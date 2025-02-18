@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
-import { AlertAction, DarkMode, Language } from "../layouts/Header/Header";
+import { ToastAction, DarkMode, Language } from "../layouts/Header/Header";
 import { useTranslation } from "react-i18next";
 import FlagIcon from "react-world-flags";
 interface AlertProps {
-  alertAction?: AlertAction;
+  toastAction?: ToastAction;
   setIsAnimating: (isAnimating: boolean) => void;
 }
 
-const Alert = ({ alertAction, setIsAnimating }: AlertProps) => {
+const Toast = ({ toastAction: toastAction, setIsAnimating }: AlertProps) => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,15 +40,12 @@ const Alert = ({ alertAction, setIsAnimating }: AlertProps) => {
         setIsVisible(false);
       }, 1000);
     }, 0);
-    console.log(1);
 
     return () => clearTimeout(timer);
-  }, [alertAction, setIsAnimating]);
+  }, [toastAction, setIsAnimating]);
 
-  console.log(alertAction);
-
-  const alertContent = () => {
-    switch (alertAction) {
+  const toastContent = () => {
+    switch (toastAction) {
       case DarkMode.DARK:
         return (
           <>
@@ -92,9 +89,9 @@ const Alert = ({ alertAction, setIsAnimating }: AlertProps) => {
         isVisible ? `-translate-y-5 opacity-100` : `translate-y-16 opacity-0`
       }  fixed bottom-0 left-1/2 z-9999 flex -translate-x-1/2 transform items-center rounded-2xl dark:bg-main-dark px-5 py-3 text-sm font-medium dark:text-text-dark-mode shadow-2xl transition-all bg-light-mode-items text-text-light-mode`}
     >
-      {alertContent()}
+      {toastContent()}
     </div>
   );
 };
 
-export default Alert;
+export default Toast;
