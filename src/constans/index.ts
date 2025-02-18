@@ -6,9 +6,9 @@ import {
   FaReact,
   FaSass,
 } from "react-icons/fa";
-import { GrDocker, GrMysql } from "react-icons/gr";
+import { GrDocker } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
-import { MdMoreHoriz, MdPhoneIphone } from "react-icons/md";
+import { MdPhoneIphone } from "react-icons/md";
 import {
   SiDotnet,
   SiExpo,
@@ -20,13 +20,13 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-import Collective from "../../public/img/Collective.jpg";
-import Finance from "../../public/img/Finance.png";
-import Bape from "../../public/img/In-ProggresBape.png";
-import AdminPanel from "../../public/img/admin-panel.jpg";
-import codenauts from "../../public/img/codenauts.jpg";
-import ignatium from "../../public/img/ignatium.png";
-import nanovo from "../../public/img/nanovo.png";
+import Collective from "@/public/img/Collective.jpg";
+import Finance from "@/public/img/Finance.png";
+import Bape from "@/public/img/In-ProggresBape.png";
+import AdminPanel from "@/public/img/admin-panel.jpg";
+import codenauts from "@/public/img/codenauts.jpg";
+import ignatium from "@/public/img/ignatium.png";
+import nanovo from "@/public/img/nanovo.png";
 import { AiOutlineCluster } from "react-icons/ai";
 
 export const nav = [

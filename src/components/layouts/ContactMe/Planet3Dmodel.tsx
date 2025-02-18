@@ -9,6 +9,10 @@ const Planet3Dmodel = () => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!mountRef.current) return;
+
+    const currentMount = mountRef.current;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.z = 5;
@@ -33,11 +37,11 @@ const Planet3Dmodel = () => {
       }
     };
 
-    if (mountRef.current) {
-      while (mountRef.current.firstChild) {
-        mountRef.current.removeChild(mountRef.current.firstChild);
+    if (currentMount) {
+      while (currentMount.firstChild) {
+        currentMount.removeChild(currentMount.firstChild);
       }
-      mountRef.current.appendChild(renderer.domElement);
+      currentMount.appendChild(renderer.domElement);
     }
 
     const loader = new GLTFLoader();
@@ -77,9 +81,9 @@ const Planet3Dmodel = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
 
-      if (mountRef.current) {
-        while (mountRef.current.firstChild) {
-          mountRef.current.removeChild(mountRef.current.firstChild);
+      if (currentMount) {
+        while (currentMount.firstChild) {
+          currentMount.removeChild(currentMount.firstChild);
         }
       }
 

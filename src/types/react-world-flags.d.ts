@@ -1,11 +1,13 @@
 declare module "react-world-flags" {
-  import { FC } from "react";
+  import { ComponentType } from "react";
 
   interface FlagProps {
     code: string;
-    [key: string]: any;
+    height?: number | string;
+    width?: number | string;
+    [key: string]: string | number | undefined;
   }
 
-  const Flag: FC<FlagProps>;
+  const Flag: ComponentType<FlagProps>;
   export default Flag;
 }
