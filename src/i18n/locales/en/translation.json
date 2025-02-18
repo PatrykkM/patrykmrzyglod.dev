@@ -1,73 +1,84 @@
 {
-  "navigation": {
-    "experience": "Experience",
-    "technologies": "Technologies",
-    "contact": "Contact"
-  },
-  "technologies": {
-    "title": "Technologies",
-    "subtitle": "What I use",
-    "description": "Throughout my journey as a developer, I've worked with various technologies. Here are the main tools and frameworks I'm proficient in:"
+  "nav": {
+    "Experience": "Experience",
+    "Technologies": "Technologies",
+    "Contact": "Contact"
   },
   "helloSection": {
     "greeting": "Hello",
     "name": "I'm Patryk",
     "softwareEngineer": "Software Engineer",
-    "description": "I design mobile apps, develop backend systems, and widely understood software, including frontend development and much more! As a college freshman, I have already accumulated almost half year of professional experience in the field and possess a strong passion for continuous development and growth. 📈",
+    "description": "I'm a software engineer specializing in FinTech, SaaS, business applications, mobile apps, and system architecture. I'm also a programming student. Outside of work, I dedicate my free time to ambitious personal projects, striving to become a native-level English speaker, and continuously enhancing my skills in Java (Spring Boot). 🚀",
     "scrollHint": "scroll down to know me better"
   },
   "introduction": {
     "title": "Introduction",
     "overview": "Overview",
-    "description": "I am an experienced software engineer with strong skills in JavaScript and TypeScript, focusing on front-end development using frameworks like React. My expertise includes creating efficient, scalable, and user-friendly solutions that address real-world problems. I am known for my quick learning abilities and my commitment to closely collaborating with clients to deliver impactful applications."
+    "description": "I am a skilled software engineer with expertise in React (Next.js), and React Native, as well as backend development with Java (Spring Boot). I specialize in building efficient, scalable, and high-performance solutions that ensure seamless user experiences. With a strong problem-solving mindset and keen attention to detail, I strive to create innovative and maintainable software. Known for my ability to learn quickly and collaborate effectively with teams, I am dedicated to delivering high-impact applications that drive real value.",
+    "frontEnd": "Frontend Engineer",
+    "backEnd": "Backend Engineer",
+    "mobile": "Mobile Engineer",
+    "systemArchitecture": "System Architecture"
   },
-  "workExperience": {
-    "title": "What i have done so far",
-    "subtitle": "Work Experience"
+  "jobs": {
+    "CodeNauts": {
+      "title": "Software Engineer",
+      "time": "Jan 2024 - Present",
+      "description": "At CodeNauts, I specialize in developing business-oriented applications, including SaaS, FinTech, and Business Intelligence (BI) solutions, using React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo, and React Native. My work is focused on delivering advanced, scalable, and high-performance systems tailored to modern business needs by leveraging cutting-edge technologies and innovative solutions.I am committed to building intuitive and maintainable software that enhances efficiency, optimizes workflows, and drives digital transformation. With a strong problem-solving mindset and a passion for continuous learning, I strive to create impactful applications that empower businesses to grow and succeed. Additionally, I actively support junior developers, helping them overcome challenges and grow their skills. 🚀"
+    },
+    "Nanovo": {
+      "title": "Frontend Engineer",
+      "time": "Apr 2022 - May 2022",
+      "description": "During my internship, I worked on a web page for a beauty salon—nothing too complex, just a simple project to get some hands-on experience. I focused on making it responsive, adding some basic interactivity with JavaScript, and fixing minor front-end issues. It wasn't rocket science, but hey, everyone starts somewhere! 💅🚀"
+    },
+    "Ignatianum": {
+      "title": "Network Administrator",
+      "time": "Oct 2021 - Nov 2021",
+      "description": "During my internship, I was responsible for setting up, configuring, and maintaining network hardware, including routers, switches, firewalls, and wireless access points. I assisted users with network-related issues, troubleshooting connectivity problems, and providing technical support. Additionally, I maintained detailed documentation of network topology, configurations, and procedures to ensure efficient management and smooth operations."
+    }
+  },
+  "technologies": {
+    "myKnowledgeOf": "My knowledge of",
+    "title": "Technologies",
+    "hint": "*Technologies are listed in order of proficiency, from highest to lowest."
   },
   "projects": {
-    "title": "My work",
-    "subtitle": "Projects",
-    "description": "The purpose of the projects presented here was to demonstrate my abilities and background while seeking my initial employment. Every project is succinctly summarized, including links to their respective code repositories. These works were developed earlier, and I am currently working on more sophisticated and polished projects. Keep an eye out for updates!",
-    "items": {
-      "boredApeClub": {
-        "desc": "The Bored Ape Club is an NFT Shop & Club. This application stands as a beacon of modern design and functionality, offering a seamless, responsive experience across all devices. Here, you can buy and sell NFTs, all showcased in an aesthetically pleasing design enhanced by tools like Framer."
-      },
-      "finance": {
-        "desc": "FinanceApp is a finance application that allows users to simulate the buying and selling of stocks from top global companies. It aims to provide a brokerage-like experience, enabling users to monitor markets and invest in stocks virtually"
-      },
-      "collective": {
-        "desc": "Collective is an innovative e-commerce platform that redefines online shopping with its groundbreaking design and exceptional user experience. At Collective, the focus is on an intuitive, user-friendly interface."
-      },
-      "clinicDashboard": {
-        "desc": "This full-stack application serves as a sophisticated admin panel that streamlines the management of client data. It features a clean, modern interface that allows administrators to efficiently add, remove, edit, and search for clients."
-      }
+    "myWork": "My Work",
+    "projects": "Projects",
+    "description": "The projects presented here are older works that don't fully reflect my current skill level, but they're still worth showcasing. They were initially created to demonstrate my abilities while seeking my first job. Each project includes a brief summary and links to the respective code repositories. Since then, I've significantly improved and am now working on more advanced and refined projects—stay tuned for updates!",
+    "BoredApeClub": {
+      "description": "BoredApeClub is a web application that enables users to explore and engage with Bored Ape Yacht Club (BAYC) NFTs. It features a seamless, user-friendly interface with smooth animations for browsing, searching, and interacting with the BAYC collection."
+    },
+    "Finance": {
+      "description": "FinanceApp is a finance application that allows users to simulate the buying and selling of stocks from top global companies. It features real-time market data, an intuitive interface, and interactive charts to enhance the trading experience."
+    },
+    "Collective": {
+      "description": "Collective is an e-commerce web application that allows users to buy and sell clothing. It offers a comprehensive platform for exploring fashion collections, with detailed product information, a user-friendly interface for browsing and searching, and a seamless way to connect with the fashion community."
+    },
+    "ClinicPatientDashboard": {
+      "description": "This full-stack application serves as a  admin panel that streamlines the management of client data. It features a clean, modern interface that allows administrators to efficiently add, remove, edit, and search for clients.This was a challenging task, as I had to complete it within just a few days to qualify for an internship. In the end, I got the internship, but ironically, they reached out just a few days too late—by then, I had already secured a job at Codenauts!"
     }
   },
   "contact": {
     "title": "Get in touch",
+    "description": "Feel free to reach out to me through",
+    "email": "email",
+    "formBelow": "or use the form below.",
     "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your Message",
+      "nameLabel": "Your Name",
+      "emailLabel": "Your Email",
+      "messageLabel": "Your Message",
+      "namePlaceholder": "What's your name",
+      "emailPlaceholder": "What's your email",
+      "messagePlaceholder": "What's your message",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "messageRequired": "Message is required",
+      "invalidEmail": "Invalid email",
       "send": "Send",
       "sent": "Sent!",
       "error": "Error",
       "thankYou": "* Thank you, your email has been sent."
-    }
-  },
-  "jobPositions": {
-    "codenauts": {
-      "name": "FullStack Developer",
-      "description": "At CodeNauts, I develop software, web applications, and mobile apps using React, Next.js, TypeScript, TailiwindCss, Java, Spring Boot, Expo, React Native. My work focuses on delivering responsive and interactive solutions tailored for business needs across web and mobile platforms."
-    },
-    "nanovo": {
-      "name": "Frontend Developer",
-      "description": "Creating RWD that adapt and look well on various screen sizes and devices, such as desktops, tablets, and smartphones. Implementing JavaScript to add interactivity, dynamic behavior, and animations to web page. Identifying and fixing front-end bugs, issues, and inconsistencies through testing and debugging"
-    },
-    "ignatium": {
-      "name": "Network Administrator",
-      "description": "Installing, configuring, and maintaining network hardware such as routers, switches, firewalls, and wireless access points. Assisting users with network-related issues, troubleshooting connectivity problems, and providing technical support for network-related inquiries. Maintaining accurate and detailed documentation of the network topology, configurations, and procedures."
     }
   }
 }

@@ -2,6 +2,7 @@ import emailjs from "emailjs-com";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import {
   UserSentFormCorrectly,
@@ -23,29 +24,8 @@ type FormField = {
   rows?: number;
 };
 
-const formFields: FormField[] = [
-  {
-    name: "from_name",
-    label: "Your Name",
-    type: "text",
-    placeholder: "What's your name",
-  },
-  {
-    name: "from_email",
-    label: "Your Email",
-    type: "email",
-    placeholder: "What's your email",
-  },
-  {
-    name: "message",
-    label: "Your Message",
-    type: "textarea",
-    placeholder: "What's your message",
-    rows: 10,
-  },
-];
-
 const FormContact = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
   const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
@@ -56,6 +36,28 @@ const FormContact = () => {
   const isUserSendFormError = useSelector(
     (state: RootState) => state.userSentFrom.error
   );
+
+  const formFields: FormField[] = [
+    {
+      name: "from_name",
+      label: t("contact.form.nameLabel"),
+      type: "text",
+      placeholder: t("contact.form.namePlaceholder"),
+    },
+    {
+      name: "from_email",
+      label: t("contact.form.emailLabel"),
+      type: "email",
+      placeholder: t("contact.form.emailPlaceholder"),
+    },
+    {
+      name: "message",
+      label: t("contact.form.messageLabel"),
+      type: "textarea",
+      placeholder: t("contact.form.messagePlaceholder"),
+      rows: 10,
+    },
+  ];
 
   const initialValues: FormValues = {
     from_name: "",
@@ -97,11 +99,11 @@ const FormContact = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={Yup.object({
-        from_name: Yup.string().required("Name is required"),
+        from_name: Yup.string().required(t("contact.form.nameRequired")),
         from_email: Yup.string()
-          .email("Invalid email")
-          .required("Email is required"),
-        message: Yup.string().required("Message is required"),
+          .email(t("contact.form.invalidEmail"))
+          .required(t("contact.form.emailRequired")),
+        message: Yup.string().required(t("contact.form.messageRequired")),
       })}
       onSubmit={handleSubmit}
     >
@@ -146,17 +148,17 @@ const FormContact = () => {
             {isSubmitting ? (
               <div className="border-Light-Green ml-2 h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-t-transparent"></div>
             ) : isUserSendFormCorrectly ? (
-              <p>Sent!</p>
+              <p>{t("contact.form.sent")}</p>
             ) : isUserSendFormError ? (
-              <p>Error</p>
+              <p>{t("contact.form.error")}</p>
             ) : (
-              <p>Send</p>
+              <p>{t("contact.form.send")}</p>
             )}
           </button>
 
           {isUserSendFormCorrectly && !isSubmitting && (
             <div className="mt-6 text-xs text-green-500 font-semibold">
-              <p>* Thank you, your email has been sent.</p>
+              <p>{t("contact.form.thankYou")}</p>
             </div>
           )}
         </Form>

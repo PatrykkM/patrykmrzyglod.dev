@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 interface NavItemProps {
   e: {
     name: string;
@@ -15,6 +17,7 @@ const NavItem = ({
   scrollToSection,
   handleClick,
 }: NavItemProps) => {
+  const { t } = useTranslation();
   const handleNavClick = (event: React.MouseEvent) => {
     event.preventDefault();
     handleClick(id);
@@ -29,7 +32,7 @@ const NavItem = ({
       key={e.name}
     >
       <a href={`#${e.name}`} onClick={handleNavClick}>
-        {e.name}
+        {t(`nav.${e.name}`)}
       </a>
     </li>
   );

@@ -1,6 +1,5 @@
 import { FaMoon } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
-
 import NavItem from "../../common/NavItem";
 
 interface ActiveNavMobileProps {

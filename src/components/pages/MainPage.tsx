@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../layouts/Header/Header";
 import HelloSectionWrapper from "../layouts/HelloSection/HelloSectionWrapper";
 import FirstWaveDelmiter from "../common/Waves/FirstWaveDelmiter";
@@ -14,6 +14,17 @@ import Projects from "../layouts/Projects/Projects";
 import ContactMeWrapper from "../layouts/ContactMe/ContactMe";
 
 export const MainPage = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    document.body.classList.add("dark");
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="box-border min-w-314px flex flex-col bg-main-light dark:bg-main-dark min-h-screen overflow-x-hidden items-center">
       <Header />

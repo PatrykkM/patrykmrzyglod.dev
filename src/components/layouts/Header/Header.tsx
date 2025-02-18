@@ -108,7 +108,7 @@ const Header = () => {
               />
             ))}
             <div
-              className="cursor-pointer font-medium"
+              className="cursor-pointer font-medium text-base"
               onClick={toggleLanguage}
             >
               {currentLang.toUpperCase()}

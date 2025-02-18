@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { KnowledgeItems } from "@/constans";
-
+import { useTranslation } from "react-i18next";
 const Introduction = () => {
   const combinedVariants = {
     hidden: { y: -50, opacity: 0 },
@@ -35,6 +35,8 @@ const Introduction = () => {
     threshold: 0.1,
   });
 
+  const { t } = useTranslation();
+
   return (
     <div className="mt-18 px-5 sm:px-10 lg:mt-0 lg:p-0">
       <section
@@ -47,7 +49,7 @@ const Introduction = () => {
           variants={combinedVariants}
           className="uppercase text-gray-500"
         >
-          Introduction
+          {t("introduction.title")}
         </motion.p>
         <motion.h2
           initial="hidden"
@@ -55,15 +57,10 @@ const Introduction = () => {
           variants={combinedVariants}
           className="my-2 text-3xl font-bold dark:text-mian-text-light sm:text-5xl lg:text-6xl"
         >
-          Overview
+          {t("introduction.overview")}
         </motion.h2>
         <p className="leading-7 text-gray-500">
-          I am an experienced software engineer with strong skills in JavaScript
-          and TypeScript, focusing on front-end development using frameworks
-          like React. My expertise includes creating efficient, scalable, and
-          user-friendly solutions that address real-world problems. I am known
-          for my quick learning abilities and my commitment to closely
-          collaborating with clients to deliver impactful applications.
+          {t("introduction.description")}
         </p>
         <div className="z-10 sm:flex sm:flex-wrap" ref={itemsRef}>
           {KnowledgeItems.map((item, index) => (
@@ -78,7 +75,7 @@ const Introduction = () => {
                 <item.src />
               </p>
               <p className="pt-1 font-semibold dark:text-blue-600 text-light-blue">
-                {item.name}
+                {t(`introduction.${item.name}`)}
               </p>
             </motion.div>
           ))}

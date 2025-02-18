@@ -18,17 +18,17 @@ export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="pl" className={` ${poppins.className}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <title>patrykmrzyglod.dev</title>
         <meta charSet="utf-8" />
         <meta property="og:title" content="patrykmrzyglod.dev" key="title" />
       </head>
-      <body>
+      <body className={poppins.className}>
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
             {/* <AppLoadingOverlay /> */}

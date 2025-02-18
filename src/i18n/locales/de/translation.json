@@ -1,76 +1,84 @@
 {
-  "navigation": {
-    "experience": "Erfahrung",
-    "technologies": "Technologien",
-    "contact": "Kontakt"
+  "nav": {
+    "Experience": "Erfahrung",
+    "Technologies": "Technologien",
+    "Contact": "Kontakt"
   },
   "technologies": {
+    "myKnowledgeOf": "Meine Kenntnisse in",
     "title": "Technologien",
-    "subtitle": "Was ich verwende",
-    "description": "Während meiner Entwicklerlaufbahn habe ich mit verschiedenen Technologien gearbeitet. Hier sind die wichtigsten Tools und Frameworks, in denen ich versiert bin:"
+    "hint": "*Technologien sind nach Kenntnisstand sortiert, von höchsten zu niedrigsten."
   },
   "helloSection": {
     "greeting": "Hallo",
     "name": "Ich bin Patryk",
-    "role": {
-      "line1": "FullStack",
-      "line2": "Entwickler"
-    },
-    "description": "Ich entwickle mobile Apps, Backend-Systeme und Software im weitesten Sinne, einschließlich Frontend-Entwicklung und vieles mehr! Als Student im ersten Jahr habe ich bereits ein halbes Jahr Berufserfahrung in der Branche gesammelt und besitze eine starke Leidenschaft für kontinuierliche Entwicklung und Wachstum. 📈",
-    "scrollHint": "nach unten scrollen, um mich besser kennenzulernen"
+    "softwareEngineer": "Software Entwickler",
+    "description": "Ich bin ein Softwareentwickler, spezialisiert auf FinTech, SaaS, Geschäftsanwendungen, mobile Apps und Systemarchitektur. Ich bin auch Informatikstudent. Neben der Arbeit widme ich meine Freizeit anspruchsvollen persönlichen Projekten, strebe danach, Englisch auf muttersprachlichem Niveau zu sprechen und verbessere kontinuierlich meine Fähigkeiten in Java (Spring Boot). 🚀",
+    "scrollHint": "nach unten scrollen, um mehr zu erfahren"
   },
   "introduction": {
     "title": "Einführung",
     "overview": "Überblick",
-    "description": "Ich bin ein erfahrener Softwareentwickler mit fundierten Kenntnissen in JavaScript und TypeScript, spezialisiert auf Frontend-Entwicklung mit Frameworks wie React. Meine Expertise umfasst die Entwicklung effizienter, skalierbarer und benutzerfreundlicher Lösungen für reale Probleme. Ich bin bekannt für meine schnelle Auffassungsgabe und mein Engagement für eine enge Zusammenarbeit mit Kunden, um wirkungsvolle Anwendungen zu liefern."
+    "description": "Ich bin ein erfahrener Softwareentwickler mit Expertise in React (Next.js) und React Native sowie Backend-Entwicklung mit Java (Spring Boot). Ich spezialisiere mich auf die Entwicklung effizienter, skalierbarer und leistungsstarker Lösungen, die nahtlose Benutzererlebnisse gewährleisten. Mit einer starken Problemlösungskompetenz und Liebe zum Detail strebe ich danach, innovative und wartbare Software zu erstellen. Bekannt für meine schnelle Auffassungsgabe und effektive Teamarbeit, widme ich mich der Entwicklung wirkungsvoller Anwendungen mit echtem Mehrwert.",
+    "frontEnd": "Frontend Entwickler",
+    "backEnd": "Backend Entwickler",
+    "mobile": "Mobile Entwickler",
+    "systemArchitecture": "System Architekt"
   },
-  "workExperience": {
-    "title": "Was ich bisher gemacht habe",
-    "subtitle": "Berufserfahrung"
+  "jobs": {
+    "CodeNauts": {
+      "title": "Software Entwickler",
+      "time": "Jan 2024 - Heute",
+      "description": "Bei CodeNauts entwickle ich geschäftsorientierte Anwendungen, einschließlich SaaS, FinTech und Business Intelligence (BI) Lösungen mit React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo und React Native. Meine Arbeit konzentriert sich darauf, fortschrittliche, skalierbare und leistungsstarke Systeme zu entwickeln, die auf moderne Geschäftsanforderungen zugeschnitten sind. Ich setze mich für die Entwicklung intuitiver und wartbarer Software ein, die die Effizienz steigert, Arbeitsabläufe optimiert und die digitale Transformation vorantreibt. Mit einer starken Problemlösungskompetenz und Leidenschaft für kontinuierliches Lernen strebe ich danach, wirkungsvolle Anwendungen zu erstellen, die Unternehmen beim Wachstum und Erfolg unterstützen. Zusätzlich unterstütze ich aktiv Junior-Entwickler dabei, Herausforderungen zu meistern und ihre Fähigkeiten weiterzuentwickeln. 🚀"
+    },
+    "Nanovo": {
+      "title": "Frontend Entwickler",
+      "time": "Apr 2022 - Mai 2022",
+      "description": "Während meines Praktikums arbeitete ich an einer Webseite für einen Schönheitssalon - nichts zu Komplexes, nur ein einfaches Projekt, um praktische Erfahrungen zu sammeln. Ich konzentrierte mich darauf, sie responsiv zu gestalten, grundlegende Interaktivität mit JavaScript hinzuzufügen und kleinere Frontend-Probleme zu beheben. Es war keine Raketenwissenschaft, aber hey, irgendwo muss man ja anfangen! 💅🚀"
+    },
+    "Ignatianum": {
+      "title": "Netzwerk Administrator",
+      "time": "Okt 2021 - Nov 2021",
+      "description": "Während meines Praktikums war ich verantwortlich für die Einrichtung, Konfiguration und Wartung von Netzwerk-Hardware, einschließlich Routern, Switches, Firewalls und WLAN-Zugangspunkten. Ich unterstützte Benutzer bei netzwerkbezogenen Problemen, behob Verbindungsprobleme und bot technischen Support. Zusätzlich führte ich detaillierte Dokumentation der Netzwerktopologie, Konfigurationen und Verfahren, um effizientes Management und reibungslose Abläufe sicherzustellen."
+    }
   },
   "projects": {
-    "title": "Meine Arbeit",
-    "subtitle": "Projekte",
-    "description": "Die hier vorgestellten Projekte dienten dazu, meine Fähigkeiten und meinen Hintergrund bei der Suche nach meiner ersten Anstellung zu demonstrieren. Jedes Projekt wird kurz zusammengefasst und enthält Links zu den jeweiligen Code-Repositories. Diese Arbeiten wurden früher entwickelt, und ich arbeite derzeit an anspruchsvolleren und ausgereifteren Projekten. Bleiben Sie dran für Updates!",
-    "items": {
-      "boredApeClub": {
-        "desc": "Der Bored Ape Club ist ein NFT-Shop & Club. Diese Anwendung ist ein Leuchtturm modernen Designs und Funktionalität, der ein nahtloses, responsives Erlebnis auf allen Geräten bietet. Hier können Sie NFTs kaufen und verkaufen, alles präsentiert in einem ästhetisch ansprechenden Design, das durch Tools wie Framer verbessert wird."
-      },
-      "finance": {
-        "desc": "FinanceApp ist eine Finanzanwendung, die es Benutzern ermöglicht, den Kauf und Verkauf von Aktien führender globaler Unternehmen zu simulieren. Sie zielt darauf ab, eine maklerähnliche Erfahrung zu bieten und ermöglicht es Benutzern, Märkte zu überwachen und virtuell in Aktien zu investieren."
-      },
-      "collective": {
-        "desc": "Collective ist eine innovative E-Commerce-Plattform, die den Online-Einkauf mit ihrem bahnbrechenden Design und außergewöhnlicher Benutzererfahrung neu definiert. Bei Collective liegt der Fokus auf einer intuitiven, benutzerfreundlichen Oberfläche."
-      },
-      "clinicDashboard": {
-        "desc": "Diese Full-Stack-Anwendung dient als ausgereiftes Admin-Panel, das die Verwaltung von Kundendaten optimiert. Es bietet eine übersichtliche, moderne Benutzeroberfläche, die es Administratoren ermöglicht, Kunden effizient hinzuzufügen, zu entfernen, zu bearbeiten und zu suchen."
-      }
+    "myWork": "Meine Arbeit",
+    "projects": "Projekte",
+    "description": "Die hier vorgestellten Projekte sind ältere Arbeiten, die mein aktuelles Können nicht vollständig widerspiegeln, aber dennoch sehenswert sind. Sie wurden ursprünglich erstellt, um meine Fähigkeiten bei der Suche nach meinem ersten Job zu demonstrieren. Jedes Projekt enthält eine kurze Zusammenfassung und Links zu den jeweiligen Code-Repositories. Seitdem habe ich mich deutlich verbessert und arbeite nun an fortgeschritteneren und ausgereifteren Projekten - bleiben Sie dran für Updates!",
+    "BoredApeClub": {
+      "description": "BoredApeClub ist eine Webanwendung, die es Benutzern ermöglicht, Bored Ape Yacht Club (BAYC) NFTs zu erkunden und damit zu interagieren. Sie bietet eine nahtlose, benutzerfreundliche Oberfläche mit flüssigen Animationen zum Durchsuchen, Suchen und Interagieren mit der BAYC-Sammlung."
+    },
+    "Finance": {
+      "description": "FinanceApp ist eine Finanzanwendung, die es Benutzern ermöglicht, den Kauf und Verkauf von Aktien führender globaler Unternehmen zu simulieren. Sie bietet Echtzeit-Marktdaten, eine intuitive Benutzeroberfläche und interaktive Diagramme zur Verbesserung der Trading-Erfahrung."
+    },
+    "Collective": {
+      "description": "Collective ist eine E-Commerce-Webanwendung, die es Benutzern ermöglicht, Kleidung zu kaufen und zu verkaufen. Sie bietet eine umfassende Plattform zum Erkunden von Modekollektionen mit detaillierten Produktinformationen, einer benutzerfreundlichen Oberfläche zum Durchsuchen und Suchen sowie einer nahtlosen Möglichkeit, sich mit der Mode-Community zu verbinden."
+    },
+    "ClinicPatientDashboard": {
+      "description": "Diese Full-Stack-Anwendung dient als Admin-Panel zur Optimierung der Verwaltung von Kundendaten. Sie bietet eine übersichtliche, moderne Benutzeroberfläche, die es Administratoren ermöglicht, Kunden effizient hinzuzufügen, zu entfernen, zu bearbeiten und zu suchen. Dies war eine herausfordernde Aufgabe, da ich sie innerhalb weniger Tage abschließen musste, um mich für ein Praktikum zu qualifizieren. Am Ende bekam ich das Praktikum, aber ironischerweise meldeten sie sich erst ein paar Tage zu spät - zu diesem Zeitpunkt hatte ich bereits einen Job bei Codenauts!"
     }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
+    "description": "Sie können mich erreichen über",
+    "email": "E-Mail",
+    "formBelow": "oder nutzen Sie das Formular unten.",
     "form": {
-      "name": "Ihr Name",
-      "email": "Ihre E-Mail",
-      "message": "Ihre Nachricht",
+      "nameLabel": "Ihr Name",
+      "emailLabel": "Ihre E-Mail",
+      "messageLabel": "Ihre Nachricht",
+      "namePlaceholder": "Wie ist Ihr Name",
+      "emailPlaceholder": "Wie ist Ihre E-Mail",
+      "messagePlaceholder": "Was ist Ihre Nachricht",
+      "nameRequired": "Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "messageRequired": "Nachricht ist erforderlich",
+      "invalidEmail": "Ungültige E-Mail",
       "send": "Senden",
       "sent": "Gesendet!",
       "error": "Fehler",
       "thankYou": "* Vielen Dank, Ihre E-Mail wurde gesendet."
-    }
-  },
-  "jobPositions": {
-    "codenauts": {
-      "name": "FullStack Entwickler",
-      "description": "Bei CodeNauts entwickle ich Software, Webanwendungen und mobile Apps mit React, Next.js, TypeScript, TailiwindCss, Java, Spring Boot, Expo und React Native. Meine Arbeit konzentriert sich darauf, responsive und interaktive Lösungen zu liefern, die auf die geschäftlichen Anforderungen für Web- und Mobile-Plattformen zugeschnitten sind."
-    },
-    "nanovo": {
-      "name": "Frontend Entwickler",
-      "description": "Entwicklung von RWD, die sich an verschiedene Bildschirmgrößen und Geräte wie Desktops, Tablets und Smartphones anpassen. Implementierung von JavaScript für Interaktivität, dynamisches Verhalten und Animationen auf Webseiten. Identifizierung und Behebung von Frontend-Bugs, Problemen und Inkonsistenzen durch Tests und Debugging."
-    },
-    "ignatium": {
-      "name": "Netzwerkadministrator",
-      "description": "Installation, Konfiguration und Wartung von Netzwerk-Hardware wie Routern, Switches, Firewalls und WLAN-Zugangspunkten. Unterstützung von Benutzern bei netzwerkbezogenen Problemen, Fehlerbehebung bei Verbindungsproblemen und technischer Support für netzwerkbezogene Anfragen. Führung genauer und detaillierter Dokumentation der Netzwerktopologie, Konfigurationen und Verfahren."
     }
   }
 }

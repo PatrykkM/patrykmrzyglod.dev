@@ -1,7 +1,7 @@
 import { projectVariants } from "@/utils/motion";
 import { motion, useAnimation } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -14,10 +14,10 @@ const Project = ({
     name: string;
     img: StaticImageData;
     link: string;
-    desc: string;
     techs: { name: string; color: string }[];
   };
 }) => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -60,7 +60,7 @@ const Project = ({
           {project.name}
         </h3>
         <p className="mt-3 text-sm dark:text-gray-300 text-gray-500">
-          {project.desc}
+          {t(`projects.${project.name}.description`)}
         </p>
       </div>
       <div className="flex flex-wrap">
