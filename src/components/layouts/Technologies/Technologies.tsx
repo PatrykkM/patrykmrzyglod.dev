@@ -21,15 +21,15 @@ const Technologies = () => {
         <p className="text-sm uppercase text-gray-400">
           {t("technologies.myKnowledgeOf")}
         </p>
-        <h2 className="text-primary-900 dark:text-primary-100  text-3xl font-extrabold lg:text-6xl">
+        <h2 className="text-3xl font-extrabold text-primary-900 dark:text-primary-100 lg:text-6xl">
           {t("technologies.title")}
         </h2>
-        <p className="font-base text-xs font-normal text-gray-400">
+        <p className="font-base mt-2 text-xs font-normal text-gray-400">
           {t("technologies.hint")}
         </p>
       </motion.div>
       <motion.div
-        className=" flex flex-col gap-10 sm:flex-row sm:flex-wrap lg:gap-7"
+        className="flex flex-col gap-10 sm:flex-row sm:flex-wrap lg:gap-7"
         variants={techsContainerVariants}
         initial="hidden"
         whileInView="visible"

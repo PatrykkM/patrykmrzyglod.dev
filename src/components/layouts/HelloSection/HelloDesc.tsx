@@ -12,20 +12,21 @@ const HelloDesc = () => {
   };
 
   return (
-    <div className="text-primary-900 dark:text-primary-100 flex flex-grow flex-col gap-10">
-      <div className="flex flex-col text-5xl font-bold sm:text-[78px] lg:items-center lg:gap-6">
+    <div className="flex flex-col gap-10 text-primary-900 dark:text-primary-100">
+      <div className="flex flex-col gap-2 text-5xl font-bold sm:text-[78px] lg:items-center lg:gap-5">
         <motion.div
           {...motionProps}
-          className="flex flex-col gap-4 lg:flex-row lg:items-center"
+          className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4"
         >
           <h1>{t("helloSection.greeting")}! 👋</h1>
           <h1 className="gradient-text">{t("helloSection.name")}</h1>
         </motion.div>
         <motion.h1
           {...motionProps}
-          className={`outline-text-light text-5xl font-bold italic leading-snug sm:text-7xl lg:text-center`}
+          className={`outline-text-light flex flex-col gap-2 text-5xl font-bold italic sm:text-7xl lg:flex-row lg:text-center`}
         >
-          {t("helloSection.softwareEngineer")}
+          <p>Software</p>
+          <p>{t("helloSection.engineer")}</p>
         </motion.h1>
       </div>
       <div className="w-full">

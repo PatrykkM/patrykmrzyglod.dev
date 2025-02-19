@@ -22,13 +22,31 @@ type FormField = {
 
 const FormContact = () => {
   const { t } = useTranslation();
+
+  const validationSchema = Yup.object({
+    from_name: Yup.string().required(t("contact.form.nameRequired")),
+    from_email: Yup.string()
+      .email(t("contact.form.invalidEmail"))
+      .required(t("contact.form.emailRequired")),
+    message: Yup.string().required(t("contact.form.messageRequired")),
+  });
+
+  const initialValues: FormValues = {
+    from_name: "",
+    from_email: "",
+    message: "",
+  };
+
   const dispatch = useDispatch();
+
   const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
   const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+
   const isUserSendFormCorrectly = useSelector(
     (state: RootState) => state.userSentFrom.correct
   );
+
   const isUserSendFormError = useSelector(
     (state: RootState) => state.userSentFrom.error
   );
@@ -54,12 +72,6 @@ const FormContact = () => {
       rows: 10,
     },
   ];
-
-  const initialValues: FormValues = {
-    from_name: "",
-    from_email: "",
-    message: "",
-  };
 
   const handleSubmit = async (
     values: FormValues,
@@ -94,19 +106,13 @@ const FormContact = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={Yup.object({
-        from_name: Yup.string().required(t("contact.form.nameRequired")),
-        from_email: Yup.string()
-          .email(t("contact.form.invalidEmail"))
-          .required(t("contact.form.emailRequired")),
-        message: Yup.string().required(t("contact.form.messageRequired")),
-      })}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting, errors, touched }) => (
-        <Form className="font-me mt-5 dark:text-gray-800">
+        <Form className="mt-8 flex flex-col gap-8 dark:text-gray-800">
           {formFields.map((field) => (
-            <div key={field.name} className="mt-8">
+            <div key={field.name} className="flex flex-col gap-2">
               <label
                 htmlFor={field.name}
                 className="text-primary-900 dark:text-primary-100"
@@ -116,47 +122,48 @@ const FormContact = () => {
               <Field
                 type={field.type}
                 as={field.type === "textarea" ? "textarea" : undefined}
-                className={`dark:bg-primary-500 text-primary-900 dark:text-primary-100 bg-primary-300 mt-3 w-full rounded-lg px-3 py-4 transition-colors duration-300`}
+                className={`w-full rounded-lg bg-primary-300 px-3 py-4 text-primary-900 transition-colors duration-300 dark:bg-primary-500 dark:text-primary-100`}
                 placeholder={field.placeholder}
                 rows={field.rows}
                 id={field.name}
                 name={field.name}
               />
               {errors[field.name] && touched[field.name] && (
-                <div className="mt-1 text-xs font-semibold text-red-500">
+                <div className="text-xs font-semibold text-red-500">
                   {errors[field.name]}
                 </div>
               )}
             </div>
           ))}
+          <div className="mt-2 flex flex-col gap-2">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`flex h-12 w-24 items-center justify-center rounded-2xl font-medium dark:text-white ${
+                isUserSendFormError && !isSubmitting
+                  ? "bg-red-500"
+                  : isUserSendFormCorrectly && !isSubmitting
+                    ? "bg-green-500"
+                    : "bg-neutral-100"
+              }`}
+            >
+              {isSubmitting ? (
+                <div className="h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-primary-300 border-t-transparent"></div>
+              ) : isUserSendFormCorrectly ? (
+                <p>{t("contact.form.sent")}</p>
+              ) : isUserSendFormError ? (
+                <p>{t("contact.form.error")}</p>
+              ) : (
+                <p>{t("contact.form.send")}</p>
+              )}
+            </button>
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`w-22 mt-7 flex h-12 w-24 items-center justify-center rounded-2xl font-medium dark:text-white ${
-              isUserSendFormError && !isSubmitting ? `bg-red-500` : ``
-            } ${
-              isUserSendFormCorrectly && !isSubmitting
-                ? `bg-green-500`
-                : `bg-neutral-100`
-            }`}
-          >
-            {isSubmitting ? (
-              <div className="border-Light-Green ml-2 h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-t-transparent"></div>
-            ) : isUserSendFormCorrectly ? (
-              <p>{t("contact.form.sent")}</p>
-            ) : isUserSendFormError ? (
-              <p>{t("contact.form.error")}</p>
-            ) : (
-              <p>{t("contact.form.send")}</p>
+            {isUserSendFormCorrectly && !isSubmitting && (
+              <div className="text-xs font-semibold text-green-500">
+                <p>{t("contact.form.thankYou")}</p>
+              </div>
             )}
-          </button>
-
-          {isUserSendFormCorrectly && !isSubmitting && (
-            <div className="mt-6 text-xs font-semibold text-green-500">
-              <p>{t("contact.form.thankYou")}</p>
-            </div>
-          )}
+          </div>
         </Form>
       )}
     </Formik>

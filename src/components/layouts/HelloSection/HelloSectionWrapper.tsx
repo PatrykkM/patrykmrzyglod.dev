@@ -4,7 +4,7 @@ import Tesla3Dmodel from "./Tesla3Dmodel";
 const HelloSectionWrapper = () => {
   return (
     <section
-      className="flex w-full flex-col justify-between px-5 pt-32  lg:m-auto lg:flex lg:max-w-7xl lg:px-16 lg:pt-40"
+      className="flex w-full flex-col px-5 pt-32 lg:max-w-7xl lg:px-16 lg:pt-40"
       id="Hello"
     >
       <HelloDesc />

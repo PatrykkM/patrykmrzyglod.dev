@@ -50,7 +50,10 @@ const JobDetails = ({
     variants={workExperienceMobileVariants}
   >
     <div className="absolute -left-1 h-3 w-3 rotate-45 bg-neutral-200"></div>
-    <p className="text-2xl font-bold">{position.id}</p>
+    <div>
+      <p className="text-2xl font-bold">{t(`jobs.${position.id}.title`)}</p>
+      <p className="text-lg">{position.id}</p>
+    </div>
     <p className="p-4 leading-6">{t(`jobs.${position.id}.description`)}</p>
     <p>{t(`jobs.${position.id}.time`)}</p>
   </motion.div>

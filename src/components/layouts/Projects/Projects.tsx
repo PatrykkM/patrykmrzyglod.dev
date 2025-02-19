@@ -12,7 +12,7 @@ const Projects = () => {
     variants: titleOfSectionVariants,
   };
   return (
-    <section className="text-primary-900 dark:text-primary-100 mt-18 flex flex-col gap-10 px-5 font-medium sm:px-10 lg:mt-18 lg:max-w-7xl lg:px-16">
+    <section className="mt-18 flex flex-col gap-10 px-5 font-medium text-primary-900 dark:text-primary-100 sm:px-10 lg:mt-18 lg:max-w-7xl lg:px-16">
       <motion.div {...titleMotionProps}>
         <p className="text-sm uppercase text-gray-500 sm:text-base">
           {t("projects.myWork")}

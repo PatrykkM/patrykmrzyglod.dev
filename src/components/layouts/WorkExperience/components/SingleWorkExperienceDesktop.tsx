@@ -42,7 +42,12 @@ const JobCard = ({ isLeft, position, id }: JobCardProps) => {
           <div
             className={`absolute ${id % 2 === 0 ? "-left-1" : "-right-1"} h-3 w-3 rotate-45 bg-neutral-200`}
           />
-          <p className="text-2xl font-bold">{position.id}</p>
+          <div>
+            <p className="text-2xl font-bold">
+              {t(`jobs.${position.id}.title`)}
+            </p>
+            <p className="text-lg">{position.id}</p>
+          </div>
           <p className="leading-6">{t(`jobs.${position.id}.description`)}</p>
         </>
       )}

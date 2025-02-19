@@ -16,10 +16,10 @@ const WorkExperience = () => {
   return (
     <div className="flex w-full justify-center bg-neutral-100" id="Experience">
       <section className="-mt-px p-5 sm:px-10 lg:max-w-7xl lg:px-16">
-        <div className="flex flex-col pt-5 text-slate-50">
-          <motion.div {...titleMotionProps}>
+        <div className="flex flex-col gap-10 pt-5 text-primary-100">
+          <motion.div {...titleMotionProps} className="flex flex-col gap-2">
             <p className="text-base">{t("jobs.subtitle")}</p>
-            <h2 className="mb-18 mt-2 text-3xl font-extrabold lg:text-6xl">
+            <h2 className="text-3xl font-extrabold lg:text-6xl">
               {t("jobs.title")}
             </h2>
           </motion.div>

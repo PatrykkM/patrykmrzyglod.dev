@@ -14,15 +14,15 @@ const ContactMeSection = () => {
         whileInView="onscreen"
         viewport={{ once: true }}
         variants={contactformVariants}
-        className="dark:bg-primary-600 bg-primary-200 rounded-xl p-7 shadow-sm transition-colors duration-300"
+        className="flex flex-col gap-2 rounded-xl bg-primary-200 p-7 shadow-sm transition-colors duration-300 dark:bg-primary-600"
       >
-        <p className="mt-2 text-sm uppercase text-gray-500 dark:text-gray-400">
+        <p className="text-sm uppercase text-gray-500 dark:text-gray-400">
           {t("contact.title")}
         </p>
-        <h3 className="text-primary-900 dark:text-primary-100 my-2 text-3xl font-bold sm:text-5xl">
+        <h3 className="text-3xl font-bold text-primary-900 dark:text-primary-100 sm:text-5xl">
           {t("nav.Contact")}
         </h3>
-        <p className="mt-4 text-gray-500 dark:text-gray-400">
+        <p className="text-gray-500 dark:text-gray-400">
           {t("contact.description")}
           <Link
             href="mailto:patrykmrzyglod3@gmail.com"

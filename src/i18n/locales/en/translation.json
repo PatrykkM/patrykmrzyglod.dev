@@ -12,7 +12,7 @@
   "helloSection": {
     "greeting": "Hello",
     "name": "I'm Patryk",
-    "softwareEngineer": "Software Engineer",
+    "engineer": "Engineer",
     "description": "I'm a software engineer specializing in FinTech, SaaS, business applications, mobile apps, and system architecture. I'm also a programming student. Outside of work, I dedicate my free time to ambitious personal projects, striving to become a native-level English speaker, and continuously enhancing my skills in Java (Spring Boot). 🚀",
     "scrollHint": "scroll down to know me better",
     "tryToRotateMe!": "Try to rotate me!"
@@ -29,7 +29,7 @@
   "jobs": {
     "subtitle": "What I have done so far",
     "title": "Work Experience",
-    "CodeNauts": {
+    "Codenauts": {
       "title": "Software Engineer",
       "time": "Jan 2024 - Present",
       "fullTime": "January 2024 - Present",

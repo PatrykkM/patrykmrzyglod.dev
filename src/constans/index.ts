@@ -63,7 +63,7 @@ export const KnowledgeItems = [
 
 export const JobPositions = [
   {
-    id: "CodeNauts",
+    id: "Codenauts",
     img: codenauts,
   },
   {
