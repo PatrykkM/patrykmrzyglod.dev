@@ -32,19 +32,13 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState<DarkMode>(DarkMode.DARK);
 
   const [toastAction, setToastAction] = useState<ToastAction | undefined>(
-    DarkMode.DARK
+    undefined
   );
 
   const nav = [
-    {
-      name: "Experience",
-    },
-    {
-      name: "Technologies",
-    },
-    {
-      name: "Contact",
-    },
+    { name: "Experience" },
+    { name: "Technologies" },
+    { name: "Contact" },
   ];
 
   const [activeMenu, setActiveMenu] = useState(false);
@@ -91,6 +85,11 @@ const Header = () => {
     setActiveMenu((prev) => !prev);
   };
 
+  const handleClickHomeScrollToSection = () => {
+    scrollToSection("Hello");
+    setActiveIndex(null);
+  };
+
   const toggleLanguage: () => void = () => {
     if (isAnimating) return;
 
@@ -99,6 +98,7 @@ const Header = () => {
     setCurrentLang(newLang);
     setToastAction(newLang);
     setActiveMenu(false);
+    handleClickHomeScrollToSection();
   };
 
   const ActiveNavMobileProps = {
@@ -115,21 +115,21 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed z-9999 w-full flex border-b dark:border-gray-800 bg-transparent px-5 backdrop-blur-lg backdrop-filter border-gray-400 sm:px-10 lg:items-center lg:px-0 py-5 top-0 left-0">
+      <header className="fixed left-0 top-0 z-9999 flex w-full border-b border-gray-400 bg-transparent p-5 backdrop-blur-lg backdrop-filter dark:border-gray-800 sm:px-10 lg:items-center lg:px-0">
         <div className="flex w-full items-center justify-between text-lg font-bold tracking-wide lg:m-auto lg:h-14 lg:max-w-7xl lg:px-16">
           <h2
             className="gradient-text cursor-pointer"
-            onClick={() => scrollToSection("Hello")}
+            onClick={handleClickHomeScrollToSection}
           >
             PatrykMrzygłód.dev
           </h2>
           <div
-            className="font-bolder cursor-pointer text-2xl dark:text-text-dark-mode transition-opacity text-text-light-mode md:hidden"
+            className="font-bolder cursor-pointer text-2xl text-primary-900 transition-opacity dark:text-primary-100 md:hidden"
             onClick={() => setActiveMenu(!activeMenu)}
           >
             {activeMenu ? <RxCross2 /> : <RxHamburgerMenu />}
           </div>
-          <div className="hidden cursor-pointer items-center justify-center dark:text-text-dark-mode text-text-light-mode md:flex gap-10">
+          <div className="hidden cursor-pointer items-center justify-center gap-10 text-primary-900 dark:text-primary-100 md:flex">
             {nav.map((e, id) => (
               <NavItem
                 e={e}
@@ -141,12 +141,12 @@ const Header = () => {
               />
             ))}
             <div
-              className="cursor-pointer font-medium text-base"
+              className="cursor-pointer text-base font-medium"
               onClick={toggleLanguage}
             >
               {currentLang.toUpperCase()}
             </div>
-            <div className="flex text-xl text-text-light-mode dark:text-text-dark-mode">
+            <div className="flex text-xl text-primary-900 dark:text-primary-100">
               {darkMode === DarkMode.DARK ? (
                 <div onClick={() => handleDarkMode(DarkMode.DARK)}>
                   <FaMoon />

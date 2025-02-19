@@ -8,21 +8,21 @@ const ContactMeSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="text-white lg:w-128" id="Contact">
+    <section className="w-full text-white lg:w-128" id="Contact">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
         variants={contactformVariants}
-        className="rounded-xl dark:bg-main-dark p-7 bg-main-light shadow-sm"
+        className="dark:bg-primary-600 bg-primary-200 rounded-xl p-7 shadow-sm transition-colors duration-300"
       >
-        <p className="mt-2 text-sm uppercase dark:text-gray-400 text-gray-500">
+        <p className="mt-2 text-sm uppercase text-gray-500 dark:text-gray-400">
           {t("contact.title")}
         </p>
-        <h3 className="my-2 text-3xl font-bold text-text-light-mode dark:text-text-dark-mode sm:text-5xl">
+        <h3 className="text-primary-900 dark:text-primary-100 my-2 text-3xl font-bold sm:text-5xl">
           {t("nav.Contact")}
         </h3>
-        <p className="mt-4 dark:text-gray-400 text-gray-500">
+        <p className="mt-4 text-gray-500 dark:text-gray-400">
           {t("contact.description")}
           <Link
             href="mailto:patrykmrzyglod3@gmail.com"

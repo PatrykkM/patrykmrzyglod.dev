@@ -18,10 +18,7 @@ const Project = ({
   };
 }) => {
   const { t } = useTranslation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const controls = useAnimation();
 
@@ -38,7 +35,7 @@ const Project = ({
       animate={controls}
       variants={projectVariants}
       key={index}
-      className="mb-8 mt-18 flex flex-col rounded-lg dark:bg-dynamic-menu p-5 font-normal bg-light-mode-items sm:mr-6 sm:w-92 shadow-md"
+      className="dark:bg-primary-500 bg-primary-300 flex flex-col gap-3 rounded-lg p-5 font-normal shadow-md transition-colors duration-300 sm:w-92"
     >
       <div className="overflow-hidden rounded-lg">
         <Link href={project.link} target="_blank">
@@ -55,20 +52,17 @@ const Project = ({
           </div>
         </Link>
       </div>
-      <div className="mt-3 flex flex-grow flex-col">
-        <h3 className="text-2xl font-bold text-blue-800 dark:text-text-dark-mode">
+      <div className="flex flex-grow flex-col">
+        <h3 className="dark:text-primary-100 text-2xl font-bold text-blue-800">
           {project.name}
         </h3>
-        <p className="mt-3 text-sm dark:text-gray-300 text-gray-500">
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
           {t(`projects.${project.name}.description`)}
         </p>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-1">
         {project.techs.map((e, id) => (
-          <p
-            className={`${e.color} mr-[1px] mt-3 text-sm lg:mr-[3px]`}
-            key={id}
-          >
+          <p className={`${e.color}  text-sm `} key={id}>
             #{e.name}
           </p>
         ))}

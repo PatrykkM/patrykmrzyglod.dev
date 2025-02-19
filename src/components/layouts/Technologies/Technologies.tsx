@@ -14,22 +14,22 @@ const Technologies = () => {
   const { t } = useTranslation();
   return (
     <section
-      className="flex flex-col px-5 font-semibold m:px-10  lg:max-w-7xl lg:px-16 pt-10"
+      className="flex w-full flex-col gap-10 px-5 pt-10 font-semibold lg:max-w-7xl lg:px-16"
       id="Technologies"
     >
-      <motion.div {...titleMotionProps}>
+      <motion.div {...titleMotionProps} className="flex flex-col gap-2">
         <p className="text-sm uppercase text-gray-400">
           {t("technologies.myKnowledgeOf")}
         </p>
-        <h2 className="mt-2 text-3xl font-extrabold dark:text-text-dark-mode text-text-light-mode lg:text-6xl">
+        <h2 className="text-primary-900 dark:text-primary-100  text-3xl font-extrabold lg:text-6xl">
           {t("technologies.title")}
         </h2>
-        <p className="font-base mt-5 text-xs font-normal text-gray-400">
+        <p className="font-base text-xs font-normal text-gray-400">
           {t("technologies.hint")}
         </p>
       </motion.div>
       <motion.div
-        className="sm:flex sm:flex-wrap"
+        className=" flex flex-col gap-10 sm:flex-row sm:flex-wrap lg:gap-7"
         variants={techsContainerVariants}
         initial="hidden"
         whileInView="visible"

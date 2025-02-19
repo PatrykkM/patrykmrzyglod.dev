@@ -32,16 +32,19 @@
     "CodeNauts": {
       "title": "Software Engineer",
       "time": "Jan 2024 - Present",
+      "fullTime": "January 2024 - Present",
       "description": "At CodeNauts, I specialize in developing business-oriented applications, including SaaS, FinTech, and Business Intelligence (BI) solutions, using React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo, and React Native. My work is focused on delivering advanced, scalable, and high-performance systems tailored to modern business needs by leveraging cutting-edge technologies and innovative solutions.I am committed to building intuitive and maintainable software that enhances efficiency, optimizes workflows, and drives digital transformation. With a strong problem-solving mindset and a passion for continuous learning, I strive to create impactful applications that empower businesses to grow and succeed. Additionally, I actively support junior developers, helping them overcome challenges and grow their skills. 🚀"
     },
     "Nanovo": {
       "title": "Frontend Engineer",
       "time": "Apr 2022 - May 2022",
+      "fullTime": "April 2022 - May 2022",
       "description": "During my internship, I worked on a web page for a beauty salon—nothing too complex, just a simple project to get some hands-on experience. I focused on making it responsive, adding some basic interactivity with JavaScript, and fixing minor front-end issues. It wasn't rocket science, but hey, everyone starts somewhere! 💅🚀"
     },
     "Ignatianum": {
       "title": "Network Administrator",
       "time": "Oct 2021 - Nov 2021",
+      "fullTime": "October 2021 - November 2021",
       "description": "During my internship, I was responsible for setting up, configuring, and maintaining network hardware, including routers, switches, firewalls, and wireless access points. I assisted users with network-related issues, troubleshooting connectivity problems, and providing technical support. Additionally, I maintained detailed documentation of network topology, configurations, and procedures to ensure efficient management and smooth operations."
     }
   },

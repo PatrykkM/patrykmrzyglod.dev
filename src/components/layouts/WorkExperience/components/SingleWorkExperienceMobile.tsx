@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 
-import { workExperienceMobileVariants } from "@/utils/motion";
+import { logoVariants, workExperienceMobileVariants } from "@/utils/motion";
 import { JobPositionTypes } from "@/components/layouts/WorkExperience/types/types";
 
 interface SingleWorkExperienceMobileProps {
@@ -12,20 +12,26 @@ interface SingleWorkExperienceMobileProps {
 }
 
 const CompanyLogo = ({ position }: { position: JobPositionTypes }) => (
-  <div className="flex w-1/5 justify-center">
-    <div className="relative w-1 bg-white">
-      <div className="absolute left-1/2 top-[25px] h-12 w-12 -translate-x-1/2 lg:h-16 lg:w-16">
-        <Image
-          src={position.img}
-          alt={`Logo of ${position.id}`}
-          fill
-          className="rounded-full object-cover"
-          placeholder="blur"
-          quality={100}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-    </div>
+  <div className="relative flex w-1/5 justify-center">
+    <div className="w-1 bg-white"></div>
+    <motion.div
+      variants={logoVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+      className="absolute top-6 h-12 w-12 overflow-hidden rounded-full border-[3px] border-white"
+    >
+      <Image
+        src={position.img}
+        alt={`Logo of ${position.id}`}
+        fill
+        className="rounded-full object-cover"
+        placeholder="blur"
+        priority
+        quality={100}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+    </motion.div>
   </div>
 );
 
@@ -37,13 +43,13 @@ const JobDetails = ({
   t: TFunction;
 }) => (
   <motion.div
-    className="relative z-10 mx-3 my-7 w-4/5 rounded-md border-b-2 border-white bg-Jobs-blue p-4 text-sm"
+    className="relative z-10 mx-3 my-7 w-4/5 rounded-md border-b-2 border-white bg-neutral-200 p-4 text-sm"
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true }}
     variants={workExperienceMobileVariants}
   >
-    <div className="absolute -left-1 h-3 w-3 rotate-45 bg-Jobs-blue"></div>
+    <div className="absolute -left-1 h-3 w-3 rotate-45 bg-neutral-200"></div>
     <p className="text-2xl font-bold">{position.id}</p>
     <p className="p-4 leading-6">{t(`jobs.${position.id}.description`)}</p>
     <p>{t(`jobs.${position.id}.time`)}</p>

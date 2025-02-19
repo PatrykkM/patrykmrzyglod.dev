@@ -6,8 +6,9 @@ import { GLTFLoader, GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 import React, { useEffect, useRef, useState } from "react";
 import { PiArrowBendLeftDownFill } from "react-icons/pi";
-import Skeleton from "@/components/common/Skeleton";
+import LoadingComponent from "@/components/common/LoadingComponent";
 import { useTranslation } from "react-i18next";
+import { LuMouse } from "react-icons/lu";
 interface ThreeJSRefs {
   scene: THREE.Scene | null;
   camera: THREE.PerspectiveCamera | null;
@@ -159,7 +160,7 @@ const Tesla3Dmodel: React.FC = () => {
   }, []);
 
   return (
-    <section className="dark:text-main-text-light flex flex-col items-center justify-center text-text-light-mode dark:text-text-dark-mode">
+    <section className="dark:text-main-text-light text-primary-900 dark:text-primary-100 flex flex-col items-center justify-center ">
       <div className="ml-32 mt-2 flex items-center self-center">
         <div className="mt-6 text-3xl">
           <PiArrowBendLeftDownFill />
@@ -170,7 +171,17 @@ const Tesla3Dmodel: React.FC = () => {
         ref={mountRef}
         className="relative flex items-center justify-center bg-transparent"
       >
-        {isLoading ? <Skeleton /> : null}
+        {isLoading ? (
+          <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
+            <LoadingComponent />
+          </div>
+        ) : null}
+      </div>
+      <div className="flex w-full items-center gap-2 pb-20 lg:justify-center">
+        <div className="text-2xl font-extrabold">
+          <LuMouse />
+        </div>
+        <p>{t("helloSection.scrollHint")}</p>
       </div>
     </section>
   );

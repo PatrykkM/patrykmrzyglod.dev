@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,css,json,js,jsx}\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",

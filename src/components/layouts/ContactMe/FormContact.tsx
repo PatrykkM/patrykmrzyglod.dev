@@ -10,11 +10,7 @@ import {
 } from "../../../redux/slices/userSentForm";
 import { RootState } from "../../../redux/store";
 
-type FormValues = {
-  from_name: string;
-  from_email: string;
-  message: string;
-};
+type FormValues = { from_name: string; from_email: string; message: string };
 
 type FormField = {
   name: keyof FormValues;
@@ -113,21 +109,21 @@ const FormContact = () => {
             <div key={field.name} className="mt-8">
               <label
                 htmlFor={field.name}
-                className="dark:text-text-dark-mode text-text-light-mode"
+                className="text-primary-900 dark:text-primary-100"
               >
                 {field.label}
               </label>
               <Field
                 type={field.type}
                 as={field.type === "textarea" ? "textarea" : undefined}
-                className={`mt-3 w-full rounded-lg dark:bg-dynamic-menu px-3 py-4 bg-light-mode-items text-text-light-mode dark:text-text-dark-mode`}
+                className={`dark:bg-primary-500 text-primary-900 dark:text-primary-100 bg-primary-300 mt-3 w-full rounded-lg px-3 py-4 transition-colors duration-300`}
                 placeholder={field.placeholder}
                 rows={field.rows}
                 id={field.name}
                 name={field.name}
               />
               {errors[field.name] && touched[field.name] && (
-                <div className="text-red-500 text-xs mt-1 font-semibold">
+                <div className="mt-1 text-xs font-semibold text-red-500">
                   {errors[field.name]}
                 </div>
               )}
@@ -142,7 +138,7 @@ const FormContact = () => {
             } ${
               isUserSendFormCorrectly && !isSubmitting
                 ? `bg-green-500`
-                : `bg-light-blue`
+                : `bg-neutral-100`
             }`}
           >
             {isSubmitting ? (
@@ -157,7 +153,7 @@ const FormContact = () => {
           </button>
 
           {isUserSendFormCorrectly && !isSubmitting && (
-            <div className="mt-6 text-xs text-green-500 font-semibold">
+            <div className="mt-6 text-xs font-semibold text-green-500">
               <p>{t("contact.form.thankYou")}</p>
             </div>
           )}

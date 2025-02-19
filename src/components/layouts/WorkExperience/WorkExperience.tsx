@@ -14,9 +14,9 @@ const WorkExperience = () => {
   };
 
   return (
-    <div className="bg-light-blue w-full flex justify-center" id="Experience">
-      <section className="-mt-px  p-5  sm:px-10  lg:max-w-7xl lg:px-16">
-        <div className="pt-10 flex flex-col text-slate-50">
+    <div className="flex w-full justify-center bg-neutral-100" id="Experience">
+      <section className="-mt-px p-5 sm:px-10 lg:max-w-7xl lg:px-16">
+        <div className="flex flex-col pt-5 text-slate-50">
           <motion.div {...titleMotionProps}>
             <p className="text-base">{t("jobs.subtitle")}</p>
             <h2 className="mb-18 mt-2 text-3xl font-extrabold lg:text-6xl">
@@ -25,11 +25,13 @@ const WorkExperience = () => {
           </motion.div>
           <div className="block lg:hidden">
             {JobPositions.map((position, id) => (
-              <SingleWorkExperienceMobile
-                position={position}
-                id={id}
-                key={id}
-              />
+              <div key={id}>
+                <SingleWorkExperienceMobile
+                  position={position}
+                  id={id}
+                  key={id}
+                />
+              </div>
             ))}
           </div>
           <div className="hidden lg:block">

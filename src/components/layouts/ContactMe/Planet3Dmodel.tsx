@@ -94,7 +94,7 @@ const Planet3Dmodel = () => {
   }, []);
 
   return (
-    <div className="dark:bg-Grey-Wave bg-light-mode-items">
+    <div className="dark:bg-primary-400 bg-primary-300">
       <div ref={mountRef} className="flex h-full w-full justify-center"></div>
     </div>
   );

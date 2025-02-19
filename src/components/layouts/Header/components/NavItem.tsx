@@ -29,7 +29,7 @@ const NavItem = ({
     <li
       className={`${
         activeIndex === id ? "gradient-text" : ""
-      }  text-base md:list-none md:text-base md:font-medium`}
+      } text-base md:list-none md:text-base md:font-medium`}
       key={e.name}
     >
       <Link

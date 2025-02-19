@@ -4,6 +4,8 @@ import { MdLightMode } from "react-icons/md";
 import { ToastAction, DarkMode, Language } from "../layouts/Header/Header";
 import { useTranslation } from "react-i18next";
 import FlagIcon from "react-world-flags";
+import { motion } from "framer-motion";
+
 interface ToastProps {
   toastAction?: ToastAction;
   setIsAnimating: (isAnimating: boolean) => void;
@@ -14,6 +16,7 @@ const Toast = ({ toastAction: toastAction, setIsAnimating }: ToastProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (!toastAction) return;
     const showAlert = () => {
       setIsAnimating(true);
       setIsVisible(true);
@@ -32,6 +35,7 @@ const Toast = ({ toastAction: toastAction, setIsAnimating }: ToastProps) => {
   }, [setIsAnimating]);
 
   useEffect(() => {
+    if (!toastAction) return;
     const timer = setTimeout(() => {
       setIsAnimating(true);
       setIsVisible(true);
@@ -84,13 +88,14 @@ const Toast = ({ toastAction: toastAction, setIsAnimating }: ToastProps) => {
   };
 
   return (
-    <div
-      className={`${
-        isVisible ? `-translate-y-5 opacity-100` : `translate-y-16 opacity-0`
-      }  fixed bottom-0 left-1/2 z-9999 flex -translate-x-1/2 transform items-center rounded-2xl dark:bg-main-dark px-5 py-3 text-sm font-medium dark:text-text-dark-mode shadow-2xl transition-all bg-light-mode-items text-text-light-mode`}
+    <motion.div
+      initial={{ y: 64, opacity: 0 }}
+      animate={{ y: isVisible ? -20 : 64, opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+      className="fixed bottom-0 z-9999 flex transform items-center rounded-2xl bg-primary-300 px-5 py-3 text-sm font-medium text-primary-900 shadow-2xl dark:bg-primary-600 dark:text-primary-100"
     >
       {toastContent()}
-    </div>
+    </motion.div>
   );
 };
 

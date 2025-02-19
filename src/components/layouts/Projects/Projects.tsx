@@ -12,17 +12,17 @@ const Projects = () => {
     variants: titleOfSectionVariants,
   };
   return (
-    <section className="mt-18 flex flex-col px-5 font-medium text-text-light-mode dark:text-text-dark-mode sm:px-10 lg:mt-18 lg:max-w-7xl lg:px-16 ">
+    <section className="text-primary-900 dark:text-primary-100 mt-18 flex flex-col gap-10 px-5 font-medium sm:px-10 lg:mt-18 lg:max-w-7xl lg:px-16">
       <motion.div {...titleMotionProps}>
         <p className="text-sm uppercase text-gray-500 sm:text-base">
           {t("projects.myWork")}
         </p>
-        <h2 className="mt-2 text-3xl font-extrabold dark:text-mian-text-light sm:text-5xl">
+        <h2 className="dark:text-mian-text-light mt-2 text-3xl font-extrabold sm:text-5xl">
           {t("projects.projects")}
         </h2>
         <p className="mt-4 text-gray-500">{t("projects.description")}</p>
       </motion.div>
-      <div className="flex-wrap justify-center sm:flex sm:justify-start">
+      <div className="flex flex-wrap justify-center gap-9 sm:justify-start">
         {MyProjects.map((project, index) => (
           <Project key={index} index={index} project={project} />
         ))}

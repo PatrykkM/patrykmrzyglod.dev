@@ -28,7 +28,7 @@ const ActiveNavMobile = ({
   return (
     <>
       {activeMenu ? (
-        <div className="p-6 fixed right-5 top-20 z-50 rounded-3xl dark:bg-dynamic-menu text-text-light-mode shadow-lg transition-opacity bg-light-mode-items dark:text-text-dark-mode md:hidden flex flex-col items-end justify-around gap-4">
+        <div className="dark:bg-primary-500 text-primary-900 dark:text-primary-100 bg-primary-300 fixed right-5 top-20 z-50 flex flex-col items-end justify-around gap-4 rounded-3xl p-6 shadow-lg transition-opacity md:hidden">
           <ul className="flex h-full flex-col items-end justify-around gap-4 text-sm font-semibold sm:p-8 sm:text-base">
             {nav.map((e, id) => (
               <NavItem
@@ -41,7 +41,7 @@ const ActiveNavMobile = ({
               />
             ))}
           </ul>
-          <div className="flex gap-4 items-center">
+          <div className="flex items-center gap-4">
             <div onClick={() => handleDarkMode(darkMode)}>
               {darkMode === DarkMode.DARK ? (
                 <FaMoon size={18} />
