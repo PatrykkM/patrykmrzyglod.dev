@@ -28,7 +28,7 @@ export const projectsHeaderVariants = {
 
 export const singleTechnologyVariants = {
   hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.4 } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.3 } },
 };
 export const techsContainerVariants = {
   hidden: { opacity: 0 },
@@ -52,13 +52,6 @@ export const helloSectionTitleVariants = {
   onscreen: {
     y: 0,
     opacity: 1,
-    transition: {
-      type: "spring",
-      ease: "easeInOut",
-      stiffness: 80,
-      damping: 10,
-      duration: 1,
-    },
   },
 };
 

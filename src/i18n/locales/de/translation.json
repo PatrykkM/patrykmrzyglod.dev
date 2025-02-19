@@ -19,7 +19,7 @@
     "greeting": "Hallo",
     "name": "Ich bin Patryk",
     "engineer": "Entwickler",
-    "description": "Ich bin ein Softwareentwickler, spezialisiert auf FinTech, SaaS, Geschäftsanwendungen, mobile Apps und Systemarchitektur. Ich bin auch Informatikstudent. Neben der Arbeit widme ich meine Freizeit anspruchsvollen persönlichen Projekten, strebe danach, Englisch auf muttersprachlichem Niveau zu sprechen und verbessere kontinuierlich meine Fähigkeiten in Java (Spring Boot). 🚀",
+    "description": "Ich bin Softwareentwickler und spezialisiere mich auf FinTech, SaaS, ERP, Geschäftsanwendungen, mobile Apps und Systemarchitektur. Außerdem bin ich Programmierstudent. In meiner Freizeit widme ich mich ehrgeizigen persönlichen Projekten und strebe danach, ein nahezu muttersprachliches Englischniveau zu erreichen – durch häufige Gespräche mit Muttersprachlern sowie einen Kurs, den ich bald abschließen werde. Anschließend werde ich die Cambridge-Prüfung als abschließende Bewertung ablegen. Zusätzlich verbessere ich auch meine Fähigkeiten in Java (Spring Boot). 🚀",
     "scrollHint": "nach unten scrollen, um mehr zu erfahren",
     "tryToRotateMe!": "Versuche mich zu drehen!"
   },
@@ -37,8 +37,9 @@
     "title": "Erfahrung",
     "Codenauts": {
       "title": "Software Entwickler",
-      "time": "Jan 2024 - Heute",
-      "description": "Bei CodeNauts entwickle ich geschäftsorientierte Anwendungen, einschließlich SaaS, FinTech und Business Intelligence (BI) Lösungen mit React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo und React Native. Meine Arbeit konzentriert sich darauf, fortschrittliche, skalierbare und leistungsstarke Systeme zu entwickeln, die auf moderne Geschäftsanforderungen zugeschnitten sind. Ich setze mich für die Entwicklung intuitiver und wartbarer Software ein, die die Effizienz steigert, Arbeitsabläufe optimiert und die digitale Transformation vorantreibt. Mit einer starken Problemlösungskompetenz und Leidenschaft für kontinuierliches Lernen strebe ich danach, wirkungsvolle Anwendungen zu erstellen, die Unternehmen beim Wachstum und Erfolg unterstützen. Zusätzlich unterstütze ich aktiv Junior-Entwickler dabei, Herausforderungen zu meistern und ihre Fähigkeiten weiterzuentwickeln. 🚀"
+      "time": "Apr 2024 - Heute",
+      "fullTime": "April 2024 - Heute",
+      "description": "Bei CodeNauts entwickle ich geschäftsorientierte Anwendungen, einschließlich SaaS, ERP, FinTech und Business Intelligence (BI) Lösungen mit React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo und React Native. Meine Arbeit konzentriert sich darauf, fortschrittliche, skalierbare und leistungsstarke Systeme zu entwickeln, die auf moderne Geschäftsanforderungen zugeschnitten sind. Ich setze mich für die Entwicklung intuitiver und wartbarer Software ein, die die Effizienz steigert, Arbeitsabläufe optimiert und die digitale Transformation vorantreibt. Mit einer starken Problemlösungskompetenz und Leidenschaft für kontinuierliches Lernen strebe ich danach, wirkungsvolle Anwendungen zu erstellen, die Unternehmen beim Wachstum und Erfolg unterstützen. Zusätzlich unterstütze ich aktiv Junior-Entwickler dabei, Herausforderungen zu meistern und ihre Fähigkeiten weiterzuentwickeln. 🚀"
     },
     "Nanovo": {
       "title": "Frontend Entwickler",

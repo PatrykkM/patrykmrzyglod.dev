@@ -43,7 +43,7 @@ const JobDetails = ({
   t: TFunction;
 }) => (
   <motion.div
-    className="relative z-10 mx-3 my-7 w-4/5 rounded-md border-b-2 border-white bg-neutral-200 p-4 text-sm"
+    className="relative z-10 mx-2 my-7 w-4/5 rounded-md bg-neutral-200 p-4 text-sm"
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true }}
@@ -52,10 +52,10 @@ const JobDetails = ({
     <div className="absolute -left-1 h-3 w-3 rotate-45 bg-neutral-200"></div>
     <div>
       <p className="text-2xl font-bold">{t(`jobs.${position.id}.title`)}</p>
-      <p className="text-lg">{position.id}</p>
+      <p>{position.id}</p>
     </div>
     <p className="p-4 leading-6">{t(`jobs.${position.id}.description`)}</p>
-    <p>{t(`jobs.${position.id}.time`)}</p>
+    <p className="italic">{t(`jobs.${position.id}.time`)}</p>
   </motion.div>
 );
 

@@ -92,7 +92,7 @@ const Toast = ({ toastAction: toastAction, setIsAnimating }: ToastProps) => {
       initial={{ y: 64, opacity: 0 }}
       animate={{ y: isVisible ? -20 : 64, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-      className="fixed bottom-0 z-9999 flex transform items-center rounded-2xl bg-primary-300 px-5 py-3 text-sm font-medium text-primary-900 shadow-2xl dark:bg-primary-600 dark:text-primary-100"
+      className="fixed bottom-0 z-9999 flex transform items-center rounded-2xl bg-primary-300 px-5 py-3 text-sm font-medium text-primary-900 shadow-2xl dark:bg-primary-500 dark:text-primary-100"
     >
       {toastContent()}
     </motion.div>

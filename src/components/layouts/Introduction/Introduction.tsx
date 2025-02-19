@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { KnowledgeItems } from "@/constans";
 import { useTranslation } from "react-i18next";
-import KnowalgeItem from "./components/KnowalgeItem";
+import KnowlageItem from "./components/KnowlageItem";
 const Introduction = () => {
   const combinedVariants = {
     hidden: { y: -50, opacity: 0 },
@@ -25,9 +25,9 @@ const Introduction = () => {
     <div className="mt-18 px-5 sm:px-10 lg:mt-0 lg:p-0">
       <section
         ref={sectionRef}
-        className="text-primary-900 dark:text-primary-100 flex flex-col gap-10 lg:m-auto lg:max-w-7xl lg:px-16"
+        className="flex flex-col gap-10 text-primary-900 dark:text-primary-100 lg:m-auto lg:max-w-7xl lg:px-16"
       >
-        <div className="flex flex-col  gap-2">
+        <div className="flex flex-col gap-2">
           <motion.p
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
@@ -50,7 +50,7 @@ const Introduction = () => {
         </div>
         <div className="z-10 flex flex-wrap gap-10" ref={itemsRef}>
           {KnowledgeItems.map((item, index) => (
-            <KnowalgeItem
+            <KnowlageItem
               item={item}
               index={index}
               itemsInView={itemsInView}

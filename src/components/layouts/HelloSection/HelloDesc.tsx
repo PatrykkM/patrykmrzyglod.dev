@@ -7,7 +7,7 @@ const HelloDesc = () => {
   const motionProps = {
     initial: "offscreen",
     whileInView: "onscreen",
-    viewport: { once: true, amount: 0.5 },
+    viewport: { once: true, amount: 0.2 },
     variants: helloSectionTitleVariants,
   };
 
