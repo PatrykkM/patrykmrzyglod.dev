@@ -1,6 +1,5 @@
-# 
 
-## 📌 patrykmrzyglod.dev
+# 👋 Hello 
 Welcome to my personal portfolio, a dynamic and visually engaging space where I showcase my skills, projects, work experience, passion for software development. Designed as both a digital resume and an interactive experience, this portfolio is built using cutting-edge technologies to provide smooth navigation, stunning 3D elements, and a sleek user interface.
 
 ## 🚀 Features
@@ -9,7 +8,7 @@ Welcome to my personal portfolio, a dynamic and visually engaging space where I 
 - **🎨 Interactive 3D** – Engaging visual effects powered by Three.js.
 - **💎 Clean UI** – Styled with Tailwind CSS and enhanced with Framer Motion animations.
 - **📂 Project Showcase** – Interactive previews of my best work.
-- **📬 Easy Contact** – Integrated social media links and contact form.
+- **🌐 Easy Contact** – Integrated social media links and contact form.
 - **☁️ Self-Hosted** – Fully controlled deployment on my own infrastructure.
 
 ## 🛠 Tech Stack
