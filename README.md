@@ -1,5 +1,5 @@
 
-# 👋 Hello 
+#  Hello 👋
 Welcome to my personal portfolio, a dynamic and visually engaging space where I showcase my skills, projects, work experience, passion for software development. Designed as both a digital resume and an interactive experience, this portfolio is built using cutting-edge technologies to provide smooth navigation, stunning 3D elements, and a sleek user interface.
 
 ## 🚀 Features
@@ -18,5 +18,6 @@ Welcome to my personal portfolio, a dynamic and visually engaging space where I 
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+
 
 🚀 **Explore, enjoy, and feel free to reach out!**
