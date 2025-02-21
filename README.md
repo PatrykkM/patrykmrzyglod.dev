@@ -1,7 +1,7 @@
-# patrykmrzyglod.dev
+# 
 
-## 📌 About
-Welcome to my personal portfolio, **[PatrykMrzyglod.dev](https://patrykmrzyglod.dev)**, a dynamic and visually engaging space where I showcase my skills, projects, work experience, passion for software development. Designed as both a digital resume and an interactive experience, this portfolio is built using cutting-edge technologies to provide smooth navigation, stunning 3D elements, and a sleek user interface.
+## 📌 patrykmrzyglod.dev
+Welcome to my personal portfolio, a dynamic and visually engaging space where I showcase my skills, projects, work experience, passion for software development. Designed as both a digital resume and an interactive experience, this portfolio is built using cutting-edge technologies to provide smooth navigation, stunning 3D elements, and a sleek user interface.
 
 ## 🚀 Features
 
