@@ -19,5 +19,6 @@ Welcome to my personal portfolio, a dynamic and visually engaging space where I 
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
+## Feedback and Collaboration
 
 🚀 **Explore, enjoy, and feel free to reach out!**
