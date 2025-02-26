@@ -27,6 +27,7 @@ import codenauts from "/public/img/codenauts.jpg";
 import ignatium from "/public/img/ignatium.png";
 import nanovo from "/public/img/nanovo.png";
 import Bape from "/public/img/bape.png";
+import logo from "/public/img/logo_blured.png";
 
 import { AiOutlineCluster } from "react-icons/ai";
 
@@ -65,6 +66,10 @@ export const JobPositions = [
   {
     id: "Codenauts",
     img: codenauts,
+  },
+  {
+    id: "???",
+    img: logo,
   },
   {
     id: "Nanovo",

@@ -41,14 +41,22 @@
       "fullTime": "April 2024 - Heute",
       "description": "Bei CodeNauts entwickle ich geschäftsorientierte Anwendungen, einschließlich SaaS, ERP, FinTech und Business Intelligence (BI) Lösungen mit React, Next.js, TypeScript, Tailwind CSS, SCSS, Java (Spring Boot), Expo und React Native. Meine Arbeit konzentriert sich darauf, fortschrittliche, skalierbare und leistungsstarke Systeme zu entwickeln, die auf moderne Geschäftsanforderungen zugeschnitten sind. Ich setze mich für die Entwicklung intuitiver und wartbarer Software ein, die die Effizienz steigert, Arbeitsabläufe optimiert und die digitale Transformation vorantreibt. Mit einer starken Problemlösungskompetenz und Leidenschaft für kontinuierliches Lernen strebe ich danach, wirkungsvolle Anwendungen zu erstellen, die Unternehmen beim Wachstum und Erfolg unterstützen. Zusätzlich unterstütze ich aktiv Junior-Entwickler dabei, Herausforderungen zu meistern und ihre Fähigkeiten weiterzuentwickeln. 🚀"
     },
+    "???":{
+      "title": "CEO und Software Entwickler",
+      "time": "Jan 2025 - Heute",
+      "fullTime": "Januar 2025 - Heute",
+      "description": "Bald in App-Stores und Google Play! Eine bahnbrechende Unterhaltungs-App, die die Branche revolutionieren wird. Durch die Kombination modernster KI-Technologie mit immersiven sozialen Funktionen schaffe ich eine völlig neue Kategorie digitaler Unterhaltung. Freuen Sie sich auf ein Erlebnis, das neu definiert, wie wir uns verbinden und Spaß haben! 🎮✨🚀"
+    },
     "Nanovo": {
       "title": "Frontend Entwickler",
       "time": "Apr 2022 - Mai 2022",
+      "fullTime": "April 2022 - Mai 2022",
       "description": "Während meines Praktikums arbeitete ich an einer Webseite für einen Schönheitssalon - nichts zu Komplexes, nur ein einfaches Projekt, um praktische Erfahrungen zu sammeln. Ich konzentrierte mich darauf, sie responsiv zu gestalten, grundlegende Interaktivität mit JavaScript hinzuzufügen und kleinere Frontend-Probleme zu beheben. Es war keine Raketenwissenschaft, aber hey, irgendwo muss man ja anfangen! 💅🚀"
     },
     "Ignatianum": {
       "title": "Netzwerk Administrator",
       "time": "Okt 2021 - Nov 2021",
+      "fullTime": "Oktober 2021 - November 2021",
       "description": "Während meines Praktikums war ich verantwortlich für die Einrichtung, Konfiguration und Wartung von Netzwerk-Hardware, einschließlich Routern, Switches, Firewalls und WLAN-Zugangspunkten. Ich unterstützte Benutzer bei netzwerkbezogenen Problemen, behob Verbindungsprobleme und bot technischen Support. Zusätzlich führte ich detaillierte Dokumentation der Netzwerktopologie, Konfigurationen und Verfahren, um effizientes Management und reibungslose Abläufe sicherzustellen."
     }
   },
